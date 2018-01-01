@@ -1,0 +1,16 @@
+name: duration
+description: Utilities to make working with 'Duration's easier.
+version: 0.0.1
+#homepage: https://www.example.com
+author: Ravi Teja Gudapati <tejainece@gmail.com>
+
+documentation:
+
+environment:
+  sdk: '>=1.20.1 <2.0.0'
+
+dependencies:
+  quiver_time: ^1.0.0
+
+dev_dependencies:
+  test: ^0.12.0

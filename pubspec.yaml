@@ -9,12 +9,7 @@ documentation:
 environment:
   sdk: '>=2.0.0 <3.0.0'
 
-dependencies:
-  # waiting for https://github.com/QuiverDart/quiver_time/pull/7
-  quiver_time:
-    git:
-      url: git://github.com/johnpryan/quiver_time.git
-      ref: dart2
+# dependencies:
 
 dev_dependencies:
   test: ^1.3.0

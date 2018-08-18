@@ -1,6 +1,25 @@
 import 'locale/locale.dart';
 
-export 'package:quiver_time/time_unit.dart';
+/// Duration of a microsecond
+const Duration aMicrosecond = const Duration(microseconds: 1);
+
+/// Duration of a millisecond
+const Duration aMillisecond = const Duration(milliseconds: 1);
+
+/// Duration of a second
+const Duration aSecond = const Duration(seconds: 1);
+
+/// Duration of a minute
+const Duration aMinute = const Duration(minutes: 1);
+
+/// Duration of an hour
+const Duration anHour = const Duration(hours: 1);
+
+/// Duration of a day
+const Duration aDay = const Duration(days: 1);
+
+/// Duration of a week
+const Duration aWeek = const Duration(days: 7);
 
 // Creates a [Duration] with given [milliseconds]
 Duration us(int microseconds) => new Duration(microseconds: microseconds);
@@ -196,7 +215,7 @@ String prettyMilliseconds(Duration duration,
     DurationLocale language: const EnglishDurationLocale(),
     String separator: ' ',
     bool abbreviated: false}) {
-  if(duration.inMilliseconds > 0) {
+  if (duration.inMilliseconds > 0) {
     final int us = duration.inMicroseconds % 1000;
     if (us == 0 || terse) {
       final sb = new StringBuffer();

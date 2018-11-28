@@ -3,6 +3,7 @@ library duration.locale;
 part 'english.dart';
 part 'spanish.dart';
 part 'swedish.dart';
+part 'portuguese_br.dart';
 
 abstract class DurationLocale {
   String year(int amount, [bool abbreviated = true]);

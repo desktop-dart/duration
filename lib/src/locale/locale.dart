@@ -4,6 +4,7 @@ part 'english.dart';
 part 'spanish.dart';
 part 'swedish.dart';
 part 'portuguese_br.dart';
+part 'russian.dart';
 
 abstract class DurationLocale {
   String year(int amount, [bool abbreviated = true]);
@@ -30,3 +31,5 @@ const EnglishDurationLocale englishLocale = const EnglishDurationLocale();
 const SpanishDurationLanguage spanishLocale = const SpanishDurationLanguage();
 
 const SwedishDurationLanguage swedishLocale = const SwedishDurationLanguage();
+
+const RussianDurationLanguage russianLocale = const RussianDurationLanguage();

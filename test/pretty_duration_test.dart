@@ -5,174 +5,174 @@ void main() {
   group('prettyDuration', () {
     test('default', () {
       {
-        final dur = new Duration(microseconds: 0);
+        final dur = Duration(microseconds: 0);
         expect(prettyDuration(dur), '0 microsecond');
       }
 
       {
-        final dur = new Duration(microseconds: 999);
+        final dur = Duration(microseconds: 999);
         expect(prettyDuration(dur), '999 microseconds');
       }
 
       {
-        final dur = new Duration(microseconds: 1000);
+        final dur = Duration(microseconds: 1000);
         expect(prettyDuration(dur), '1 millisecond');
       }
 
       {
-        final dur = new Duration(milliseconds: 5);
+        final dur = Duration(milliseconds: 5);
         expect(prettyDuration(dur), '5 milliseconds');
       }
 
       {
-        final dur = new Duration(milliseconds: 999);
+        final dur = Duration(milliseconds: 999);
         expect(prettyDuration(dur), '999 milliseconds');
       }
 
       {
-        final dur = new Duration(milliseconds: 1000);
+        final dur = Duration(milliseconds: 1000);
         expect(prettyDuration(dur), '1 second');
       }
 
       {
-        final dur = new Duration(seconds: 5);
+        final dur = Duration(seconds: 5);
         expect(prettyDuration(dur), '5 seconds');
       }
 
       {
-        final dur = new Duration(seconds: 59);
+        final dur = Duration(seconds: 59);
         expect(prettyDuration(dur), '59 seconds');
       }
 
       {
-        final dur = new Duration(seconds: 60);
+        final dur = Duration(seconds: 60);
         expect(prettyDuration(dur), '1 minute');
       }
 
       {
-        final dur = new Duration(minutes: 5);
+        final dur = Duration(minutes: 5);
         expect(prettyDuration(dur), '5 minutes');
       }
 
       {
-        final dur = new Duration(minutes: 59);
+        final dur = Duration(minutes: 59);
         expect(prettyDuration(dur), '59 minutes');
       }
 
       {
-        final dur = new Duration(minutes: 60);
+        final dur = Duration(minutes: 60);
         expect(prettyDuration(dur), '1 hour');
       }
 
       {
-        final dur = new Duration(hours: 5);
+        final dur = Duration(hours: 5);
         expect(prettyDuration(dur), '5 hours');
       }
 
       {
-        final dur = new Duration(hours: 23);
+        final dur = Duration(hours: 23);
         expect(prettyDuration(dur), '23 hours');
       }
 
       {
-        final dur = new Duration(hours: 24);
+        final dur = Duration(hours: 24);
         expect(prettyDuration(dur), '1 day');
       }
 
       {
-        final dur = new Duration(days: 5);
+        final dur = Duration(days: 5);
         expect(prettyDuration(dur), '5 days');
       }
 
       {
-        final dur = new Duration(days: 1000);
+        final dur = Duration(days: 1000);
         expect(prettyDuration(dur), '1000 days');
       }
     });
 
     test('Abbreviated', () {
       {
-        final dur = new Duration(microseconds: 0);
+        final dur = Duration(microseconds: 0);
         expect(prettyDuration(dur, abbreviated: true), '0us');
       }
 
       {
-        final dur = new Duration(microseconds: 999);
+        final dur = Duration(microseconds: 999);
         expect(prettyDuration(dur, abbreviated: true), '999us');
       }
 
       {
-        final dur = new Duration(microseconds: 1000);
+        final dur = Duration(microseconds: 1000);
         expect(prettyDuration(dur, abbreviated: true), '1ms');
       }
 
       {
-        final dur = new Duration(milliseconds: 5);
+        final dur = Duration(milliseconds: 5);
         expect(prettyDuration(dur, abbreviated: true), '5ms');
       }
 
       {
-        final dur = new Duration(milliseconds: 999);
+        final dur = Duration(milliseconds: 999);
         expect(prettyDuration(dur, abbreviated: true), '999ms');
       }
 
       {
-        final dur = new Duration(milliseconds: 1000);
+        final dur = Duration(milliseconds: 1000);
         expect(prettyDuration(dur, abbreviated: true), '1s');
       }
 
       {
-        final dur = new Duration(seconds: 5);
+        final dur = Duration(seconds: 5);
         expect(prettyDuration(dur, abbreviated: true), '5s');
       }
 
       {
-        final dur = new Duration(seconds: 59);
+        final dur = Duration(seconds: 59);
         expect(prettyDuration(dur, abbreviated: true), '59s');
       }
 
       {
-        final dur = new Duration(seconds: 60);
+        final dur = Duration(seconds: 60);
         expect(prettyDuration(dur, abbreviated: true), '1m');
       }
 
       {
-        final dur = new Duration(minutes: 5);
+        final dur = Duration(minutes: 5);
         expect(prettyDuration(dur, abbreviated: true), '5m');
       }
 
       {
-        final dur = new Duration(minutes: 59);
+        final dur = Duration(minutes: 59);
         expect(prettyDuration(dur, abbreviated: true), '59m');
       }
 
       {
-        final dur = new Duration(minutes: 60);
+        final dur = Duration(minutes: 60);
         expect(prettyDuration(dur, abbreviated: true), '1h');
       }
 
       {
-        final dur = new Duration(hours: 5);
+        final dur = Duration(hours: 5);
         expect(prettyDuration(dur, abbreviated: true), '5h');
       }
 
       {
-        final dur = new Duration(hours: 23);
+        final dur = Duration(hours: 23);
         expect(prettyDuration(dur, abbreviated: true), '23h');
       }
 
       {
-        final dur = new Duration(hours: 24);
+        final dur = Duration(hours: 24);
         expect(prettyDuration(dur, abbreviated: true), '1d');
       }
 
       {
-        final dur = new Duration(days: 5);
+        final dur = Duration(days: 5);
         expect(prettyDuration(dur, abbreviated: true), '5d');
       }
 
       {
-        final dur = new Duration(days: 1000);
+        final dur = Duration(days: 1000);
         expect(prettyDuration(dur, abbreviated: true), '1000d');
       }
     });
@@ -237,7 +237,7 @@ void main() {
     });
 
     test('Terse', () {
-      final dur = new Duration(
+      final dur = Duration(
           days: 5,
           hours: 23,
           minutes: 59,

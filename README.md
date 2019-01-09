@@ -9,7 +9,7 @@ will print the duration down to the second. It uses english locale by default.
 
 ```dart
 main() {
-    final dur = new Duration(
+    final dur = Duration(
         days: 5,
         hours: 23,
         minutes: 59,
@@ -48,7 +48,7 @@ Use `abbreviated` parameter to use abbreviated units.
 
 ```dart
 main() {
-  final dur = new Duration(
+  final dur = Duration(
       days: 5,
       hours: 23,
       minutes: 59,

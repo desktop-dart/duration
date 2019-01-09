@@ -7,7 +7,7 @@ main() {
 
   // More examples
 
-  final dur = new Duration(
+  final dur = Duration(
       days: 5,
       hours: 23,
       minutes: 59,

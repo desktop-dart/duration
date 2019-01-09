@@ -22,22 +22,22 @@ const Duration aDay = const Duration(days: 1);
 const Duration aWeek = const Duration(days: 7);
 
 // Creates a [Duration] with given [milliseconds]
-Duration us(int microseconds) => new Duration(microseconds: microseconds);
+Duration us(int microseconds) => Duration(microseconds: microseconds);
 
 // Creates a [Duration] with given [milliseconds]
-Duration ms(int milliseconds) => new Duration(milliseconds: milliseconds);
+Duration ms(int milliseconds) => Duration(milliseconds: milliseconds);
 
 // Creates a [Duration] with given [seconds]
-Duration seconds(int seconds) => new Duration(seconds: seconds);
+Duration seconds(int seconds) => Duration(seconds: seconds);
 
 // Creates a [Duration] with given [minutes]
-Duration minutes(int minutes) => new Duration(minutes: minutes);
+Duration minutes(int minutes) => Duration(minutes: minutes);
 
 // Creates a [Duration] with given [minutes]
-Duration hours(int hours) => new Duration(hours: hours);
+Duration hours(int hours) => Duration(hours: hours);
 
 // Creates a [Duration] with given [days]
-Duration days(int days) => new Duration(days: days);
+Duration days(int days) => Duration(days: days);
 
 class DurationTersity {
   final int id;
@@ -65,7 +65,7 @@ class DurationTersity {
 ///
 /// Example:
 ///
-///     final dur = new Duration(
+///     final dur = Duration(
 ///         days: 5,
 ///         hours: 23,
 ///         minutes: 59,
@@ -106,7 +106,7 @@ String prettyDuration(Duration duration,
   var out = <String>[];
 
   final partFmt = (int amount, String annotater(int amount, bool abbreviated)) {
-    final sb = new StringBuffer();
+    final sb = StringBuffer();
     sb.write(amount);
     sb.write(spacer);
     sb.write(annotater(amount, abbreviated));
@@ -174,13 +174,13 @@ String prettySeconds(Duration duration,
     bool abbreviated: false}) {
   if (duration.inSeconds > 0) {
     if (duration.inMilliseconds == 0 || terse) {
-      final sb = new StringBuffer();
+      final sb = StringBuffer();
       sb.write(duration.inSeconds);
       sb.write(separator);
       sb.write(language.second(duration.inSeconds, abbreviated));
       return sb.toString();
     } else if (duration.inMicroseconds == 0) {
-      final sb = new StringBuffer();
+      final sb = StringBuffer();
       sb.write(duration.inSeconds);
       sb.write('.');
       sb.write(_digits(duration.inMilliseconds % 1000, 3));
@@ -188,7 +188,7 @@ String prettySeconds(Duration duration,
       sb.write(language.second(duration.inSeconds, abbreviated));
       return sb.toString();
     } else {
-      final sb = new StringBuffer();
+      final sb = StringBuffer();
       sb.write(duration.inSeconds);
       sb.write(separator);
       sb.write(language.second(duration.inSeconds, abbreviated));
@@ -218,13 +218,13 @@ String prettyMilliseconds(Duration duration,
   if (duration.inMilliseconds > 0) {
     final int us = duration.inMicroseconds % 1000;
     if (us == 0 || terse) {
-      final sb = new StringBuffer();
+      final sb = StringBuffer();
       sb.write(duration.inMilliseconds);
       sb.write(separator);
       sb.write(language.millisecond(duration.inMilliseconds, abbreviated));
       return sb.toString();
     } else {
-      final sb = new StringBuffer();
+      final sb = StringBuffer();
       sb.write(duration.inMilliseconds);
       sb.write('.');
       sb.write(_digits(us, 3));
@@ -233,7 +233,7 @@ String prettyMilliseconds(Duration duration,
       return sb.toString();
     }
   } else {
-    final sb = new StringBuffer();
+    final sb = StringBuffer();
     sb.write(duration.inMicroseconds);
     sb.write(separator);
     sb.write(language.microseconds(duration.inMicroseconds, abbreviated));

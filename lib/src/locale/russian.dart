@@ -17,13 +17,15 @@ class RussianDurationLanguage implements DurationLocale {
   String year(int amount, [bool abbreviated = true]) {
     if (abbreviated)
       return 'г';
-    else return _russianStr(amount, 'год', 'года', 'лет');
+    else
+      return _russianStr(amount, 'год', 'года', 'лет');
   }
 
   String month(int amount, [bool abbreviated = true]) {
     if (abbreviated)
       return 'мес';
-    else return _russianStr(amount, 'месяц', 'месяца', 'месяцев');
+    else
+      return _russianStr(amount, 'месяц', 'месяца', 'месяцев');
   }
 
   String week(int amount, [bool abbreviated = true]) {

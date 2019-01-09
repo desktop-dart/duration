@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.1
+
++ Russian and Portugese support
+
 ## 2.0.0
 
 + Removed dependence on `quiver_time`

@@ -113,6 +113,8 @@ String prettyDuration(Duration duration,
     return sb.toString();
   };
 
+  int tersityIndex = 0;
+
   if (duration.inDays > 0) {
     out.add(partFmt(duration.inDays, locale.day));
   }
@@ -122,39 +124,45 @@ String prettyDuration(Duration duration,
     out.add(partFmt(hours, locale.hour));
   }
 
+  if (tersity.id == DurationTersity.hour.id)
+    tersityIndex = out.length;
+    
   final int minutes = duration.inMinutes % 60;
   if (minutes > 0) {
     out.add(partFmt(minutes, locale.minute));
   }
+
+  if (tersity.id == DurationTersity.minute.id)
+    tersityIndex = out.length;
 
   final int seconds = duration.inSeconds % 60;
   if (seconds > 0) {
     out.add(partFmt(seconds, locale.second));
   }
 
+  if (tersity.id == DurationTersity.second.id)
+    tersityIndex = out.length;
+    
   final int milliseconds = duration.inMilliseconds % 1000;
   if (milliseconds > 0) {
     out.add(partFmt(milliseconds, locale.millisecond));
   }
+
+  if (tersity.id == DurationTersity.millisecond.id)
+    tersityIndex = out.length;
 
   final int microseconds = duration.inMicroseconds % 1000;
   if (microseconds > 0 || out.length == 0) {
     out.add(partFmt(microseconds, locale.microseconds));
   }
 
+  if (tersity.id == DurationTersity.microsecond.id)
+    tersityIndex = out.length;
+  
   if (out.length == 1) {
     return out.first;
   } else {
-    if (out.length <= tersity.id) {
-      if (conjunction == null) {
-        return out.join(delimiter);
-      } else {
-        return out.sublist(0, out.length - 1).join(delimiter) +
-            conjunction +
-            out.last;
-      }
-    } else {
-      out = out.sublist(0, tersity.id);
+      out = out.sublist(0, tersityIndex);
       if (conjunction == null || out.length == 1) {
         return out.join(delimiter);
       } else {
@@ -162,7 +170,6 @@ String prettyDuration(Duration duration,
             conjunction +
             out.last;
       }
-    }
   }
 }
 

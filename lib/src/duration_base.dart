@@ -119,6 +119,9 @@ String prettyDuration(Duration duration,
     out.add(partFmt(duration.inDays, locale.day));
   }
 
+  if (tersity.id == DurationTersity.day.id)
+    tersityIndex = out.length;
+    
   final int hours = duration.inHours % 24;
   if (hours > 0) {
     out.add(partFmt(hours, locale.hour));

@@ -6,27 +6,31 @@ void main() {
     test('default', () {
       {
         final dur = Duration(microseconds: 0);
-        expect(prettyDuration(dur), '0 microsecond');
+        expect(prettyDuration(dur), '0 second');
       }
 
       {
         final dur = Duration(microseconds: 999);
-        expect(prettyDuration(dur), '999 microseconds');
+        expect(prettyDuration(dur, tersity: DurationTersity.microsecond),
+            '999 microseconds');
       }
 
       {
         final dur = Duration(microseconds: 1000);
-        expect(prettyDuration(dur), '1 millisecond');
+        expect(prettyDuration(dur, tersity: DurationTersity.microsecond),
+            '1 millisecond');
       }
 
       {
         final dur = Duration(milliseconds: 5);
-        expect(prettyDuration(dur), '5 milliseconds');
+        expect(prettyDuration(dur, tersity: DurationTersity.microsecond),
+            '5 milliseconds');
       }
 
       {
         final dur = Duration(milliseconds: 999);
-        expect(prettyDuration(dur), '999 milliseconds');
+        expect(prettyDuration(dur, tersity: DurationTersity.microsecond),
+            '999 milliseconds');
       }
 
       {
@@ -93,27 +97,42 @@ void main() {
     test('Abbreviated', () {
       {
         final dur = Duration(microseconds: 0);
-        expect(prettyDuration(dur, abbreviated: true), '0us');
+        expect(
+            prettyDuration(dur,
+                abbreviated: true, tersity: DurationTersity.microsecond),
+            '0us');
       }
 
       {
         final dur = Duration(microseconds: 999);
-        expect(prettyDuration(dur, abbreviated: true), '999us');
+        expect(
+            prettyDuration(dur,
+                abbreviated: true, tersity: DurationTersity.microsecond),
+            '999us');
       }
 
       {
         final dur = Duration(microseconds: 1000);
-        expect(prettyDuration(dur, abbreviated: true), '1ms');
+        expect(
+            prettyDuration(dur,
+                abbreviated: true, tersity: DurationTersity.microsecond),
+            '1ms');
       }
 
       {
         final dur = Duration(milliseconds: 5);
-        expect(prettyDuration(dur, abbreviated: true), '5ms');
+        expect(
+            prettyDuration(dur,
+                abbreviated: true, tersity: DurationTersity.microsecond),
+            '5ms');
       }
 
       {
         final dur = Duration(milliseconds: 999);
-        expect(prettyDuration(dur, abbreviated: true), '999ms');
+        expect(
+            prettyDuration(dur,
+                abbreviated: true, tersity: DurationTersity.microsecond),
+            '999ms');
       }
 
       {

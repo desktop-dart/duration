@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.4
+
++ Terisity now takes account missing values inbetween.
+
 ## 2.0.1
 
 + Russian and Portugese support

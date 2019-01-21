@@ -1,6 +1,6 @@
 name: duration
 description: Utilities to make working with 'Duration's easier.
-version: 2.0.2
+version: 2.0.4
 homepage: https://github.com/desktop-dart/duration
 author: Ravi Teja Gudapati <tejainece@gmail.com>
 

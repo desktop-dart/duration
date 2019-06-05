@@ -15,65 +15,74 @@ class RussianDurationLanguage implements DurationLocale {
   }
 
   String year(int amount, [bool abbreviated = true]) {
-    if (abbreviated)
+    if (abbreviated) {
       return 'г';
-    else
+    } else {
       return _russianStr(amount, 'год', 'года', 'лет');
+    }
   }
 
   String month(int amount, [bool abbreviated = true]) {
-    if (abbreviated)
+    if (abbreviated) {
       return 'мес';
-    else
+    } else {
       return _russianStr(amount, 'месяц', 'месяца', 'месяцев');
+    }
   }
 
   String week(int amount, [bool abbreviated = true]) {
-    if (abbreviated)
+    if (abbreviated) {
       return 'нед';
-    else
+    } else {
       return _russianStr(amount, 'неделя', 'недели', 'недель');
+    }
   }
 
   String day(int amount, [bool abbreviated = true]) {
-    if (abbreviated)
+    if (abbreviated) {
       return 'д';
-    else
+    } else {
       return _russianStr(amount, 'день', 'дня', 'дней');
+    }
   }
 
   String hour(int amount, [bool abbreviated = true]) {
-    if (abbreviated)
+    if (abbreviated) {
       return 'ч';
-    else
+    } else {
       return _russianStr(amount, 'час', 'часа', 'часов');
+    }
   }
 
   String minute(int amount, [bool abbreviated = true]) {
-    if (abbreviated)
+    if (abbreviated) {
       return 'м';
-    else
+    } else {
       return _russianStr(amount, 'минута', 'минуты', 'минут');
+    }
   }
 
   String second(int amount, [bool abbreviated = true]) {
-    if (abbreviated)
+    if (abbreviated) {
       return 'c';
-    else
+    } else {
       return _russianStr(amount, 'секунда', 'секунды', 'секунд');
+    }
   }
 
   String millisecond(int amount, [bool abbreviated = true]) {
-    if (abbreviated)
+    if (abbreviated) {
       return 'мс';
-    else
+    } else {
       return _russianStr(amount, 'миллисекунда', 'миллисекунды', 'миллисекунд');
+    }
   }
 
   String microseconds(int amount, [bool abbreviated = true]) {
-    if (abbreviated)
+    if (abbreviated) {
       return 'мкс';
-    else
+    } else {
       return _russianStr(amount, 'микросекунда', 'микросекунды', 'микросекунд');
+    }
   }
 }

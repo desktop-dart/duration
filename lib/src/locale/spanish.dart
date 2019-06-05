@@ -4,65 +4,74 @@ class SpanishDurationLanguage implements DurationLocale {
   const SpanishDurationLanguage();
 
   String year(int amount, [bool abbreviated = true]) {
-    if (abbreviated)
+    if (abbreviated) {
       return 'y';
-    else
+    } else {
       return 'año' + (amount > 1 ? 's' : '');
+    }
   }
 
   String month(int amount, [bool abbreviated = true]) {
-    if (abbreviated)
+    if (abbreviated) {
       return 'mon';
-    else
+    } else {
       return 'mes' + (amount > 1 ? 's' : '');
+    }
   }
 
   String week(int amount, [bool abbreviated = true]) {
-    if (abbreviated)
+    if (abbreviated) {
       return 'w';
-    else
+    } else {
       return 'semana' + (amount > 1 ? 's' : '');
+    }
   }
 
   String day(int amount, [bool abbreviated = true]) {
-    if (abbreviated)
+    if (abbreviated) {
       return 'd';
-    else
+    } else {
       return 'día' + (amount > 1 ? 's' : '');
+    }
   }
 
   String hour(int amount, [bool abbreviated = true]) {
-    if (abbreviated)
+    if (abbreviated) {
       return 'h';
-    else
+    } else {
       return 'hora' + (amount > 1 ? 's' : '');
+    }
   }
 
   String minute(int amount, [bool abbreviated = true]) {
-    if (abbreviated)
+    if (abbreviated) {
       return 'm';
-    else
+    } else {
       return 'minuto' + (amount > 1 ? 's' : '');
+    }
   }
 
   String second(int amount, [bool abbreviated = true]) {
-    if (abbreviated)
+    if (abbreviated) {
       return 's';
-    else
+    } else {
       return 'segundo' + (amount > 1 ? 's' : '');
+    }
   }
 
   String millisecond(int amount, [bool abbreviated = true]) {
-    if (abbreviated)
+    if (abbreviated) {
       return 'ms';
-    else
+    } else {
       return 'milisegundo' + (amount > 1 ? 's' : '');
+    }
   }
 
   String microseconds(int amount, [bool abbreviated = true]) {
-    if (abbreviated)
+    if (abbreviated) {
       return 'us';
-    else
+    } else {
       return 'microsegundo' + (amount > 1 ? 's' : '');
+    }
   }
 }

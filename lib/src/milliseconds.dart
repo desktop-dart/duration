@@ -6,10 +6,10 @@ import 'locale/locale.dart';
 /// Use [language] to configure which locale to print for.
 /// Use [abbreviated] to control if the units should be abbreviated.
 String prettyMilliseconds(Duration duration,
-    {bool terse: false,
-    DurationLocale language: const EnglishDurationLocale(),
-    String separator: ' ',
-    bool abbreviated: false}) {
+    {bool terse = false,
+    DurationLocale language = const EnglishDurationLocale(),
+    String separator = ' ',
+    bool abbreviated = false}) {
   if (duration.inMilliseconds > 0) {
     final int us = duration.inMicroseconds % 1000;
     if (us == 0 || terse) {
@@ -45,10 +45,10 @@ String prettyMilliseconds(Duration duration,
 /// Use [language] to configure which locale to print for.
 /// Use [abbreviated] to control if the units should be abbreviated.
 String printMilliseconds(Duration duration,
-    {bool terse: false,
-    DurationLocale language: const EnglishDurationLocale(),
-    String separator: ' ',
-    bool abbreviated: false}) {
+    {bool terse = false,
+    DurationLocale language = const EnglishDurationLocale(),
+    String separator = ' ',
+    bool abbreviated = false}) {
   final String fmt = prettyMilliseconds(duration,
       terse: terse,
       language: language,
@@ -64,11 +64,11 @@ String printMilliseconds(Duration duration,
 /// Use [language] to configure which locale to print for.
 /// Use [abbreviated] to control if the units should be abbreviated.
 String prettySeconds(Duration duration,
-    {bool terse: false,
-    DurationLocale language: const EnglishDurationLocale(),
-    String separator: ' ',
-    String delimiter: ' ',
-    bool abbreviated: false}) {
+    {bool terse = false,
+    DurationLocale language = const EnglishDurationLocale(),
+    String separator = ' ',
+    String delimiter = ' ',
+    bool abbreviated = false}) {
   if (duration.inSeconds > 0) {
     if (duration.inMilliseconds == 0 || terse) {
       final sb = StringBuffer();

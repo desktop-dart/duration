@@ -29,12 +29,12 @@ import 'tersity.dart';
 ///     printDuration(aDay * 5 + anHour * 9,
 ///         abbreviated: false, locale: spanishLocale);
 String prettyDuration(Duration duration,
-    {DurationTersity tersity: DurationTersity.second,
-    DurationLocale locale: const EnglishDurationLocale(),
+    {DurationTersity tersity = DurationTersity.second,
+    DurationLocale locale = const EnglishDurationLocale(),
     String spacer,
     String delimiter,
     String conjunction,
-    bool abbreviated: false}) {
+    bool abbreviated = false}) {
   if (abbreviated && delimiter == null) {
     delimiter = ', ';
     spacer = '';
@@ -77,7 +77,7 @@ String prettyDuration(Duration duration,
 
           if (tersity >= DurationTersity.microsecond) {
             final int microseconds = duration.inMicroseconds % 1000;
-            if (microseconds > 0 || out.length == 0) {
+            if (microseconds > 0 || out.isEmpty) {
               out.add(partFmt(microseconds, locale.microseconds));
             }
           } else {
@@ -110,12 +110,12 @@ String prettyDuration(Duration duration,
 }
 
 String printDuration(Duration duration,
-    {DurationTersity tersity: DurationTersity.second,
-    DurationLocale locale: const EnglishDurationLocale(),
+    {DurationTersity tersity = DurationTersity.second,
+    DurationLocale locale = const EnglishDurationLocale(),
     String spacer,
     String delimiter,
     String conjugation,
-    bool abbreviated: false}) {
+    bool abbreviated = false}) {
   final String fmt = prettyDuration(duration,
       tersity: tersity,
       locale: locale,

@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.5
+
++ Added `parseDuration`
+
 ## 2.0.4
 
 + Terisity now takes account missing values inbetween.

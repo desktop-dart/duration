@@ -109,3 +109,31 @@ Duration parseTime(String input) {
       milliseconds: milliseconds ?? 0,
       microseconds: microseconds ?? 0);
 }
+
+Duration tryParseDuration(String input) {
+  try {
+    return parseDuration(input);
+  } catch (_) {
+    return null;
+  }
+}
+
+Duration tryParseTime(String input) {
+  try {
+    return parseTime(input);
+  } catch (_) {
+    return null;
+  }
+}
+
+Duration tryParseDurationAny(String input) {
+  try {
+    return parseDuration(input);
+  } catch (_) {
+    try {
+      return parseTime(input);
+    } catch (e) {
+      return null;
+    }
+  }
+}

@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.6
+
++ `tryParseDuration`, `tryParseTime` and `tryParseDurationAny`
+
 ## 2.0.5
 
 + Added `parseDuration`

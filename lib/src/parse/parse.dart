@@ -111,6 +111,7 @@ Duration parseTime(String input) {
 }
 
 Duration tryParseDuration(String input) {
+  if (input == null) return null;
   try {
     return parseDuration(input);
   } catch (_) {
@@ -119,6 +120,7 @@ Duration tryParseDuration(String input) {
 }
 
 Duration tryParseTime(String input) {
+  if (input == null) return null;
   try {
     return parseTime(input);
   } catch (_) {
@@ -127,6 +129,7 @@ Duration tryParseTime(String input) {
 }
 
 Duration tryParseDurationAny(String input) {
+  if (input == null) return null;
   try {
     return parseDuration(input);
   } catch (_) {

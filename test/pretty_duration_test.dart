@@ -281,5 +281,11 @@ void main() {
       expect(prettyDuration(dur, tersity: DurationTersity.microsecond),
           '5 days 23 hours 59 minutes 59 seconds 999 milliseconds 999 microseconds');
     });
+
+    test('First', () {
+      final dur = Duration(days: 5, hours: 23);
+
+      expect(prettyDuration(dur, first: true), '5 days');
+    });
   });
 }

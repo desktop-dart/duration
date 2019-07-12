@@ -34,7 +34,8 @@ String prettyDuration(Duration duration,
     String spacer,
     String delimiter,
     String conjunction,
-    bool abbreviated = false}) {
+    bool abbreviated = false,
+    bool first = false}) {
   if (abbreviated && delimiter == null) {
     delimiter = ', ';
     spacer = '';
@@ -96,7 +97,7 @@ String prettyDuration(Duration duration,
     if (out.isEmpty) out.add(partFmt(0, locale.day));
   }
 
-  if (out.length == 1) {
+  if (out.length == 1 || first == true) {
     return out.first;
   } else {
     if (conjunction == null || out.length == 1) {

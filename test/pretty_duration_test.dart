@@ -89,8 +89,13 @@ void main() {
       }
 
       {
-        final dur = Duration(days: 1000);
-        expect(prettyDuration(dur), '1000 days');
+        final dur = Duration(days: 7);
+        expect(prettyDuration(dur), '1 week');
+      }
+
+      {
+        final dur = Duration(days: 14);
+        expect(prettyDuration(dur), '2 weeks');
       }
     });
 
@@ -191,8 +196,13 @@ void main() {
       }
 
       {
-        final dur = Duration(days: 1000);
-        expect(prettyDuration(dur, abbreviated: true), '1000d');
+        final dur = Duration(days: 7);
+        expect(prettyDuration(dur, abbreviated: true), '1w');
+      }
+
+      {
+        final dur = Duration(days: 14);
+        expect(prettyDuration(dur, abbreviated: true), '2w');
       }
     });
 

@@ -137,13 +137,16 @@ String prettyDuration(Duration duration,
   }
 }
 
-String printDuration(Duration duration,
-    {DurationTersity tersity = DurationTersity.second,
-    DurationLocale locale = const EnglishDurationLocale(),
-    String spacer,
-    String delimiter,
-    String conjugation,
-    bool abbreviated = false}) {
+String printDuration(
+  Duration duration, {
+  DurationTersity tersity = DurationTersity.second,
+  DurationLocale locale = const EnglishDurationLocale(),
+  String spacer,
+  String delimiter,
+  String conjugation,
+  bool abbreviated = false,
+  bool printTimeToConsole = true,
+}) {
   final String fmt = prettyDuration(duration,
       tersity: tersity,
       locale: locale,
@@ -151,6 +154,6 @@ String printDuration(Duration duration,
       delimiter: delimiter,
       conjunction: conjugation,
       abbreviated: abbreviated);
-  print(fmt);
+  if (printTimeToConsole) print(fmt);
   return fmt;
 }

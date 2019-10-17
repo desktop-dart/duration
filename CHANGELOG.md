@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.7 -  2019-17-10
+
++ add year, month and week support
+
++ add printTimeToConsole option to ``printDuration`` function
+
 ## 2.0.6
 
 + `tryParseDuration`, `tryParseTime` and `tryParseDurationAny`

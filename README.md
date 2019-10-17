@@ -9,15 +9,15 @@ will print the duration down to the second. It uses english locale by default.
 
 ```dart
 main() {
-    final dur = Duration(
-        days: 5,
-        hours: 23,
-        minutes: 59,
-        seconds: 59,
-        milliseconds: 999,
-        microseconds: 999);
-    // => 5d, 23h, 59m, 59s
-    printDuration(dur);
+  final dur = Duration(
+      days: 5,
+      hours: 23,
+      minutes: 59,
+      seconds: 59,
+      milliseconds: 999,
+      microseconds: 999);
+  // => 5d, 23h, 59m, 59s
+  printDuration(dur);
   
   // => 3 seconds
   printDuration(aMillisecond * 3000);

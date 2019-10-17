@@ -4,7 +4,7 @@
 
 + add year, month and week support
 
-+ add printTimeToConsole option to ``printDuration`` function
++ add ``printTimeToConsole`` option to ``printDuration`` function
 
 ## 2.0.6
 

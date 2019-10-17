@@ -8,15 +8,18 @@ main() {
   // More examples
 
   final dur = Duration(
-      days: 5,
+      days: 445,
       hours: 23,
       minutes: 59,
       seconds: 59,
       milliseconds: 999,
       microseconds: 999);
 
-  // => 5d, 23h, 59m, 59s
-  printDuration(dur);
+  // => 1y, 2mon, 2w, 6d, 23h, 59m, 59s
+  printDuration(dur, abbreviated: true);
+
+  // => 1 yıl 2 ay 2 hafta 6 gün 23 saat 59 dakika 59 saniye
+  printDuration(dur, locale: turkishLocale);
 
   // => 3.455 milliseconds
   printMilliseconds(aMicrosecond * 3455);

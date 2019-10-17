@@ -34,7 +34,8 @@ String prettyDuration(Duration duration,
     String spacer,
     String delimiter,
     String conjunction,
-    bool abbreviated = false}) {
+    bool abbreviated = false,
+    bool first = false}) {
   if (abbreviated && delimiter == null) {
     delimiter = ', ';
     spacer = '';
@@ -53,50 +54,59 @@ String prettyDuration(Duration duration,
     return sb.toString();
   };
 
-  if (duration.inDays > 0) {
-    out.add(partFmt(duration.inDays, locale.day));
+    final int weeks = (duration.inDays / 7).floor();
+
+  if (weeks > 0) {
+    out.add(partFmt(weeks, locale.week));
   }
 
-  if (tersity >= DurationTersity.hour) {
-    final int hours = duration.inHours % 24;
-    if (hours > 0) out.add(partFmt(hours, locale.hour));
+    if (tersity >= DurationTersity.day) {
+      final int days = duration.inDays - (weeks * 7);
+      if (days > 0) out.add(partFmt(days, locale.day));
 
-    if (tersity >= DurationTersity.minute) {
-      final int minutes = duration.inMinutes % 60;
-      if (minutes > 0) out.add(partFmt(minutes, locale.minute));
+      if (tersity >= DurationTersity.hour) {
+        final int hours = duration.inHours % 24;
+        if (hours > 0) out.add(partFmt(hours, locale.hour));
 
-      if (tersity >= DurationTersity.second) {
-        final int seconds = duration.inSeconds % 60;
-        if (seconds > 0) out.add(partFmt(seconds, locale.second));
+        if (tersity >= DurationTersity.minute) {
+          final int minutes = duration.inMinutes % 60;
+          if (minutes > 0) out.add(partFmt(minutes, locale.minute));
 
-        if (tersity >= DurationTersity.millisecond) {
-          final int milliseconds = duration.inMilliseconds % 1000;
-          if (milliseconds > 0) {
-            out.add(partFmt(milliseconds, locale.millisecond));
-          }
+          if (tersity >= DurationTersity.second) {
+            final int seconds = duration.inSeconds % 60;
+            if (seconds > 0) out.add(partFmt(seconds, locale.second));
 
-          if (tersity >= DurationTersity.microsecond) {
-            final int microseconds = duration.inMicroseconds % 1000;
-            if (microseconds > 0 || out.isEmpty) {
-              out.add(partFmt(microseconds, locale.microseconds));
+            if (tersity >= DurationTersity.millisecond) {
+              final int milliseconds = duration.inMilliseconds % 1000;
+              if (milliseconds > 0) {
+                out.add(partFmt(milliseconds, locale.millisecond));
+              }
+
+              if (tersity >= DurationTersity.microsecond) {
+                final int microseconds = duration.inMicroseconds % 1000;
+                if (microseconds > 0 || out.isEmpty) {
+                  out.add(partFmt(microseconds, locale.microseconds));
+                }
+              } else {
+                if (out.isEmpty) out.add(partFmt(0, locale.millisecond));
+              }
+            } else {
+              if (out.isEmpty) out.add(partFmt(0, locale.second));
             }
           } else {
-            if (out.isEmpty) out.add(partFmt(0, locale.millisecond));
+            if (out.isEmpty) out.add(partFmt(0, locale.minute));
           }
         } else {
-          if (out.isEmpty) out.add(partFmt(0, locale.second));
+          if (out.isEmpty) out.add(partFmt(0, locale.hour));
         }
       } else {
-        if (out.isEmpty) out.add(partFmt(0, locale.minute));
+        if (out.isEmpty) out.add(partFmt(0, locale.day));
       }
     } else {
-      if (out.isEmpty) out.add(partFmt(0, locale.hour));
-    }
-  } else {
-    if (out.isEmpty) out.add(partFmt(0, locale.day));
+      if (out.isEmpty) out.add(partFmt(0, locale.week));
   }
 
-  if (out.length == 1) {
+  if (out.length == 1 || first == true) {
     return out.first;
   } else {
     if (conjunction == null || out.length == 1) {

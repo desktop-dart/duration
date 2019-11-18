@@ -12,7 +12,7 @@ class GermanDurationLocale implements DurationLocale {
 
   String month(int amount, [bool abbreviated = true]) {
     if (abbreviated)
-      return 'Mon';
+      return 'M';
     else
       return 'Monat' + (amount > 1 ? 'e' : '');
   }
@@ -33,21 +33,21 @@ class GermanDurationLocale implements DurationLocale {
 
   String hour(int amount, [bool abbreviated = true]) {
     if (abbreviated)
-      return 'S';
+      return 'Std';
     else
       return 'Stunde' + (amount > 1 ? 'n' : '');
   }
 
   String minute(int amount, [bool abbreviated = true]) {
     if (abbreviated)
-      return 'M';
+      return 'Min';
     else
       return 'Minute' + (amount > 1 ? 'n' : '');
   }
 
   String second(int amount, [bool abbreviated = true]) {
     if (abbreviated)
-      return 'S';
+      return 'Sek';
     else
       return 'Sekunde' + (amount > 1 ? 'n' : '');
   }

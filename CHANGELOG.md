@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.1.0
+
++ Added `getLocaleFromLanguageCode`
++ `printDuration` now doesn't print to console
++ Added constants for all locales
+
 ## 2.0.6
 
 + `tryParseDuration`, `tryParseTime` and `tryParseDurationAny`

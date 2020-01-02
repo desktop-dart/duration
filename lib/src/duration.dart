@@ -54,56 +54,56 @@ String prettyDuration(Duration duration,
     return sb.toString();
   };
 
-    final int weeks = (duration.inDays / 7).floor();
+  final int weeks = (duration.inDays / 7).floor();
 
   if (weeks > 0) {
     out.add(partFmt(weeks, locale.week));
   }
 
-    if (tersity >= DurationTersity.day) {
-      final int days = duration.inDays - (weeks * 7);
-      if (days > 0) out.add(partFmt(days, locale.day));
+  if (tersity >= DurationTersity.day) {
+    final int days = duration.inDays - (weeks * 7);
+    if (days > 0) out.add(partFmt(days, locale.day));
 
-      if (tersity >= DurationTersity.hour) {
-        final int hours = duration.inHours % 24;
-        if (hours > 0) out.add(partFmt(hours, locale.hour));
+    if (tersity >= DurationTersity.hour) {
+      final int hours = duration.inHours % 24;
+      if (hours > 0) out.add(partFmt(hours, locale.hour));
 
-        if (tersity >= DurationTersity.minute) {
-          final int minutes = duration.inMinutes % 60;
-          if (minutes > 0) out.add(partFmt(minutes, locale.minute));
+      if (tersity >= DurationTersity.minute) {
+        final int minutes = duration.inMinutes % 60;
+        if (minutes > 0) out.add(partFmt(minutes, locale.minute));
 
-          if (tersity >= DurationTersity.second) {
-            final int seconds = duration.inSeconds % 60;
-            if (seconds > 0) out.add(partFmt(seconds, locale.second));
+        if (tersity >= DurationTersity.second) {
+          final int seconds = duration.inSeconds % 60;
+          if (seconds > 0) out.add(partFmt(seconds, locale.second));
 
-            if (tersity >= DurationTersity.millisecond) {
-              final int milliseconds = duration.inMilliseconds % 1000;
-              if (milliseconds > 0) {
-                out.add(partFmt(milliseconds, locale.millisecond));
-              }
+          if (tersity >= DurationTersity.millisecond) {
+            final int milliseconds = duration.inMilliseconds % 1000;
+            if (milliseconds > 0) {
+              out.add(partFmt(milliseconds, locale.millisecond));
+            }
 
-              if (tersity >= DurationTersity.microsecond) {
-                final int microseconds = duration.inMicroseconds % 1000;
-                if (microseconds > 0 || out.isEmpty) {
-                  out.add(partFmt(microseconds, locale.microseconds));
-                }
-              } else {
-                if (out.isEmpty) out.add(partFmt(0, locale.millisecond));
+            if (tersity >= DurationTersity.microsecond) {
+              final int microseconds = duration.inMicroseconds % 1000;
+              if (microseconds > 0 || out.isEmpty) {
+                out.add(partFmt(microseconds, locale.microseconds));
               }
             } else {
-              if (out.isEmpty) out.add(partFmt(0, locale.second));
+              if (out.isEmpty) out.add(partFmt(0, locale.millisecond));
             }
           } else {
-            if (out.isEmpty) out.add(partFmt(0, locale.minute));
+            if (out.isEmpty) out.add(partFmt(0, locale.second));
           }
         } else {
-          if (out.isEmpty) out.add(partFmt(0, locale.hour));
+          if (out.isEmpty) out.add(partFmt(0, locale.minute));
         }
       } else {
-        if (out.isEmpty) out.add(partFmt(0, locale.day));
+        if (out.isEmpty) out.add(partFmt(0, locale.hour));
       }
     } else {
-      if (out.isEmpty) out.add(partFmt(0, locale.week));
+      if (out.isEmpty) out.add(partFmt(0, locale.day));
+    }
+  } else {
+    if (out.isEmpty) out.add(partFmt(0, locale.week));
   }
 
   if (out.length == 1 || first == true) {
@@ -119,20 +119,4 @@ String prettyDuration(Duration duration,
   }
 }
 
-String printDuration(Duration duration,
-    {DurationTersity tersity = DurationTersity.second,
-    DurationLocale locale = const EnglishDurationLocale(),
-    String spacer,
-    String delimiter,
-    String conjugation,
-    bool abbreviated = false}) {
-  final String fmt = prettyDuration(duration,
-      tersity: tersity,
-      locale: locale,
-      spacer: spacer,
-      delimiter: delimiter,
-      conjunction: conjugation,
-      abbreviated: abbreviated);
-  print(fmt);
-  return fmt;
-}
+final printDuration = prettyDuration;

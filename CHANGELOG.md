@@ -1,9 +1,8 @@
 # Changelog
 
-## 2.1.0
+## 2.0.9
 
-+ Added `getLocaleFromLanguageCode`
-+ `printDuration` now doesn't print to console
++ Added `DurationLocale.fromLanguageCode`
 + Added constants for all locales
 
 ## 2.0.6

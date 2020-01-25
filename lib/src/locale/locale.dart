@@ -45,6 +45,10 @@ abstract class DurationLocale {
   /// Print [amount] microseconds for the corresponding locale. The unit is
   /// abbreviated if [abbreviated] is set to true.
   String microseconds(int amount, [bool abbreviated = true]);
+
+  static DurationLocale fromLanguageCode(String languageCode) {
+    return _locales[languageCode];
+  }
 }
 
 /// [DurationLocale] for English language
@@ -79,6 +83,4 @@ const _locales = <String, DurationLocale>{
   'tr': turkishLocale,
 };
 
-DurationLocale getLocaleFromLanguageCode(String languageCode) {
-  return _locales[languageCode];
-}
+

@@ -46,7 +46,8 @@ String prettyDuration(Duration duration,
 
   var out = <String>[];
 
-  final partFmt = (int amount, String annotater(int amount, bool abbreviated)) {
+  final partFmt =
+      (int amount, String Function(int amount, bool abbreviated) annotater) {
     final sb = StringBuffer();
     sb.write(amount);
     sb.write(spacer);
@@ -119,4 +120,20 @@ String prettyDuration(Duration duration,
   }
 }
 
-final printDuration = prettyDuration;
+String printDuration(Duration duration,
+    {DurationTersity tersity = DurationTersity.second,
+    DurationLocale locale = const EnglishDurationLocale(),
+    String spacer,
+    String delimiter,
+    String conjugation,
+    bool abbreviated = false}) {
+  final String fmt = prettyDuration(duration,
+      tersity: tersity,
+      locale: locale,
+      spacer: spacer,
+      delimiter: delimiter,
+      conjunction: conjugation,
+      abbreviated: abbreviated);
+  print(fmt);
+  return fmt;
+}

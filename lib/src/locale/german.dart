@@ -1,68 +1,86 @@
-part of duration.locale;
+import 'package:duration/locale.dart';
 
 class GermanDurationLocale implements DurationLocale {
   const GermanDurationLocale();
 
+  @override
   String year(int amount, [bool abbreviated = true]) {
-    if (abbreviated)
+    if (abbreviated) {
       return 'J';
-    else
+    } else {
       return 'Jahr' + (amount > 1 ? 'e' : '');
+    }
   }
 
+  @override
   String month(int amount, [bool abbreviated = true]) {
-    if (abbreviated)
+    if (abbreviated) {
       return 'M';
-    else
+    } else {
       return 'Monat' + (amount > 1 ? 'e' : '');
+    }
   }
 
+  @override
   String week(int amount, [bool abbreviated = true]) {
-    if (abbreviated)
+    if (abbreviated) {
       return 'W';
-    else
+    } else {
       return 'Woche' + (amount > 1 ? 'n' : '');
+    }
   }
 
+  @override
   String day(int amount, [bool abbreviated = true]) {
-    if (abbreviated)
+    if (abbreviated) {
       return 'T';
-    else
+    } else {
       return 'Tag' + (amount > 1 ? 'e' : '');
+    }
   }
 
+  @override
   String hour(int amount, [bool abbreviated = true]) {
-    if (abbreviated)
+    if (abbreviated) {
       return 'Std';
-    else
+    } else {
       return 'Stunde' + (amount > 1 ? 'n' : '');
+    }
   }
 
+  @override
   String minute(int amount, [bool abbreviated = true]) {
-    if (abbreviated)
+    if (abbreviated) {
       return 'Min';
-    else
+    } else {
       return 'Minute' + (amount > 1 ? 'n' : '');
+    }
   }
 
+  @override
   String second(int amount, [bool abbreviated = true]) {
-    if (abbreviated)
+    if (abbreviated) {
       return 'Sek';
-    else
+    } else {
       return 'Sekunde' + (amount > 1 ? 'n' : '');
+    }
   }
 
+  @override
   String millisecond(int amount, [bool abbreviated = true]) {
-    if (abbreviated)
+    if (abbreviated) {
       return 'Ms';
-    else
+    } else {
       return 'Millisekunde' + (amount > 1 ? 'n' : '');
+    }
   }
 
+  @override
   String microseconds(int amount, [bool abbreviated = true]) {
-    if (abbreviated)
+    if (abbreviated) {
       return 'Us';
-    else
+    } else {
       return 'Mikrosekunde' + (amount > 1 ? 'n' : '');
+    }
   }
 }

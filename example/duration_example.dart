@@ -1,7 +1,7 @@
 import 'package:duration/duration.dart';
 import 'package:duration/locale.dart';
 
-main() {
+void main() {
   // => 5 days 9 hours
   printDuration(aDay * 5 + anHour * 9);
 
@@ -15,7 +15,7 @@ main() {
       milliseconds: 999,
       microseconds: 999);
 
-  // => 5d, 23h, 59m, 59s
+  // => 5 days 23 hours 59 minutes 59 seconds
   printDuration(dur);
 
   // => 3.455 milliseconds
@@ -24,7 +24,7 @@ main() {
   // => 3 seconds
   printDuration(aMillisecond * 3000);
 
-  // => 2 seconds 250 milliseconds
+  // => 2 seconds
   printDuration(aMillisecond * 2250);
 
   // => 1 day 3 hours 2 minutes

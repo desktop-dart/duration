@@ -11,7 +11,7 @@ Duration parseDuration(String input, {String separator = ','}) {
 
   for (String part in parts) {
     final match = RegExp(r'^(\d+)(d|h|m|s|ms|us])$').matchAsPrefix(part);
-    if (match == null) throw FormatException("Invalid duration format");
+    if (match == null) throw FormatException('Invalid duration format');
 
     int value = int.parse(match.group(1));
     String unit = match.group(2);
@@ -19,42 +19,42 @@ Duration parseDuration(String input, {String separator = ','}) {
     switch (unit) {
       case 'd':
         if (days != null) {
-          throw FormatException("Days specified multiple times");
+          throw FormatException('Days specified multiple times');
         }
         days = value;
         break;
       case 'h':
         if (hours != null) {
-          throw FormatException("Days specified multiple times");
+          throw FormatException('Days specified multiple times');
         }
         hours = value;
         break;
       case 'm':
         if (minutes != null) {
-          throw FormatException("Days specified multiple times");
+          throw FormatException('Days specified multiple times');
         }
         minutes = value;
         break;
       case 's':
         if (seconds != null) {
-          throw FormatException("Days specified multiple times");
+          throw FormatException('Days specified multiple times');
         }
         seconds = value;
         break;
       case 'ms':
         if (milliseconds != null) {
-          throw FormatException("Days specified multiple times");
+          throw FormatException('Days specified multiple times');
         }
         milliseconds = value;
         break;
       case 'us':
         if (microseconds != null) {
-          throw FormatException("Days specified multiple times");
+          throw FormatException('Days specified multiple times');
         }
         microseconds = value;
         break;
       default:
-        throw FormatException("Invalid duration unit $unit");
+        throw FormatException('Invalid duration unit $unit');
     }
   }
 
@@ -70,7 +70,7 @@ Duration parseDuration(String input, {String separator = ','}) {
 Duration parseTime(String input) {
   final parts = input.split(':');
 
-  if (parts.length != 3) throw FormatException("Invalid time format");
+  if (parts.length != 3) throw FormatException('Invalid time format');
 
   int days;
   int hours;
@@ -82,7 +82,7 @@ Duration parseTime(String input) {
   {
     final p = parts[2].split('.');
 
-    if (p.length != 2) throw FormatException("Invalid time format");
+    if (p.length != 2) throw FormatException('Invalid time format');
 
     final p2 = int.parse(p[1]);
     microseconds = p2 % 1000;

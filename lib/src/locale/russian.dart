@@ -14,6 +14,7 @@ class RussianDurationLanguage implements DurationLocale {
     return third;
   }
 
+  @override
   String year(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'г';
@@ -22,6 +23,7 @@ class RussianDurationLanguage implements DurationLocale {
     }
   }
 
+  @override
   String month(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'мес';
@@ -30,6 +32,7 @@ class RussianDurationLanguage implements DurationLocale {
     }
   }
 
+  @override
   String week(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'нед';
@@ -38,6 +41,7 @@ class RussianDurationLanguage implements DurationLocale {
     }
   }
 
+  @override
   String day(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'д';
@@ -46,6 +50,7 @@ class RussianDurationLanguage implements DurationLocale {
     }
   }
 
+  @override
   String hour(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'ч';
@@ -54,6 +59,7 @@ class RussianDurationLanguage implements DurationLocale {
     }
   }
 
+  @override
   String minute(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'м';
@@ -62,6 +68,7 @@ class RussianDurationLanguage implements DurationLocale {
     }
   }
 
+  @override
   String second(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'c';
@@ -70,6 +77,7 @@ class RussianDurationLanguage implements DurationLocale {
     }
   }
 
+  @override
   String millisecond(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'мс';
@@ -78,6 +86,7 @@ class RussianDurationLanguage implements DurationLocale {
     }
   }
 
+  @override
   String microseconds(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'мкс';

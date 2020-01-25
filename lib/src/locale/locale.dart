@@ -48,26 +48,26 @@ abstract class DurationLocale {
 }
 
 /// [DurationLocale] for English language
-const EnglishDurationLocale englishLocale = const EnglishDurationLocale();
+const EnglishDurationLocale englishLocale = EnglishDurationLocale();
 
 /// [DurationLocale] for French language
-const FrenchDurationLocale frenchLocale = const FrenchDurationLocale();
+const FrenchDurationLocale frenchLocale = FrenchDurationLocale();
 
 /// [DurationLocale] for Portuguese language
 const PortugueseBRDurationLanguage portugueseBrLocale =
-    const PortugueseBRDurationLanguage();
+    PortugueseBRDurationLanguage();
 
 /// [DurationLocale] for Russian language
-const RussianDurationLanguage russianLocale = const RussianDurationLanguage();
+const RussianDurationLanguage russianLocale = RussianDurationLanguage();
 
 /// [DurationLocale] for Spanish language
-const SpanishDurationLanguage spanishLocale = const SpanishDurationLanguage();
+const SpanishDurationLanguage spanishLocale = SpanishDurationLanguage();
 
 /// [DurationLocale] for Swedish language
-const SwedishDurationLanguage swedishLocale = const SwedishDurationLanguage();
+const SwedishDurationLanguage swedishLocale = SwedishDurationLanguage();
 
 /// [DurationLocale] for Turkish language
-const TurkishDurationLocale turkishLocale = const TurkishDurationLocale();
+const TurkishDurationLocale turkishLocale = TurkishDurationLocale();
 
 const _locales = <String, DurationLocale>{
   'en': englishLocale,

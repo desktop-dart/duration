@@ -3,6 +3,7 @@ part of duration.locale;
 class EnglishDurationLocale implements DurationLocale {
   const EnglishDurationLocale();
 
+  @override
   String year(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'y';
@@ -11,6 +12,7 @@ class EnglishDurationLocale implements DurationLocale {
     }
   }
 
+  @override
   String month(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'mon';
@@ -19,6 +21,7 @@ class EnglishDurationLocale implements DurationLocale {
     }
   }
 
+  @override
   String week(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'w';
@@ -27,6 +30,7 @@ class EnglishDurationLocale implements DurationLocale {
     }
   }
 
+  @override
   String day(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'd';
@@ -35,6 +39,7 @@ class EnglishDurationLocale implements DurationLocale {
     }
   }
 
+  @override
   String hour(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'h';
@@ -43,6 +48,7 @@ class EnglishDurationLocale implements DurationLocale {
     }
   }
 
+  @override
   String minute(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'm';
@@ -51,6 +57,7 @@ class EnglishDurationLocale implements DurationLocale {
     }
   }
 
+  @override
   String second(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 's';
@@ -59,6 +66,7 @@ class EnglishDurationLocale implements DurationLocale {
     }
   }
 
+  @override
   String millisecond(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'ms';
@@ -67,6 +75,7 @@ class EnglishDurationLocale implements DurationLocale {
     }
   }
 
+  @override
   String microseconds(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'us';

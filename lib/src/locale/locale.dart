@@ -1,11 +1,11 @@
 library duration.locale;
 
 part 'english.dart';
-part 'spanish.dart';
-part 'swedish.dart';
+part 'french.dart';
 part 'portuguese_br.dart';
 part 'russian.dart';
-part 'french.dart';
+part 'spanish.dart';
+part 'swedish.dart';
 part 'turkish.dart';
 
 /// Interface to print time units for different locale
@@ -50,14 +50,35 @@ abstract class DurationLocale {
 /// [DurationLocale] for English language
 const EnglishDurationLocale englishLocale = const EnglishDurationLocale();
 
+/// [DurationLocale] for French language
+const FrenchDurationLocale frenchLocale = const FrenchDurationLocale();
+
+/// [DurationLocale] for Portuguese language
+const PortugueseBRDurationLanguage portugueseBrLocale =
+    const PortugueseBRDurationLanguage();
+
+/// [DurationLocale] for Russian language
+const RussianDurationLanguage russianLocale = const RussianDurationLanguage();
+
 /// [DurationLocale] for Spanish language
 const SpanishDurationLanguage spanishLocale = const SpanishDurationLanguage();
 
 /// [DurationLocale] for Swedish language
 const SwedishDurationLanguage swedishLocale = const SwedishDurationLanguage();
 
-/// [DurationLocale] for Russian language
-const RussianDurationLanguage russianLocale = const RussianDurationLanguage();
-
 /// [DurationLocale] for Turkish language
 const TurkishDurationLocale turkishLocale = const TurkishDurationLocale();
+
+const _locales = <String, DurationLocale>{
+  'en': englishLocale,
+  'fr': frenchLocale,
+  'pt': portugueseBrLocale,
+  'ru': russianLocale,
+  'es': spanishLocale,
+  'sv': swedishLocale,
+  'tr': turkishLocale,
+};
+
+DurationLocale getLocaleFromLanguageCode(String languageCode) {
+  return _locales[languageCode];
+}

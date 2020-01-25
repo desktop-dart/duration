@@ -1,4 +1,4 @@
-# duration
+# duration [![pub package](https://img.shields.io/pub/v/duration.svg)](https://pub.dartlang.org/packages/duration)
 
 Utilities to make working with 'Duration's easier.
 
@@ -9,15 +9,17 @@ will print the duration down to the second. It uses english locale by default.
 
 ```dart
 main() {
-    final dur = Duration(
-        days: 5,
-        hours: 23,
-        minutes: 59,
-        seconds: 59,
-        milliseconds: 999,
-        microseconds: 999);
-    // => 5d, 23h, 59m, 59s
-    printDuration(dur);
+  final dur = Duration(
+    days: 5,
+    hours: 23,
+    minutes: 59,
+    seconds: 59,
+    milliseconds: 999,
+    microseconds: 999,
+  );
+
+  // => 5d, 23h, 59m, 59s
+  printDuration(dur);
   
   // => 3 seconds
   printDuration(aMillisecond * 3000);
@@ -37,8 +39,11 @@ Use `locale` parameter to format with desired locale.
 ```dart
 main() {
   // => 5 días 9 horas
-  printDuration(aDay * 5 + anHour * 9,
-      abbreviated: false, locale: spanishLocale);
+  printDuration(
+    aDay * 5 + anHour * 9,
+    abbreviated: false,
+    locale: spanishLocale,
+  );
 }
 ```
 
@@ -49,12 +54,14 @@ Use `abbreviated` parameter to use abbreviated units.
 ```dart
 main() {
   final dur = Duration(
-      days: 5,
-      hours: 23,
-      minutes: 59,
-      seconds: 59,
-      milliseconds: 999,
-      microseconds: 999);
+    days: 5,
+    hours: 23,
+    minutes: 59,
+    seconds: 59,
+    milliseconds: 999,
+    microseconds: 999,
+  );
+
   // => 5d, 23h, 59m, 59s, 999ms, 999us
   printDuration(dur, abbreviated: true, tersity: DurationTersity.all);
 }
@@ -90,7 +97,10 @@ delimiter to add ',' and 'and' to separate individual parts.
 ```dart
 main() {
   // => 5 days, 9 hours and 10 minutes
-  printDuration(aDay * 5 + anHour * 9 + aMinute * 10,
-      delimiter: ', ', conjugation: ' and ');
+  printDuration(
+    aDay * 5 + anHour * 9 + aMinute * 10,
+    delimiter: ', ',
+    conjugation: ' and ',
+  );
 }
 ```

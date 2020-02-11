@@ -87,5 +87,3 @@ const _locales = <String, DurationLocale>{
   'tr': turkishLocale,
   'it': italianLocale,
 };
-
-

@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.0.11
+
++ dartfmt
+
+## 2.0.10
+
++ Added `ItalianDurationLocale`
+
 ## 2.0.9
 
 + Added `DurationLocale.fromLanguageCode`

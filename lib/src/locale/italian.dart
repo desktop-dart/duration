@@ -8,7 +8,7 @@ class ItalianDurationLocale implements DurationLocale {
     if (abbreviated) {
       return 'a';
     } else {
-      return 'ann' + (amount > 1 ? 'i' : 'o');
+      return 'ann' + ((amount == 0 || amount > 1) ? 'i' : 'o');
     }
   }
 
@@ -17,7 +17,7 @@ class ItalianDurationLocale implements DurationLocale {
     if (abbreviated) {
       return 'm';
     } else {
-      return 'mes' + (amount > 1 ? 'i' : 'e');
+      return 'mes' + ((amount == 0 || amount > 1) ? 'i' : 'e');
     }
   }
 
@@ -26,7 +26,7 @@ class ItalianDurationLocale implements DurationLocale {
     if (abbreviated) {
       return 'set';
     } else {
-      return 'settiman' + (amount > 1 ? 'e' : 'a');
+      return 'settiman' + ((amount == 0 || amount > 1) ? 'e' : 'a');
     }
   }
 
@@ -35,7 +35,7 @@ class ItalianDurationLocale implements DurationLocale {
     if (abbreviated) {
       return 'g';
     } else {
-      return 'giorn' + (amount > 1 ? 'i' : 'o');
+      return 'giorn' + ((amount == 0 || amount > 1) ? 'i' : 'o');
     }
   }
 
@@ -44,7 +44,7 @@ class ItalianDurationLocale implements DurationLocale {
     if (abbreviated) {
       return 'h';
     } else {
-      return 'or' + (amount > 1 ? 'e' : 'a');
+      return 'or' + ((amount == 0 || amount > 1) ? 'e' : 'a');
     }
   }
 
@@ -53,7 +53,7 @@ class ItalianDurationLocale implements DurationLocale {
     if (abbreviated) {
       return 'm';
     } else {
-      return 'minut' + (amount > 1 ? 'i' : 'o');
+      return 'minut' + ((amount == 0 || amount > 1) ? 'i' : 'o');
     }
   }
 
@@ -62,7 +62,7 @@ class ItalianDurationLocale implements DurationLocale {
     if (abbreviated) {
       return 's';
     } else {
-      return 'second' + (amount > 1 ? 'i' : 'o');
+      return 'second' + ((amount == 0 || amount > 1) ? 'i' : 'o');
     }
   }
 
@@ -71,7 +71,7 @@ class ItalianDurationLocale implements DurationLocale {
     if (abbreviated) {
       return 'ms';
     } else {
-      return 'millisecond' + (amount > 1 ? 'i' : 'o');
+      return 'millisecond' + ((amount == 0 || amount > 1) ? 'i' : 'o');
     }
   }
 
@@ -80,7 +80,7 @@ class ItalianDurationLocale implements DurationLocale {
     if (abbreviated) {
       return 'μs';
     } else {
-      return 'microsecond' + (amount > 1 ? 'i' : 'o');
+      return 'microsecond' + ((amount == 0 || amount > 1) ? 'i' : 'o');
     }
   }
 }

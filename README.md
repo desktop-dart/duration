@@ -4,7 +4,7 @@ Utilities to make working with 'Duration's easier.
 
 # Format duration
 
-Use `printDuration` to print a human readable durations. By default, `printDuration` 
+Use `printDuration` to print a human readable durations. By default, `printDuration`
 will print the duration down to the second. It uses english locale by default.
 
 ```dart
@@ -20,7 +20,7 @@ main() {
 
   // => 5d, 23h, 59m, 59s
   printDuration(dur);
-  
+
   // => 3 seconds
   printDuration(aMillisecond * 3000);
 
@@ -42,7 +42,7 @@ main() {
   printDuration(
     aDay * 5 + anHour * 9,
     abbreviated: false,
-    locale: spanishLocale,
+    locale: DurationLocale.fromLanguageCode('ru'),
   );
 }
 ```

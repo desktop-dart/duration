@@ -1,4 +1,4 @@
-import 'package:duration/locale.dart';
+part of duration.locale;
 
 class GermanDurationLocale implements DurationLocale {
   const GermanDurationLocale();

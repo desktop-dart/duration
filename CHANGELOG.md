@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.12
+
++ Fix for Itallian locale
++ Fix for German locale
+
 ## 2.0.11
 
 + dartfmt

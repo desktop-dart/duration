@@ -35,7 +35,8 @@ String prettyDuration(Duration duration,
     String delimiter,
     String conjunction,
     bool abbreviated = false,
-    bool first = false}) {
+    bool first = false,
+    int maxTersity}) {
   if (abbreviated && delimiter == null) {
     delimiter = ', ';
     spacer = '';
@@ -45,6 +46,9 @@ String prettyDuration(Duration duration,
   }
 
   var out = <String>[];
+  int usedTersity = 0;
+  // If no maxTersity is supplied use the maximum value so all are included
+  maxTersity = maxTersity ?? DurationTersity.all.id;
 
   final partFmt =
       (int amount, String Function(int amount, bool abbreviated) annotater) {
@@ -59,34 +63,49 @@ String prettyDuration(Duration duration,
 
   if (weeks > 0) {
     out.add(partFmt(weeks, locale.week));
+    usedTersity++;
   }
 
-  if (tersity >= DurationTersity.day) {
+  if (tersity >= DurationTersity.day && usedTersity < maxTersity) {
     final int days = duration.inDays - (weeks * 7);
-    if (days > 0) out.add(partFmt(days, locale.day));
+    if (days > 0) {
+      out.add(partFmt(days, locale.day));
+      usedTersity++;
+    }
 
-    if (tersity >= DurationTersity.hour) {
+    if (tersity >= DurationTersity.hour && usedTersity < maxTersity) {
       final int hours = duration.inHours % 24;
-      if (hours > 0) out.add(partFmt(hours, locale.hour));
+      if (hours > 0) {
+        out.add(partFmt(hours, locale.hour));
+        usedTersity++;
+      }
 
-      if (tersity >= DurationTersity.minute) {
+      if (tersity >= DurationTersity.minute && usedTersity < maxTersity) {
         final int minutes = duration.inMinutes % 60;
-        if (minutes > 0) out.add(partFmt(minutes, locale.minute));
+        if (minutes > 0) {
+          out.add(partFmt(minutes, locale.minute));
+          usedTersity++;
+        }
 
-        if (tersity >= DurationTersity.second) {
+        if (tersity >= DurationTersity.second && usedTersity < maxTersity) {
           final int seconds = duration.inSeconds % 60;
-          if (seconds > 0) out.add(partFmt(seconds, locale.second));
+          if (seconds > 0) {
+            out.add(partFmt(seconds, locale.second));
+            usedTersity++;
+          }
 
-          if (tersity >= DurationTersity.millisecond) {
+          if (tersity >= DurationTersity.millisecond && usedTersity < maxTersity) {
             final int milliseconds = duration.inMilliseconds % 1000;
             if (milliseconds > 0) {
               out.add(partFmt(milliseconds, locale.millisecond));
+              usedTersity++;
             }
 
-            if (tersity >= DurationTersity.microsecond) {
+            if (tersity >= DurationTersity.microsecond && usedTersity < maxTersity) {
               final int microseconds = duration.inMicroseconds % 1000;
               if (microseconds > 0 || out.isEmpty) {
                 out.add(partFmt(microseconds, locale.microseconds));
+                usedTersity++;
               }
             } else {
               if (out.isEmpty) out.add(partFmt(0, locale.millisecond));

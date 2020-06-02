@@ -274,6 +274,7 @@ void main() {
           milliseconds: 999,
           microseconds: 999);
       final dur2 = Duration(
+          days: 5,
           minutes: 59,
           seconds: 59,
           milliseconds: 999,
@@ -303,7 +304,7 @@ void main() {
           '5 days 23 hours 59 minutes 59 seconds');
 
       expect(prettyDuration(dur2, tersity: DurationTersity.microsecond, maxTersity: 2),
-          '59 minutes 59 seconds');
+          '5 days 59 minutes');
     });
 
     test('First', () {

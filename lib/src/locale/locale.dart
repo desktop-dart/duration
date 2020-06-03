@@ -82,6 +82,9 @@ const ItalianDurationLocale italianLocale = ItalianDurationLocale();
 /// [DurationLocale] for German language
 const GermanDurationLocale germanLocale = GermanDurationLocale();
 
+/// [DurationLocale] for Hebrew language
+const HebrewDurationLocale hebrewLocale = HebrewDurationLocale();
+
 const _locales = <String, DurationLocale>{
   'en': englishLocale,
   'fr': frenchLocale,
@@ -92,4 +95,5 @@ const _locales = <String, DurationLocale>{
   'tr': turkishLocale,
   'it': italianLocale,
   'de': germanLocale,
+  'he': hebrewLocale,
 };

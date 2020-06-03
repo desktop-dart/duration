@@ -8,7 +8,7 @@ class HebrewDurationLocale implements DurationLocale {
     if (abbreviated) {
       return 'י';
     } else {
-      return 'יום';
+      return amount == 1 ? 'יום' : 'ימים';
     }
   }
 
@@ -17,7 +17,7 @@ class HebrewDurationLocale implements DurationLocale {
     if (abbreviated) {
       return 'ש';
     } else {
-      return 'שעה';
+      return amount == 1 ? 'שעה' : 'שעות';
     }
   }
 
@@ -26,7 +26,7 @@ class HebrewDurationLocale implements DurationLocale {
     if (abbreviated) {
       return 'µs';
     } else {
-      return 'מיקרו שניה';
+      return amount == 1 ? 'מיקרו שניה' : 'מיקרו שניות';
     }
   }
 
@@ -35,7 +35,7 @@ class HebrewDurationLocale implements DurationLocale {
     if (abbreviated) {
       return 'ms';
     } else {
-      return 'מילי שניה';
+      return amount == 1 ? 'מילי שניה' : 'מילי שניות';
     }
   }
 
@@ -44,7 +44,7 @@ class HebrewDurationLocale implements DurationLocale {
     if (abbreviated) {
       return 'דק.';
     } else {
-      return 'דקה';
+      return amount == 1 ? 'דקה' : 'דקות';
     }
   }
 
@@ -53,7 +53,7 @@ class HebrewDurationLocale implements DurationLocale {
     if (abbreviated) {
       return 'ח';
     } else {
-      return 'חודש';
+      return amount == 1 ? 'חודש' : 'חודשיים';
     }
   }
 
@@ -62,7 +62,7 @@ class HebrewDurationLocale implements DurationLocale {
     if (abbreviated) {
       return 'שנ.';
     } else {
-      return 'שניה';
+      return amount == 1 ? 'שניה' : 'שניות';
     }
   }
 
@@ -71,7 +71,7 @@ class HebrewDurationLocale implements DurationLocale {
     if (abbreviated) {
       return 'שב.';
     } else {
-      return 'שבוע';
+      return amount == 1 ? 'שבוע' : 'שבועות';
     }
   }
 
@@ -80,7 +80,7 @@ class HebrewDurationLocale implements DurationLocale {
     if (abbreviated) {
       return 'שנ.';
     } else {
-      return 'שנה';
+      return amount == 1 ? 'שנה' : 'שנים';
     }
   }
 }

@@ -10,6 +10,7 @@ part 'turkish.dart';
 part 'italian.dart';
 part 'german.dart';
 part 'dutch.dart';
+part 'chinese.dart';
 
 /// Interface to print time units for different locale
 abstract class DurationLocale {
@@ -85,6 +86,9 @@ const GermanDurationLocale germanLocale = GermanDurationLocale();
 /// [DurationLocale] for Dutch language
 const DutchDurationLocale dutchLocale = DutchDurationLocale();
 
+/// [DurationLocale] for Chinese language
+const ChineseDurationLocale chineseLocale = ChineseDurationLocale();
+
 const _locales = <String, DurationLocale>{
   'en': englishLocale,
   'fr': frenchLocale,
@@ -96,4 +100,5 @@ const _locales = <String, DurationLocale>{
   'it': italianLocale,
   'de': germanLocale,
   'nl': dutchLocale,
+  'zh': chineseLocale
 };

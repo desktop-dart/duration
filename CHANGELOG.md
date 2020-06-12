@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.14
+
++ Chinese locale
++ Dutch locale
+
 ## 2.0.12
 
 + Fix for Itallian locale

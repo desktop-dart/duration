@@ -1,3 +1,5 @@
+import 'package:duration/src/time_const.dart';
+
 import 'locale/locale.dart';
 import 'tersity.dart';
 
@@ -35,7 +37,8 @@ String prettyDuration(Duration duration,
     String delimiter,
     String conjunction,
     bool abbreviated = false,
-    bool first = false}) {
+    bool first = false,
+    int minNumberMonths = 2}) {
   if (abbreviated && delimiter == null) {
     delimiter = ', ';
     spacer = '';
@@ -55,14 +58,22 @@ String prettyDuration(Duration duration,
     return sb.toString();
   };
 
-  final int weeks = (duration.inDays / 7).floor();
+  final int months = (duration.inDays / avgDaysPerMonth).floor();
+  int daysCounted = 0;
 
-  if (weeks > 0) {
-    out.add(partFmt(weeks, locale.week));
+  if (months >= minNumberMonths) {
+    out.add(partFmt(months, locale.month));
+    daysCounted = (months * avgDaysPerMonth).floor();
+  } else {
+    final int weeks = (duration.inDays / 7).floor();
+    if (weeks > 0) {
+      out.add(partFmt(weeks, locale.week));
+      daysCounted = weeks * 7;
+    }
   }
 
   if (tersity >= DurationTersity.day) {
-    final int days = duration.inDays - (weeks * 7);
+    final int days = duration.inDays - daysCounted;
     if (days > 0) out.add(partFmt(days, locale.day));
 
     if (tersity >= DurationTersity.hour) {
@@ -126,14 +137,16 @@ String printDuration(Duration duration,
     String spacer,
     String delimiter,
     String conjugation,
-    bool abbreviated = false}) {
+    bool abbreviated = false,
+    int minNumberMonths = 2}) {
   final String fmt = prettyDuration(duration,
       tersity: tersity,
       locale: locale,
       spacer: spacer,
       delimiter: delimiter,
       conjunction: conjugation,
-      abbreviated: abbreviated);
+      abbreviated: abbreviated,
+      minNumberMonths: minNumberMonths);
   print(fmt);
   return fmt;
 }

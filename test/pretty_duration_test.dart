@@ -97,6 +97,19 @@ void main() {
         final dur = Duration(days: 14);
         expect(prettyDuration(dur), '2 weeks');
       }
+
+      {
+        final dur = Duration(days: 60);
+        expect(prettyDuration(dur), '8 weeks 4 days');
+      }
+      {
+        final dur = Duration(days: 61);
+        expect(prettyDuration(dur), '2 months 1 day');
+      }
+      {
+        final dur = Duration(days: 60);
+        expect(prettyDuration(dur, minNumberMonths: 1), '1 month 30 days');
+      }
     });
 
     test('Abbreviated', () {
@@ -203,6 +216,16 @@ void main() {
       {
         final dur = Duration(days: 14);
         expect(prettyDuration(dur, abbreviated: true), '2w');
+      }
+
+      {
+        final dur = Duration(days: 60);
+        expect(prettyDuration(dur, abbreviated: true), '8w, 4d');
+      }
+
+      {
+        final dur = Duration(days: 61);
+        expect(prettyDuration(dur, abbreviated: true), '2mon, 1d');
       }
     });
 

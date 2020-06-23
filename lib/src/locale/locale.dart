@@ -2,6 +2,7 @@ library duration.locale;
 
 part 'english.dart';
 part 'french.dart';
+part 'polish.dart';
 part 'portuguese_br.dart';
 part 'russian.dart';
 part 'spanish.dart';
@@ -61,6 +62,9 @@ const EnglishDurationLocale englishLocale = EnglishDurationLocale();
 /// [DurationLocale] for French language
 const FrenchDurationLocale frenchLocale = FrenchDurationLocale();
 
+/// [DurationLocale] for Polish language
+const PolishDurationLocale polishLocale = PolishDurationLocale();
+
 /// [DurationLocale] for Portuguese language
 const PortugueseBRDurationLanguage portugueseBrLocale =
     PortugueseBRDurationLanguage();
@@ -92,6 +96,7 @@ const ChineseDurationLocale chineseLocale = ChineseDurationLocale();
 const _locales = <String, DurationLocale>{
   'en': englishLocale,
   'fr': frenchLocale,
+  'pl': polishLocale,
   'pt': portugueseBrLocale,
   'ru': russianLocale,
   'es': spanishLocale,

@@ -20,7 +20,7 @@ class PolishDurationLocale implements DurationLocale {
   @override
   String year(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
-      return 'r';
+      return _polishStr(amount, 'r', 'l', 'l');
     } else {
       return _polishStr(amount, 'rok', 'lata', 'lat');
     }

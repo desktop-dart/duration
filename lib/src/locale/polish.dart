@@ -6,9 +6,9 @@ class PolishDurationLocale implements DurationLocale {
   /// Based on https://github.com/unicode-org/cldr/blob/master/common/supplemental/plurals.xml
   /// 'other' case is skipped as it doesn't affect the duration strings.
   String _polishStr(int amount, String one, String few, String many) {
-    final int lastDigit = amount % 10;
-    if (lastDigit == 1) return one;
+    if (amount == 1) return one;
 
+    final int lastDigit = amount % 10;
     final int lastTwoDigits = amount % 100;
     if (lastDigit >= 2 &&
         lastDigit <= 4 &&

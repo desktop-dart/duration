@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.15
+
++ Hebrew locale
+
 ## 2.0.14
 
 + Chinese locale

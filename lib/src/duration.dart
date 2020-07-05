@@ -30,12 +30,12 @@ import 'tersity.dart';
 ///         abbreviated: false, locale: spanishLocale);
 String prettyDuration(Duration duration,
     {DurationTersity tersity = DurationTersity.second,
-      DurationLocale locale = const EnglishDurationLocale(),
-      String spacer,
-      String delimiter,
-      String conjunction,
-      bool abbreviated = false,
-      bool first = false}) {
+    DurationLocale locale = const EnglishDurationLocale(),
+    String spacer,
+    String delimiter,
+    String conjunction,
+    bool abbreviated = false,
+    bool first = false}) {
   if (abbreviated && delimiter == null) {
     delimiter = ', ';
     spacer = '';
@@ -122,11 +122,11 @@ String prettyDuration(Duration duration,
 
 String printDuration(Duration duration,
     {DurationTersity tersity = DurationTersity.second,
-      DurationLocale locale = const EnglishDurationLocale(),
-      String spacer,
-      String delimiter,
-      String conjugation,
-      bool abbreviated = false}) {
+    DurationLocale locale = const EnglishDurationLocale(),
+    String spacer,
+    String delimiter,
+    String conjugation,
+    bool abbreviated = false}) {
   final String fmt = prettyDuration(duration,
       tersity: tersity,
       locale: locale,

@@ -4,6 +4,8 @@ part 'english.dart';
 
 part 'french.dart';
 
+part 'hebrew.dart';
+
 part 'polish.dart';
 
 part 'portuguese_br.dart';
@@ -73,12 +75,15 @@ const EnglishDurationLocale englishLocale = EnglishDurationLocale();
 /// [DurationLocale] for French language
 const FrenchDurationLocale frenchLocale = FrenchDurationLocale();
 
+/// [DurationLocale] for Hebrew language
+const HebrewDurationLocale hebrewLocale = HebrewDurationLocale();
+
 /// [DurationLocale] for Polish language
 const PolishDurationLocale polishLocale = PolishDurationLocale();
 
 /// [DurationLocale] for Portuguese language
 const PortugueseBRDurationLanguage portugueseBrLocale =
-PortugueseBRDurationLanguage();
+    PortugueseBRDurationLanguage();
 
 /// [DurationLocale] for Russian language
 const RussianDurationLanguage russianLocale = RussianDurationLanguage();
@@ -107,6 +112,7 @@ const ChineseDurationLocale chineseLocale = ChineseDurationLocale();
 const _locales = <String, DurationLocale>{
   'en': englishLocale,
   'fr': frenchLocale,
+  'he': hebrewLocale,
   'pl': polishLocale,
   'pt': portugueseBrLocale,
   'ru': russianLocale,

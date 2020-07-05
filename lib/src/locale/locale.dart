@@ -1,16 +1,27 @@
 library duration.locale;
 
 part 'english.dart';
+
 part 'french.dart';
+
 part 'polish.dart';
+
 part 'portuguese_br.dart';
+
 part 'russian.dart';
+
 part 'spanish.dart';
+
 part 'swedish.dart';
+
 part 'turkish.dart';
+
 part 'italian.dart';
+
 part 'german.dart';
+
 part 'dutch.dart';
+
 part 'chinese.dart';
 
 /// Interface to print time units for different locale
@@ -67,7 +78,7 @@ const PolishDurationLocale polishLocale = PolishDurationLocale();
 
 /// [DurationLocale] for Portuguese language
 const PortugueseBRDurationLanguage portugueseBrLocale =
-    PortugueseBRDurationLanguage();
+PortugueseBRDurationLanguage();
 
 /// [DurationLocale] for Russian language
 const RussianDurationLanguage russianLocale = RussianDurationLanguage();

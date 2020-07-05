@@ -8,7 +8,7 @@ class DutchDurationLocale implements DurationLocale {
     if (abbreviated) {
       return 'j';
     } else {
-      return amount == 1 ? 'jaar': 'jaren';
+      return amount == 1 ? 'jaar' : 'jaren';
     }
   }
 
@@ -26,7 +26,7 @@ class DutchDurationLocale implements DurationLocale {
     if (abbreviated) {
       return 'w';
     } else {
-      return amount == 1 ? 'week': 'weken';
+      return amount == 1 ? 'week' : 'weken';
     }
   }
 
@@ -44,7 +44,7 @@ class DutchDurationLocale implements DurationLocale {
     if (abbreviated) {
       return 'u';
     } else {
-      return amount == 1 ? 'uur': 'uren';
+      return amount == 1 ? 'uur' : 'uren';
     }
   }
 
@@ -53,7 +53,7 @@ class DutchDurationLocale implements DurationLocale {
     if (abbreviated) {
       return 'm';
     } else {
-      return amount == 1 ? 'minuut': 'minuten';
+      return amount == 1 ? 'minuut' : 'minuten';
     }
   }
 

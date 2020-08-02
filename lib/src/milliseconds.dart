@@ -54,7 +54,6 @@ String printMilliseconds(Duration duration,
       language: language,
       separator: separator,
       abbreviated: abbreviated);
-  print(fmt);
   return fmt;
 }
 

@@ -16,6 +16,8 @@ part 'spanish.dart';
 
 part 'swedish.dart';
 
+part 'norwegian.dart';
+
 part 'turkish.dart';
 
 part 'italian.dart';

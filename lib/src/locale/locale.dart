@@ -16,6 +16,8 @@ part 'spanish.dart';
 
 part 'swedish.dart';
 
+part 'norwegian.dart';
+
 part 'turkish.dart';
 
 part 'italian.dart';
@@ -94,6 +96,9 @@ const SpanishDurationLanguage spanishLocale = SpanishDurationLanguage();
 /// [DurationLocale] for Swedish language
 const SwedishDurationLanguage swedishLocale = SwedishDurationLanguage();
 
+/// [DurationLocale] for Norwegian language
+const NorwegianDurationLanguage norwegianLocale = NorwegianDurationLanguage();
+
 /// [DurationLocale] for Turkish language
 const TurkishDurationLocale turkishLocale = TurkishDurationLocale();
 
@@ -118,6 +123,7 @@ const _locales = <String, DurationLocale>{
   'ru': russianLocale,
   'es': spanishLocale,
   'sv': swedishLocale,
+  'nb': norwegianLocale,
   'tr': turkishLocale,
   'it': italianLocale,
   'de': germanLocale,

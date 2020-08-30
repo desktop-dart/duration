@@ -36,3 +36,7 @@ Duration hours(int hours) => Duration(hours: hours);
 
 // Creates a [Duration] with given [days]
 Duration days(int days) => Duration(days: days);
+
+// Average number of days per month (365 / 12)
+// Obviously a bit off on leap years.
+const double avgDaysPerMonth = 30.42;

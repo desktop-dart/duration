@@ -104,3 +104,23 @@ main() {
   );
 }
 ```
+
+## Months instead of weeks
+
+If a duration spans more than two months it will be formatted as 'x months' instead of 'y weeks'.
+To override the amount of months use `minNumberMonths`.
+
+```dart
+main() {
+  // => 8 weeks 4 days
+  printDuration(
+    Duration(days: 60)
+  );
+  
+  // => 1 month 30 days
+  printDuration(
+    Duration(days: 60),
+    minNumberMonths: 1
+  );
+}
+```

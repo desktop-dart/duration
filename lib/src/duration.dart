@@ -134,6 +134,5 @@ String printDuration(Duration duration,
       delimiter: delimiter,
       conjunction: conjugation,
       abbreviated: abbreviated);
-  print(fmt);
   return fmt;
 }

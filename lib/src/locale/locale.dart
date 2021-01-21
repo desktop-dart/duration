@@ -1,34 +1,21 @@
 library duration.locale;
 
-part 'english.dart';
-
-part 'french.dart';
-
-part 'hebrew.dart';
-
-part 'polish.dart';
-
-part 'portuguese_br.dart';
-
-part 'russian.dart';
-
-part 'spanish.dart';
-
-part 'swedish.dart';
-
-part 'norwegian.dart';
-
-part 'turkish.dart';
-
-part 'italian.dart';
-
-part 'german.dart';
-
-part 'dutch.dart';
-
+part 'arabic.dart';
 part 'chinese.dart';
-
+part 'dutch.dart';
+part 'english.dart';
+part 'french.dart';
+part 'german.dart';
+part 'hebrew.dart';
+part 'italian.dart';
+part 'norwegian.dart';
+part 'polish.dart';
+part 'portuguese_br.dart';
+part 'russian.dart';
+part 'spanish.dart';
+part 'swedish.dart';
 part 'thai.dart';
+part 'turkish.dart';
 
 /// Interface to print time units for different locale
 abstract class DurationLocale {
@@ -119,6 +106,9 @@ const ChineseDurationLocale chineseLocale = ChineseDurationLocale();
 /// [DurationLocale] for Thai language
 const ThaiDurationLocale thaiLocale = ThaiDurationLocale();
 
+/// [DurationLocale] for Arabic language
+const ArabicDurationLocale arabicLocale = ArabicDurationLocale();
+
 const _locales = <String, DurationLocale>{
   'en': englishLocale,
   'fr': frenchLocale,
@@ -135,4 +125,5 @@ const _locales = <String, DurationLocale>{
   'nl': dutchLocale,
   'zh': chineseLocale,
   'th': thaiLocale,
+  'ar': arabicLocale,
 };

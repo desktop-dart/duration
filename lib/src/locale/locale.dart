@@ -1,21 +1,36 @@
 library duration.locale;
 
-part 'arabic.dart';
-part 'chinese.dart';
-part 'dutch.dart';
 part 'english.dart';
+
 part 'french.dart';
-part 'german.dart';
+
 part 'hebrew.dart';
-part 'italian.dart';
-part 'norwegian.dart';
+
 part 'polish.dart';
+
 part 'portuguese_br.dart';
+
 part 'russian.dart';
+
 part 'spanish.dart';
+
 part 'swedish.dart';
-part 'thai.dart';
+
+part 'norwegian.dart';
+
 part 'turkish.dart';
+
+part 'italian.dart';
+
+part 'german.dart';
+
+part 'dutch.dart';
+
+part 'chinese.dart';
+
+part 'thai.dart';
+
+part 'arabic.dart';
 
 /// Interface to print time units for different locale
 abstract class DurationLocale {

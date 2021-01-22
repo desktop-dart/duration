@@ -13,12 +13,12 @@ class ArabicDurationLocale implements DurationLocale {
       } else if (amount == 2) {
         return 'عامين';
       } else if (amount > 2 && amount < 11) {
-        return 'اعوام';
+        return 'أعوام';
       } else if (amount > 10) {
         return 'عام';
       }
 
-      return 'اعوام';
+      return 'أعوام';
     }
   }
 
@@ -32,7 +32,7 @@ class ArabicDurationLocale implements DurationLocale {
       } else if (amount == 2) {
         return 'شهرين';
       } else if (amount > 2 && amount < 11) {
-        return 'اشهر';
+        return 'أشهر';
       } else if (amount > 10) {
         return 'شهر';
       }
@@ -46,13 +46,13 @@ class ArabicDurationLocale implements DurationLocale {
       return 'أ';
     } else {
       if (amount == 1) {
-        return 'اسبوع';
+        return 'أسبوع';
       } else if (amount == 2) {
         return 'اسبوعين';
       } else if (amount > 2 && amount < 11) {
         return 'اسابيع';
       } else if (amount > 10) {
-        return 'اسبوع';
+        return 'أسبوع';
       }
       return 'اسابيع';
     }
@@ -136,15 +136,15 @@ class ArabicDurationLocale implements DurationLocale {
       return 'م ث';
     } else {
       if (amount == 1) {
-        return 'ميلى ثانية';
+        return 'ملّي ثانية';
       } else if (amount == 2) {
-        return 'ميلي ثانيتين';
+        return 'ملّي ثانيتين';
       } else if (amount > 2 && amount < 11) {
-        return 'ميلي ثواني';
+        return 'ملّي ثواني';
       } else if (amount > 10) {
-        return 'ميلي ثانية';
+        return 'ملّي ثانية';
       }
-      return 'ميلي ثواني';
+      return 'ملّي ثواني';
     }
   }
 

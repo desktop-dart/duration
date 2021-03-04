@@ -68,7 +68,7 @@ abstract class DurationLocale {
   /// abbreviated if [abbreviated] is set to true.
   String microseconds(int amount, [bool abbreviated = true]);
 
-  static DurationLocale fromLanguageCode(String languageCode) {
+  static DurationLocale? fromLanguageCode(String languageCode) {
     return _locales[languageCode];
   }
 }

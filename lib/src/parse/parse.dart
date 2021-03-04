@@ -102,15 +102,15 @@ Duration parseTime(String input) {
   // TODO verify that there are no negative parts
 
   return Duration(
-      days: days ?? 0,
-      hours: hours ?? 0,
-      minutes: minutes ?? 0,
-      seconds: seconds ?? 0,
-      milliseconds: milliseconds ?? 0,
-      microseconds: microseconds ?? 0);
+      days: days,
+      hours: hours,
+      minutes: minutes,
+      seconds: seconds,
+      milliseconds: milliseconds,
+      microseconds: microseconds);
 }
 
-Duration? tryParseDuration(String input) {
+Duration? tryParseDuration(String? input) {
   if (input == null) return null;
   try {
     return parseDuration(input);
@@ -119,7 +119,7 @@ Duration? tryParseDuration(String input) {
   }
 }
 
-Duration? tryParseTime(String input) {
+Duration? tryParseTime(String? input) {
   if (input == null) return null;
   try {
     return parseTime(input);
@@ -128,7 +128,7 @@ Duration? tryParseTime(String input) {
   }
 }
 
-Duration? tryParseDurationAny(String input) {
+Duration? tryParseDurationAny(String? input) {
   if (input == null) return null;
   try {
     return parseDuration(input);

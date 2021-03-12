@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.1
+
++ Added Indonesian, Korean, Romanian and Arabic locales
+
 ## 3.0.0
 
 + Migration to null safety

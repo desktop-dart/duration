@@ -139,6 +139,6 @@ const _locales = <String, DurationLocale>{
   'th': thaiLocale,
   'id': indonesianLocale,
   'ko': koreanLocale,
-  'ro': romanianLocale
+  'ro': romanianLocale,
   'ar': arabicLocale,
 };

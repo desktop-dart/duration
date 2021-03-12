@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.0
+
++ Migration to null safety
+
 ## 2.0.15
 
 + Hebrew locale

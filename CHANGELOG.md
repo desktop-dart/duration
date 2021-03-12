@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.2
+
++ English plural fix for negative amounts
+
 ## 3.0.1
 
 + Added Indonesian, Korean, Romanian and Arabic locales

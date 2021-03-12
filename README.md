@@ -2,6 +2,8 @@
 
 Utilities to make working with 'Duration's easier.
 
+NOTE: Use `prettyDuration` instead of `printDuration` if you only want to format/convert and dont want to print to console!
+
 # Format duration
 
 Use `printDuration` to print a human readable durations. By default, `printDuration`

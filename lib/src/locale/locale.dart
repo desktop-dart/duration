@@ -18,6 +18,7 @@ part 'thai.dart';
 part 'romanian.dart';
 part 'arabic.dart';
 part 'korean.dart';
+part 'indonesian.dart';
 
 /// Interface to print time units for different locale
 abstract class DurationLocale {
@@ -108,6 +109,9 @@ const ChineseDurationLocale chineseLocale = ChineseDurationLocale();
 /// [DurationLocale] for Thai language
 const ThaiDurationLocale thaiLocale = ThaiDurationLocale();
 
+/// [DurationLocale] for Indonesian language
+const IndonesianDurationLocale indonesianLocale = IndonesianDurationLocale();
+
 /// [DurationLocale] for Korean language
 const KoreanDurationLocale koreanLocale = KoreanDurationLocale();
 
@@ -133,6 +137,7 @@ const _locales = <String, DurationLocale>{
   'nl': dutchLocale,
   'zh': chineseLocale,
   'th': thaiLocale,
+  'id': indonesianLocale,
   'ko': koreanLocale,
   'ro': romanianLocale
   'ar': arabicLocale,

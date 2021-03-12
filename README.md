@@ -108,3 +108,23 @@ main() {
   );
 }
 ```
+
+# Parse duration
+
+## Parse duration
+
+```dart
+main() {
+  final Duration dur = parseDuration('245:09:08.007006');
+  print(dur);
+}
+```
+
+## Parse time
+
+```dart
+main() {
+  final Duration dur = parseTime('245:09:08.007006');
+  print(dur);
+}
+```

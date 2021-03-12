@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.0.6
+
++ Fixed `parseDuration`
++ Documented `parseDuration` in README
+
 ## 3.0.5
 
 + README note on `prettyDuration`

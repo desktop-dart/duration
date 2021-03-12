@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.4
+
++ English plural fix for 0 years
+
 ## 3.0.2
 
 + English plural fix for negative amounts

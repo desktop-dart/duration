@@ -8,7 +8,7 @@ class EnglishDurationLocale implements DurationLocale {
     if (abbreviated) {
       return 'y';
     } else {
-      return 'year' + (amount.abs() > 1 ? 's' : '');
+      return 'year' + (amount.abs() != 1 ? 's' : '');
     }
   }
 

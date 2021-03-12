@@ -6,7 +6,7 @@ void main() {
     test('default', () {
       {
         final dur = Duration(microseconds: 0);
-        expect(prettySeconds(dur), '0 microsecond');
+        expect(prettySeconds(dur), '0 microseconds');
       }
 
       {
@@ -80,7 +80,7 @@ void main() {
     test('terse', () {
       {
         final dur = Duration(microseconds: 0);
-        expect(prettySeconds(dur, terse: true), '0 microsecond');
+        expect(prettySeconds(dur, terse: true), '0 microseconds');
       }
 
       {

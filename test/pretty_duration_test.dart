@@ -6,7 +6,7 @@ void main() {
     test('default', () {
       {
         final dur = Duration(microseconds: 0);
-        expect(prettyDuration(dur), '0 second');
+        expect(prettyDuration(dur), '0 seconds');
       }
 
       {

@@ -2,7 +2,9 @@
 
 Utilities to make working with 'Duration's easier.
 
-**NOTE**: Use `prettyDuration` instead of `printDuration` if you only want to format/convert and dont want to print to console!
+**NOTE**: Use `prettyDuration`, `prettySeconds`, `prettyMilliseconds` 
+instead of `printDuration`, `printSeconds`, `printMilliseconds`
+if you only want to format/convert and don't want to print to console!
 
 # Format duration
 

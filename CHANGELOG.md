@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.5
+
++ README note on `prettyDuration`
+
 ## 3.0.4
 
 + English plural fix for 0 years

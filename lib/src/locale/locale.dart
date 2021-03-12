@@ -1,35 +1,21 @@
 library duration.locale;
 
 part 'english.dart';
-
 part 'french.dart';
-
 part 'hebrew.dart';
-
 part 'polish.dart';
-
 part 'portuguese_br.dart';
-
 part 'russian.dart';
-
 part 'spanish.dart';
-
 part 'swedish.dart';
-
 part 'norwegian.dart';
-
 part 'turkish.dart';
-
 part 'italian.dart';
-
 part 'german.dart';
-
 part 'dutch.dart';
-
 part 'chinese.dart';
-
 part 'thai.dart';
-
+part 'romanian.dart';
 part 'arabic.dart';
 
 /// Interface to print time units for different locale
@@ -121,6 +107,9 @@ const ChineseDurationLocale chineseLocale = ChineseDurationLocale();
 /// [DurationLocale] for Thai language
 const ThaiDurationLocale thaiLocale = ThaiDurationLocale();
 
+/// [DurationLocale] for Romanian language
+const RomanianDurationLocale romanianLocale = RomanianDurationLocale();
+
 /// [DurationLocale] for Arabic language
 const ArabicDurationLocale arabicLocale = ArabicDurationLocale();
 
@@ -140,5 +129,6 @@ const _locales = <String, DurationLocale>{
   'nl': dutchLocale,
   'zh': chineseLocale,
   'th': thaiLocale,
+  'ro': romanianLocale
   'ar': arabicLocale,
 };

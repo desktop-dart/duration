@@ -104,7 +104,7 @@ const GermanDurationLocale germanLocale = GermanDurationLocale();
 /// [DurationLocale] for Dutch language
 const DutchDurationLocale dutchLocale = DutchDurationLocale();
 
-/// [DurationLocale] for Chinese language
+/// [DurationLocale] for Chinese (Simplified) language
 const ChineseSimplifiedDurationLocale chineseSimplifiedLocale =
     ChineseSimplifiedDurationLocale();
 
@@ -141,7 +141,7 @@ const _locales = <String, DurationLocale>{
   'it': italianLocale,
   'de': germanLocale,
   'nl': dutchLocale,
-  'zh_Hans': chineseSimplifiedLocale,
+  'zh': chineseSimplifiedLocale,
   'zh_Hant': chineseTraditionalLocale,
   'th': thaiLocale,
   'id': indonesianLocale,

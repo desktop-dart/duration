@@ -1,7 +1,7 @@
 part of duration.locale;
 
-class ChineseDurationLocale implements DurationLocale {
-  const ChineseDurationLocale();
+class ChineseSimplifiedDurationLocale implements DurationLocale {
+  const ChineseSimplifiedDurationLocale();
 
   @override
   String year(int amount, [bool abbreviated = true]) {

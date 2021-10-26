@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.0.7
+
++ Chinese and Czech languages
++ **Breaking changes** to chinese locale
++ Minute is now abbreviated as 'min' not 'm'
+
 ## 3.0.6
 
 + Fixed `parseDuration`

@@ -157,17 +157,17 @@ void main() {
 
       {
         final dur = Duration(seconds: 60);
-        expect(prettyDuration(dur, abbreviated: true), '1m');
+        expect(prettyDuration(dur, abbreviated: true), '1min');
       }
 
       {
         final dur = Duration(minutes: 5);
-        expect(prettyDuration(dur, abbreviated: true), '5m');
+        expect(prettyDuration(dur, abbreviated: true), '5min');
       }
 
       {
         final dur = Duration(minutes: 59);
-        expect(prettyDuration(dur, abbreviated: true), '59m');
+        expect(prettyDuration(dur, abbreviated: true), '59min');
       }
 
       {

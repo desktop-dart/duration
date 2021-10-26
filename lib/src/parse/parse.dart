@@ -10,7 +10,7 @@ Duration parseDuration(String input, {String separator = ','}) {
   int? microseconds;
 
   for (String part in parts) {
-    final match = RegExp(r'^(\d+)(d|h|m|s|ms|us)$').matchAsPrefix(part);
+    final match = RegExp(r'^(\d+)(d|h|min|m|s|ms|us)$').matchAsPrefix(part);
     if (match == null) throw FormatException('Invalid duration format');
 
     int value = int.parse(match.group(1)!);
@@ -29,6 +29,7 @@ Duration parseDuration(String input, {String separator = ','}) {
         }
         hours = value;
         break;
+      case 'min':
       case 'm':
         if (minutes != null) {
           throw FormatException('Days specified multiple times');

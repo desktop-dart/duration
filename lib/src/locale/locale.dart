@@ -13,7 +13,8 @@ part 'turkish.dart';
 part 'italian.dart';
 part 'german.dart';
 part 'dutch.dart';
-part 'chinese.dart';
+part 'chinese_hans.dart';
+part 'chinese_hant.dart';
 part 'thai.dart';
 part 'romanian.dart';
 part 'arabic.dart';
@@ -104,8 +105,13 @@ const GermanDurationLocale germanLocale = GermanDurationLocale();
 /// [DurationLocale] for Dutch language
 const DutchDurationLocale dutchLocale = DutchDurationLocale();
 
-/// [DurationLocale] for Chinese language
-const ChineseDurationLocale chineseLocale = ChineseDurationLocale();
+/// [DurationLocale] for Chinese (Simplified) language
+const ChineseSimplifiedDurationLocale chineseSimplifiedLocale =
+    ChineseSimplifiedDurationLocale();
+
+/// [DurationLocale] for Chinese (Traditional) language
+const ChineseTraditionalDurationLocale chineseTraditionalLocale =
+    ChineseTraditionalDurationLocale();
 
 /// [DurationLocale] for Thai language
 const ThaiDurationLocale thaiLocale = ThaiDurationLocale();
@@ -139,7 +145,8 @@ const _locales = <String, DurationLocale>{
   'it': italianLocale,
   'de': germanLocale,
   'nl': dutchLocale,
-  'zh': chineseLocale,
+  'zh': chineseSimplifiedLocale,
+  'zh_Hant': chineseTraditionalLocale,
   'th': thaiLocale,
   'id': indonesianLocale,
   'ko': koreanLocale,

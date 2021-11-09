@@ -10,5 +10,9 @@ void main() {
     test('duration', () {
       expect((parseDuration('20d,10h,30m')).toString(), '490:30:00.000000');
     });
+
+    test('duration weeks', () {
+      expect((parseDuration('2w,20d,10h,30m')).toString(), '490:30:00.000000');
+    });
   });
 }

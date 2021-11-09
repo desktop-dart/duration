@@ -1,7 +1,12 @@
-/// Parses duration string into [Duration]
+/// Parses duration string formatted by [prettyDuration] into [Duration].
+/// [separator] defines the string that splits duration components in the string.
+///
+/// Example:
+///     parseDuration('2w 5d 23h 59m 59s 999ms 999us');
 Duration parseDuration(String input, {String separator = ','}) {
   final parts = input.split(separator).map((t) => t.trim()).toList();
 
+  int? weeks;
   int? days;
   int? hours;
   int? minutes;
@@ -10,13 +15,19 @@ Duration parseDuration(String input, {String separator = ','}) {
   int? microseconds;
 
   for (String part in parts) {
-    final match = RegExp(r'^(\d+)(d|h|min|m|s|ms|us)$').matchAsPrefix(part);
+    final match = RegExp(r'^(\d+)(w|d|h|min|m|s|ms|us)$').matchAsPrefix(part);
     if (match == null) throw FormatException('Invalid duration format');
 
     int value = int.parse(match.group(1)!);
     String? unit = match.group(2);
 
     switch (unit) {
+      case 'w':
+        if (weeks != null) {
+          throw FormatException('Weeks specified multiple times');
+        }
+        weeks = value;
+        break;
       case 'd':
         if (days != null) {
           throw FormatException('Days specified multiple times');
@@ -60,7 +71,7 @@ Duration parseDuration(String input, {String separator = ','}) {
   }
 
   return Duration(
-      days: days ?? 0,
+      days: (days ?? 0) + (weeks ?? 0) * 7,
       hours: hours ?? 0,
       minutes: minutes ?? 0,
       seconds: seconds ?? 0,
@@ -68,6 +79,10 @@ Duration parseDuration(String input, {String separator = ','}) {
       microseconds: microseconds ?? 0);
 }
 
+/// Parses duration string formatted by Duration.toString() to [Duration].
+///
+/// Example:
+///     parseTime('245:09:08.007006');
 Duration parseTime(String input) {
   final parts = input.split(':');
 

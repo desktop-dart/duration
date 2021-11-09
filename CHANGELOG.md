@@ -1,10 +1,14 @@
 # Changelog
 
+## 3.0.8
+
++ **Breaking change**: In Dutch locale, minute is now abbreviated as 'min' not 'm'
+
 ## 3.0.7
 
 + Chinese and Czech languages
 + **Breaking changes** to chinese locale
-+ Minute is now abbreviated as 'min' not 'm'
++ **Breaking change**: Minute is now abbreviated as 'min' not 'm'
 
 ## 3.0.6
 

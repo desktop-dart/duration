@@ -12,7 +12,7 @@ void main() {
     });
 
     test('duration weeks', () {
-      expect((parseDuration('2w,20d,10h,30m')).toString(), '490:30:00.000000');
+      expect((parseDuration('2w,20d,10h,30m')).toString(), '826:30:00.000000');
     });
   });
 }

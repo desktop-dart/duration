@@ -80,6 +80,7 @@ Duration parseDuration(String input, {String separator = ','}) {
 }
 
 /// Parses duration string formatted by Duration.toString() to [Duration].
+/// The string should be of form hours:minutes:seconds.microseconds
 ///
 /// Example:
 ///     parseTime('245:09:08.007006');

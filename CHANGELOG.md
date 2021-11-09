@@ -3,6 +3,8 @@
 ## 3.0.8
 
 + **Breaking change**: In Dutch locale, minute is now abbreviated as 'min' not 'm'
++ parseDuration now parses weeks
++ Added some documentation to parseDuration and parseTime
 
 ## 3.0.7
 

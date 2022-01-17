@@ -12,7 +12,6 @@ part 'norwegian.dart';
 part 'turkish.dart';
 part 'italian.dart';
 part 'german.dart';
-part 'hebrew.dart';
 part 'dutch.dart';
 part 'chinese_hans.dart';
 part 'chinese_hant.dart';

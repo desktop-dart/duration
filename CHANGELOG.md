@@ -1,5 +1,51 @@
 # Changelog
 
+## 3.0.8
+
++ **Breaking change**: In Dutch locale, minute is now abbreviated as 'min' not 'm'
++ parseDuration now parses weeks
++ Added some documentation to parseDuration and parseTime
+
+## 3.0.7
+
++ Chinese and Czech languages
++ **Breaking changes** to chinese locale
++ **Breaking change**: Minute is now abbreviated as 'min' not 'm'
+
+## 3.0.6
+
++ Fixed `parseDuration`
++ Documented `parseDuration` in README
+
+## 3.0.5
+
++ README note on `prettyDuration`
+
+## 3.0.4
+
++ English plural fix for 0 years
+
+## 3.0.2
+
++ English plural fix for negative amounts
+
+## 3.0.1
+
++ Added Indonesian, Korean, Romanian and Arabic locales
+
+## 3.0.0
+
++ Migration to null safety
+
+## 2.0.15
+
++ Hebrew locale
+
+## 2.0.14
+
++ Chinese locale
++ Dutch locale
+
 ## 2.0.12
 
 + Fix for Itallian locale

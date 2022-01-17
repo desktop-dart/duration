@@ -51,7 +51,7 @@ class FrenchDurationLocale implements DurationLocale {
   @override
   String minute(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
-      return 'm';
+      return 'min';
     } else {
       return 'minute' + (amount > 1 ? 's' : '');
     }

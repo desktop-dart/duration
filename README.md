@@ -2,6 +2,10 @@
 
 Utilities to make working with 'Duration's easier.
 
+**NOTE**: Use `prettyDuration`, `prettySeconds`, `prettyMilliseconds` 
+instead of `printDuration`, `printSeconds`, `printMilliseconds`
+if you only want to format/convert and don't want to print to console!
+
 # Format duration
 
 Use `printDuration` to print a human readable durations. By default, `printDuration`
@@ -102,5 +106,25 @@ main() {
     delimiter: ', ',
     conjugation: ' and ',
   );
+}
+```
+
+# Parse duration
+
+## Parse duration
+
+```dart
+main() {
+  final Duration dur = parseDuration('245:09:08.007006');
+  print(dur);
+}
+```
+
+## Parse time
+
+```dart
+main() {
+  final Duration dur = parseTime('245:09:08.007006');
+  print(dur);
 }
 ```

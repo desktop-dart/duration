@@ -1,23 +1,23 @@
 part of duration.locale;
 
-class EnglishDurationLocale implements DurationLocale {
-  const EnglishDurationLocale();
+class DutchDurationLocale implements DurationLocale {
+  const DutchDurationLocale();
 
   @override
   String year(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
-      return 'y';
+      return 'j';
     } else {
-      return 'year' + (amount.abs() != 1 ? 's' : '');
+      return amount == 1 ? 'jaar' : 'jaren';
     }
   }
 
   @override
   String month(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
-      return 'mon';
+      return 'm';
     } else {
-      return 'month' + (amount.abs() != 1 ? 's' : '');
+      return 'maand${amount != 1 ? 'en' : ''}';
     }
   }
 
@@ -26,7 +26,7 @@ class EnglishDurationLocale implements DurationLocale {
     if (abbreviated) {
       return 'w';
     } else {
-      return 'week' + (amount.abs() != 1 ? 's' : '');
+      return amount == 1 ? 'week' : 'weken';
     }
   }
 
@@ -35,16 +35,16 @@ class EnglishDurationLocale implements DurationLocale {
     if (abbreviated) {
       return 'd';
     } else {
-      return 'day' + (amount.abs() != 1 ? 's' : '');
+      return 'dag${amount != 1 ? 'en' : ''}';
     }
   }
 
   @override
   String hour(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
-      return 'h';
+      return 'u';
     } else {
-      return 'hour' + (amount.abs() != 1 ? 's' : '');
+      return amount == 1 ? 'uur' : 'uren';
     }
   }
 
@@ -53,7 +53,7 @@ class EnglishDurationLocale implements DurationLocale {
     if (abbreviated) {
       return 'min';
     } else {
-      return 'minute' + (amount.abs() != 1 ? 's' : '');
+      return amount == 1 ? 'minuut' : 'minuten';
     }
   }
 
@@ -62,7 +62,7 @@ class EnglishDurationLocale implements DurationLocale {
     if (abbreviated) {
       return 's';
     } else {
-      return 'second' + (amount.abs() != 1 ? 's' : '');
+      return 'seconde${amount != 1 ? 'n' : ''}';
     }
   }
 
@@ -71,7 +71,7 @@ class EnglishDurationLocale implements DurationLocale {
     if (abbreviated) {
       return 'ms';
     } else {
-      return 'millisecond' + (amount.abs() != 1 ? 's' : '');
+      return 'milliseconde${amount != 1 ? 'n' : ''}';
     }
   }
 
@@ -80,7 +80,7 @@ class EnglishDurationLocale implements DurationLocale {
     if (abbreviated) {
       return 'us';
     } else {
-      return 'microsecond' + (amount.abs() != 1 ? 's' : '');
+      return 'microseconde${amount != 1 ? 'n' : ''}';
     }
   }
 }

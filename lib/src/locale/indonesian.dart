@@ -1,86 +1,86 @@
 part of duration.locale;
 
-class EnglishDurationLocale implements DurationLocale {
-  const EnglishDurationLocale();
+class IndonesianDurationLocale implements DurationLocale {
+  const IndonesianDurationLocale();
 
   @override
   String year(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
-      return 'y';
+      return 'thn';
     } else {
-      return 'year' + (amount.abs() != 1 ? 's' : '');
+      return 'tahun' + (amount > 1 ? '' : ''); //no pluralization
     }
   }
 
   @override
   String month(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
-      return 'mon';
+      return 'bln';
     } else {
-      return 'month' + (amount.abs() != 1 ? 's' : '');
+      return 'bulan' + (amount > 1 ? '' : ''); //no pluralization
     }
   }
 
   @override
   String week(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
-      return 'w';
+      return 'mgg';
     } else {
-      return 'week' + (amount.abs() != 1 ? 's' : '');
+      return 'minggu' + (amount > 1 ? '' : ''); //no pluralization
     }
   }
 
   @override
   String day(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
-      return 'd';
+      return 'hr';
     } else {
-      return 'day' + (amount.abs() != 1 ? 's' : '');
+      return 'hari' + (amount > 1 ? '' : ''); //no pluralization
     }
   }
 
   @override
   String hour(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
-      return 'h';
+      return 'j';
     } else {
-      return 'hour' + (amount.abs() != 1 ? 's' : '');
+      return 'jam' + (amount > 1 ? '' : ''); //no pluralization
     }
   }
 
   @override
   String minute(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
-      return 'min';
+      return 'm';
     } else {
-      return 'minute' + (amount.abs() != 1 ? 's' : '');
+      return 'menit' + (amount > 1 ? '' : ''); //no pluralization
     }
   }
 
   @override
   String second(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
-      return 's';
+      return 'd';
     } else {
-      return 'second' + (amount.abs() != 1 ? 's' : '');
+      return 'detik' + (amount > 1 ? '' : ''); //no pluralization
     }
   }
 
   @override
   String millisecond(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
-      return 'ms';
+      return 'milidetik';
     } else {
-      return 'millisecond' + (amount.abs() != 1 ? 's' : '');
+      return 'milidetik' + (amount > 1 ? '' : ''); //no pluralization
     }
   }
 
   @override
   String microseconds(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
-      return 'us';
+      return 'mikrodetik';
     } else {
-      return 'microsecond' + (amount.abs() != 1 ? 's' : '');
+      return 'mikrodetik' + (amount > 1 ? 's' : ''); //no pluralization
     }
   }
 }

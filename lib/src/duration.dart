@@ -36,7 +36,7 @@ String prettyDuration(Duration duration,
     String? conjunction,
     bool abbreviated = false,
     bool first = false,
-    int maxTersity}) {
+    int? maxTersity}) {
   if (abbreviated && delimiter == null) {
     delimiter = ', ';
     spacer = '';
@@ -94,14 +94,16 @@ String prettyDuration(Duration duration,
             usedTersity++;
           }
 
-          if (tersity >= DurationTersity.millisecond && usedTersity < maxTersity) {
+          if (tersity >= DurationTersity.millisecond &&
+              usedTersity < maxTersity) {
             final int milliseconds = duration.inMilliseconds % 1000;
             if (milliseconds > 0) {
               out.add(partFmt(milliseconds, locale.millisecond));
               usedTersity++;
             }
 
-            if (tersity >= DurationTersity.microsecond && usedTersity < maxTersity) {
+            if (tersity >= DurationTersity.microsecond &&
+                usedTersity < maxTersity) {
               final int microseconds = duration.inMicroseconds % 1000;
               if (microseconds > 0 || out.isEmpty) {
                 out.add(partFmt(microseconds, locale.microseconds));

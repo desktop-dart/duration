@@ -292,6 +292,33 @@ void main() {
           '5 days 23 hours 59 minutes 59 seconds 999 milliseconds 999 microseconds');
     });
 
+    test('Upper Tersity', () {
+      final dur = Duration(days: 8);
+      expect(prettyDuration(dur), '1 week 1 day');
+
+      expect(prettyDuration(dur, upperTersity: DurationTersity.day), '8 days');
+
+      expect(
+          prettyDuration(dur, upperTersity: DurationTersity.hour), '192 hours');
+
+      expect(prettyDuration(dur, upperTersity: DurationTersity.minute),
+          '11520 minutes');
+
+      expect(prettyDuration(dur, upperTersity: DurationTersity.second),
+          '691200 seconds');
+
+      expect(
+          prettyDuration(dur,
+              upperTersity: DurationTersity.millisecond,
+              tersity: DurationTersity.all),
+          '691200000 milliseconds');
+      expect(
+          prettyDuration(dur,
+              upperTersity: DurationTersity.microsecond,
+              tersity: DurationTersity.all),
+          '691200000000 microseconds');
+    });
+
     test('First', () {
       final dur = Duration(days: 5, hours: 23);
 

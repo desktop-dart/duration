@@ -1,6 +1,6 @@
 part of duration.locale;
 
-class NorwegianDurationLanguage implements DurationLocale {
+class NorwegianDurationLanguage extends DurationLocale {
   const NorwegianDurationLanguage();
 
   @override

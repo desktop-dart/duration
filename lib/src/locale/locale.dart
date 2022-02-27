@@ -1,5 +1,7 @@
 library duration.locale;
 
+import 'package:duration/duration.dart';
+
 part 'english.dart';
 part 'french.dart';
 part 'hebrew.dart';
@@ -25,6 +27,8 @@ part 'finnish.dart';
 
 /// Interface to print time units for different locale
 abstract class DurationLocale {
+  const DurationLocale();
+
   /// Print [amount] years for the corresponding locale. The unit is abbreviated
   /// if [abbreviated] is set to true.
   String year(int amount, [bool abbreviated = true]);
@@ -60,6 +64,27 @@ abstract class DurationLocale {
   /// Print [amount] microseconds for the corresponding locale. The unit is
   /// abbreviated if [abbreviated] is set to true.
   String microseconds(int amount, [bool abbreviated = true]);
+
+  String inUnit(DurationTersity unit, int amount, [bool abbreviated = true]) {
+    switch (unit) {
+      case DurationTersity.week:
+        return week(amount, abbreviated);
+      case DurationTersity.day:
+        return day(amount, abbreviated);
+      case DurationTersity.hour:
+        return hour(amount, abbreviated);
+      case DurationTersity.minute:
+        return minute(amount, abbreviated);
+      case DurationTersity.second:
+        return second(amount, abbreviated);
+      case DurationTersity.millisecond:
+        return millisecond(amount, abbreviated);
+      case DurationTersity.microsecond:
+        return microseconds(amount, abbreviated);
+      default:
+        throw UnsupportedError('unsupported duration unit: $unit');
+    }
+  }
 
   static DurationLocale? fromLanguageCode(String languageCode) {
     return _locales[languageCode];

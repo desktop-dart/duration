@@ -1,6 +1,6 @@
 part of duration.locale;
 
-class PolishDurationLocale implements DurationLocale {
+class PolishDurationLocale extends DurationLocale {
   const PolishDurationLocale();
 
   /// Based on https://github.com/unicode-org/cldr/blob/master/common/supplemental/plurals.xml

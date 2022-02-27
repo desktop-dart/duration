@@ -6,7 +6,7 @@ enum CzechDurationLocalePluralization {
   many,
 }
 
-class CzechDurationLocale implements DurationLocale {
+class CzechDurationLocale extends DurationLocale {
   const CzechDurationLocale();
 
   static CzechDurationLocalePluralization getPluralization(int amount) {

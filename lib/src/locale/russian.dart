@@ -1,6 +1,6 @@
 part of duration.locale;
 
-class RussianDurationLanguage implements DurationLocale {
+class RussianDurationLanguage extends DurationLocale {
   const RussianDurationLanguage();
 
   String _russianStr(int amount, String first, String second, String third) {

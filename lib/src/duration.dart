@@ -30,6 +30,7 @@ import 'tersity.dart';
 ///         abbreviated: false, locale: spanishLocale);
 String prettyDuration(Duration duration,
     {DurationTersity tersity = DurationTersity.second,
+    DurationTersity upperTersity = DurationTersity.week,
     DurationLocale locale = const EnglishDurationLocale(),
     String? spacer,
     String? delimiter,
@@ -46,65 +47,22 @@ String prettyDuration(Duration duration,
 
   var out = <String>[];
 
-  final partFmt =
-      (int amount, String Function(int amount, bool abbreviated) annotater) {
-    final sb = StringBuffer();
-    sb.write(amount);
-    sb.write(spacer);
-    sb.write(annotater(amount, abbreviated));
-    return sb.toString();
-  };
-
-  final int weeks = (duration.inDays / 7).floor();
-
-  if (weeks > 0) {
-    out.add(partFmt(weeks, locale.week));
-  }
-
-  if (tersity >= DurationTersity.day) {
-    final int days = duration.inDays - (weeks * 7);
-    if (days > 0) out.add(partFmt(days, locale.day));
-
-    if (tersity >= DurationTersity.hour) {
-      final int hours = duration.inHours % 24;
-      if (hours > 0) out.add(partFmt(hours, locale.hour));
-
-      if (tersity >= DurationTersity.minute) {
-        final int minutes = duration.inMinutes % 60;
-        if (minutes > 0) out.add(partFmt(minutes, locale.minute));
-
-        if (tersity >= DurationTersity.second) {
-          final int seconds = duration.inSeconds % 60;
-          if (seconds > 0) out.add(partFmt(seconds, locale.second));
-
-          if (tersity >= DurationTersity.millisecond) {
-            final int milliseconds = duration.inMilliseconds % 1000;
-            if (milliseconds > 0) {
-              out.add(partFmt(milliseconds, locale.millisecond));
-            }
-
-            if (tersity >= DurationTersity.microsecond) {
-              final int microseconds = duration.inMicroseconds % 1000;
-              if (microseconds > 0 || out.isEmpty) {
-                out.add(partFmt(microseconds, locale.microseconds));
-              }
-            } else {
-              if (out.isEmpty) out.add(partFmt(0, locale.millisecond));
-            }
-          } else {
-            if (out.isEmpty) out.add(partFmt(0, locale.second));
-          }
-        } else {
-          if (out.isEmpty) out.add(partFmt(0, locale.minute));
-        }
-      } else {
-        if (out.isEmpty) out.add(partFmt(0, locale.hour));
-      }
-    } else {
-      if (out.isEmpty) out.add(partFmt(0, locale.day));
+  for (final currentTersity in DurationTersity.list) {
+    if (currentTersity > upperTersity) {
+      continue;
+    } else if (currentTersity < tersity) {
+      break;
     }
-  } else {
-    if (out.isEmpty) out.add(partFmt(0, locale.week));
+    int value = duration.inUnit(currentTersity);
+    if (currentTersity != upperTersity) {
+      value %= currentTersity.mod;
+    }
+    if (value > 0) {
+      out.add(
+          '$value$spacer${locale.inUnit(currentTersity, value, abbreviated)}');
+    } else if (currentTersity == tersity && out.isEmpty) {
+      out.add('0$spacer${locale.inUnit(currentTersity, value, abbreviated)}');
+    }
   }
 
   if (out.length == 1 || first == true) {
@@ -122,6 +80,7 @@ String prettyDuration(Duration duration,
 
 String printDuration(Duration duration,
     {DurationTersity tersity = DurationTersity.second,
+    DurationTersity upperTersity = DurationTersity.week,
     DurationLocale locale = const EnglishDurationLocale(),
     String? spacer,
     String? delimiter,

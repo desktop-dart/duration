@@ -1,6 +1,6 @@
 part of duration.locale;
 
-class ThaiDurationLocale implements DurationLocale {
+class ThaiDurationLocale extends DurationLocale {
   const ThaiDurationLocale();
 
   @override

@@ -35,7 +35,7 @@ void main() {
       abbreviated: false, locale: spanishLocale);
 
   // => 5d, 23h, 59m, 59s, 999ms, 999us
-  printDuration(dur, abbreviated: true, tersity: DurationTersity.all);
+  printDuration(dur, abbreviated: true, tersity: DurationTersity.microsecond);
 
   // => 5 whole days 9 whole hours
   printDuration(aDay * 5 + anHour * 9, spacer: ' whole ');

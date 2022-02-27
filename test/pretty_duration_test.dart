@@ -292,6 +292,20 @@ void main() {
           '5 days 23 hours 59 minutes 59 seconds 999 milliseconds 999 microseconds');
     });
 
+    test('upperTersity', () {
+      {
+        final dur = Duration(hours: 25);
+        expect(prettyDuration(dur, upperTersity: DurationTersity.hour),
+            '25 hours');
+      }
+
+      {
+        final dur = Duration(days: 2, hours: 2);
+        expect(prettyDuration(dur, upperTersity: DurationTersity.minute),
+            '3000 minutes');
+      }
+    });
+
     test('First', () {
       final dur = Duration(days: 5, hours: 23);
 

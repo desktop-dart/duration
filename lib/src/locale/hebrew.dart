@@ -1,6 +1,6 @@
 part of duration.locale;
 
-class HebrewDurationLocale implements DurationLocale {
+class HebrewDurationLocale extends DurationLocale {
   const HebrewDurationLocale();
 
   @override

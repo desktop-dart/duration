@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.10
+
++ Upper tersity support
+
 ## 3.0.9
 
 + Added Finish locale

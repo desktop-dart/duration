@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.9
+
++ Added Finish locale
+
 ## 3.0.8
 
 + **Breaking change**: In Dutch locale, minute is now abbreviated as 'min' not 'm'

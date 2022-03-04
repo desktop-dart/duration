@@ -1,8 +1,14 @@
 # Changelog
 
+## 3.0.11
+
++ printDuration bug fix for upperTersity
+
 ## 3.0.10
 
 + Upper tersity support
++ **Breaking change**: DurationTersity.id is made private
++ **Breaking change**: DurationTersity order is reversed
 
 ## 3.0.9
 

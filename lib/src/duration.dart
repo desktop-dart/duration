@@ -88,6 +88,7 @@ String printDuration(Duration duration,
     bool abbreviated = false}) {
   final String fmt = prettyDuration(duration,
       tersity: tersity,
+      upperTersity: upperTersity,
       locale: locale,
       spacer: spacer,
       delimiter: delimiter,

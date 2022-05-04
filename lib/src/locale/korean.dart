@@ -4,6 +4,9 @@ class KoreanDurationLocale extends DurationLocale {
   const KoreanDurationLocale();
 
   @override
+  String get defaultSpacer => '';
+
+  @override
   String year(int amount, [bool abbreviated = true]) {
     return '년';
   }

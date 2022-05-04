@@ -4,6 +4,9 @@ class JapaneseDurationLocale extends DurationLocale {
   const JapaneseDurationLocale();
 
   @override
+  String get defaultSpacer => '';
+
+  @override
   String year(int amount, [bool abbreviated = true]) {
     return '年';
   }

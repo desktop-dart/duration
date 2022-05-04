@@ -30,6 +30,8 @@ part 'japanese.dart';
 abstract class DurationLocale {
   const DurationLocale();
 
+  String get defaultSpacer => ' ';
+
   /// Print [amount] years for the corresponding locale. The unit is abbreviated
   /// if [abbreviated] is set to true.
   String year(int amount, [bool abbreviated = true]);

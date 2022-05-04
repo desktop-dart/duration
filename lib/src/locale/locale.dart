@@ -24,6 +24,7 @@ part 'korean.dart';
 part 'indonesian.dart';
 part 'czech.dart';
 part 'finnish.dart';
+part 'japanese.dart';
 
 /// Interface to print time units for different locale
 abstract class DurationLocale {
@@ -160,8 +161,11 @@ const ArabicDurationLocale arabicLocale = ArabicDurationLocale();
 /// [DurationLocale] for Czech language
 const CzechDurationLocale czechLocale = CzechDurationLocale();
 
-/// [DurationLocale] for Czech language
+/// [DurationLocale] for Finnish language
 const FinnishDurationLocale finnishLocale = FinnishDurationLocale();
+
+/// [DurationLocale] for Japanese language
+const JapaneseDurationLocale japaneseLocale = JapaneseDurationLocale();
 
 const _locales = <String, DurationLocale>{
   'en': englishLocale,
@@ -186,4 +190,5 @@ const _locales = <String, DurationLocale>{
   'ar': arabicLocale,
   'cz': czechLocale,
   'fi': finnishLocale,
+  'ja': japaneseLocale,
 };

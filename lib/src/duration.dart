@@ -42,7 +42,7 @@ String prettyDuration(Duration duration,
     spacer = '';
   } else {
     delimiter ??= ' ';
-    spacer ??= ' ';
+    spacer ??= locale.defaultSpacer;
   }
 
   var out = <String>[];

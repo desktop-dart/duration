@@ -4,6 +4,9 @@ class ChineseSimplifiedDurationLocale extends DurationLocale {
   const ChineseSimplifiedDurationLocale();
 
   @override
+  String get defaultSpacer => '';
+
+  @override
   String year(int amount, [bool abbreviated = true]) {
     return '年';
   }

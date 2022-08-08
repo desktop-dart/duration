@@ -1,57 +1,57 @@
 part of duration.locale;
 
-class KoreanDurationLocale extends DurationLocale {
-  const KoreanDurationLocale();
+class JapaneseDurationLocale extends DurationLocale {
+  const JapaneseDurationLocale();
 
   @override
   String get defaultSpacer => '';
 
   @override
   String year(int amount, [bool abbreviated = true]) {
-    return '년';
+    return '年';
   }
 
   @override
   String month(int amount, [bool abbreviated = true]) {
-    return '월';
+    return '月';
   }
 
   @override
   String week(int amount, [bool abbreviated = true]) {
-    return '주';
+    return '週';
   }
 
   @override
   String day(int amount, [bool abbreviated = true]) {
-    return '일';
+    return '日';
   }
 
   @override
   String hour(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
-      return '시';
+      return '時';
     } else {
-      return '시간';
+      return '時間';
     }
   }
 
   @override
   String minute(int amount, [bool abbreviated = true]) {
-    return '분';
+    return '分';
   }
 
   @override
   String second(int amount, [bool abbreviated = true]) {
-    return '초';
+    return '秒';
   }
 
   @override
   String millisecond(int amount, [bool abbreviated = true]) {
-    return '밀리초';
+    return 'ミリ秒';
   }
 
   @override
   String microseconds(int amount, [bool abbreviated = true]) {
-    return '마이크로초';
+    return 'マイクロ秒';
   }
 }

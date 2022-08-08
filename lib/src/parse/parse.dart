@@ -101,7 +101,9 @@ Duration parseTime(String input) {
 
     if (p.length != 2) throw FormatException('Invalid time format');
 
-    final p2 = int.parse(p[1]);
+    // If fractional seconds is passed, but less than 6 digits
+    // Pad out to the right so we can calculate the ms/us correctly
+    final p2 = int.parse(p[1].padRight(6, '0'));
     microseconds = p2 % 1000;
     milliseconds = p2 ~/ 1000;
 

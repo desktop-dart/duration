@@ -14,5 +14,9 @@ void main() {
     test('duration weeks', () {
       expect((parseDuration('2w,20d,10h,30m')).toString(), '826:30:00.000000');
     });
+
+    test('time without microsecods', () {
+      expect(parseTime('245:09:08.12').toString(), '245:09:08.120000');
+    });
   });
 }

@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.12
+
++ Ukranian locale
+
 ## 3.0.11
 
 + printDuration bug fix for upperTersity

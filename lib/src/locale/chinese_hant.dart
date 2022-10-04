@@ -28,11 +28,7 @@ class ChineseTraditionalDurationLocale extends DurationLocale {
 
   @override
   String hour(int amount, [bool abbreviated = true]) {
-    if (abbreviated) {
-      return '時';
-    } else {
-      return '小時';
-    }
+    return '小時';
   }
 
   @override

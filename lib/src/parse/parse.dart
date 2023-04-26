@@ -89,6 +89,11 @@ Duration parseTime(String input) {
 
   if (parts.length != 3) throw FormatException('Invalid time format');
 
+  final isNegative = input.startsWith('-');
+  if (isNegative) {
+    input = input.substring(1);
+  }
+
   int days;
   int hours;
   int minutes;
@@ -103,30 +108,30 @@ Duration parseTime(String input) {
 
     // If fractional seconds is passed, but less than 6 digits
     // Pad out to the right so we can calculate the ms/us correctly
-    final p2 = int.parse(p[1].padRight(6, '0'));
+    final p2 = int.parse(p[1].padRight(6, '0')).abs();
     microseconds = p2 % 1000;
     milliseconds = p2 ~/ 1000;
 
-    seconds = int.parse(p[0]);
+    seconds = int.parse(p[0]).abs();
   }
 
-  minutes = int.parse(parts[1]);
+  minutes = int.parse(parts[1]).abs();
 
   {
-    int p = int.parse(parts[0]);
+    int p = int.parse(parts[0]).abs();
     hours = p % 24;
     days = p ~/ 24;
   }
 
-  // TODO verify that there are no negative parts
-
-  return Duration(
+  final duration = Duration(
       days: days,
       hours: hours,
       minutes: minutes,
       seconds: seconds,
       milliseconds: milliseconds,
       microseconds: microseconds);
+
+  return (isNegative) ? -duration : duration;
 }
 
 Duration? tryParseDuration(String input) {

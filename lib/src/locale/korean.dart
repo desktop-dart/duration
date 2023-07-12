@@ -28,11 +28,7 @@ class KoreanDurationLocale extends DurationLocale {
 
   @override
   String hour(int amount, [bool abbreviated = true]) {
-    if (abbreviated) {
-      return '시';
-    } else {
-      return '시간';
-    }
+    return '시간';
   }
 
   @override

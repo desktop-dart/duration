@@ -28,11 +28,7 @@ class JapaneseDurationLocale extends DurationLocale {
 
   @override
   String hour(int amount, [bool abbreviated = true]) {
-    if (abbreviated) {
-      return '時';
-    } else {
-      return '時間';
-    }
+    return '時間';
   }
 
   @override

@@ -30,11 +30,11 @@ void main() {
       );
       expect(
         prettyDuration(dur, locale: locale, abbreviated: true),
-        '5日, 23时',
+        '5日, 23小时',
       );
       expect(
         prettyDuration(dur, locale: locale, abbreviated: true, delimiter: ' '),
-        '5日 23时',
+        '5日 23小时',
       );
     });
 
@@ -47,11 +47,11 @@ void main() {
       );
       expect(
         prettyDuration(dur, locale: locale, abbreviated: true),
-        '5日, 23時',
+        '5日, 23時間',
       );
       expect(
         prettyDuration(dur, locale: locale, abbreviated: true, delimiter: ' '),
-        '5日 23時',
+        '5日 23時間',
       );
     });
 
@@ -64,11 +64,11 @@ void main() {
       );
       expect(
         prettyDuration(dur, locale: locale, abbreviated: true),
-        '5일, 23시',
+        '5일, 23시간',
       );
       expect(
         prettyDuration(dur, locale: locale, abbreviated: true, delimiter: ' '),
-        '5일 23시',
+        '5일 23시간',
       );
     });
   });

@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.13
+
++ Abbreviation fix for Chinese, Japanese and Korean
+
 ## 3.0.12
 
 + Ukranian locale

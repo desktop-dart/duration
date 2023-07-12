@@ -3,11 +3,12 @@ part of duration.locale;
 class UkrainianDurationLocale extends DurationLocale {
   const UkrainianDurationLocale();
 
-  String _pickNoun(int amount, String nominativeSingle, String genitiveSingle, String genitivePlural) {
+  String _pickNoun(int amount, String nominativeSingle, String genitiveSingle,
+      String genitivePlural) {
     final lastTwoDigits = amount % 100;
     final lastDigit = amount % 10;
 
-    if(lastTwoDigits >= 11 && lastTwoDigits <= 20){
+    if (lastTwoDigits >= 11 && lastTwoDigits <= 20) {
       return genitivePlural;
     }
 

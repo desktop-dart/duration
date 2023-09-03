@@ -129,6 +129,68 @@ Duration parseTime(String input) {
       microseconds: microseconds);
 }
 
+Duration parseTimeLoose(String input) {
+  final parts = input.split(':');
+  if (parts.length != 3 && parts.length != 2) {
+    throw const FormatException('Invalid time format');
+  }
+
+  final isNegative = input.startsWith('-');
+  if (isNegative) {
+    input = input.substring(1);
+  }
+
+  late final int days;
+  late final int hours;
+  late final int minutes;
+  late final int seconds;
+  late final int milliseconds;
+  late final int microseconds;
+
+  if (parts.length == 3) {
+    final p = parts[2].split('.');
+
+    if (p.length == 2) {
+      // If fractional seconds is passed, but less than 6 digits
+      // Pad out to the right so we can calculate the ms/us correctly
+      final p2 = int.parse(p[1].padRight(6, '0')).abs();
+
+      microseconds = p2 % 1000;
+      milliseconds = p2 ~/ 1000;
+      seconds = int.parse(p[0]).abs();
+    } else if (p.length == 1) {
+      microseconds = 0;
+      milliseconds = 0;
+      seconds = int.parse(p[0]).abs();
+    } else {
+      throw const FormatException('Invalid time format');
+    }
+  } else {
+    microseconds = 0;
+    milliseconds = 0;
+    seconds = 0;
+  }
+
+  minutes = int.parse(parts[1]).abs();
+
+  {
+    final p = int.parse(parts[0]).abs();
+
+    hours = p % 24;
+    days = p ~/ 24;
+  }
+
+  final duration = Duration(
+      days: days,
+      hours: hours,
+      minutes: minutes,
+      seconds: seconds,
+      milliseconds: milliseconds,
+      microseconds: microseconds);
+
+  return (isNegative) ? -duration : duration;
+}
+
 Duration? tryParseDuration(String input) {
   try {
     return parseDuration(input);
@@ -138,6 +200,14 @@ Duration? tryParseDuration(String input) {
 }
 
 Duration? tryParseTime(String input) {
+  try {
+    return parseTime(input);
+  } catch (_) {
+    return null;
+  }
+}
+
+Duration? tryParseTimeLoose(String input) {
   try {
     return parseTime(input);
   } catch (_) {

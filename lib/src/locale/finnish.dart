@@ -8,7 +8,7 @@ class FinnishDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'v';
     } else {
-      return 'vuosi' + (amount.abs() != 1 ? 'a' : '');
+      return 'vuosi${amount.abs() != 1 ? 'a' : ''}';
     }
   }
 
@@ -17,7 +17,7 @@ class FinnishDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'kk';
     } else {
-      return 'kuukausi' + (amount.abs() != 1 ? 'a' : '');
+      return 'kuukausi${amount.abs() != 1 ? 'a' : ''}';
     }
   }
 
@@ -26,7 +26,7 @@ class FinnishDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'vko';
     } else {
-      return 'viikko' + (amount.abs() != 1 ? 'a' : '');
+      return 'viikko${amount.abs() != 1 ? 'a' : ''}';
     }
   }
 
@@ -35,7 +35,7 @@ class FinnishDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'pvä';
     } else {
-      return 'päivä' + (amount.abs() != 1 ? 'ä' : '');
+      return 'päivä${amount.abs() != 1 ? 'ä' : ''}';
     }
   }
 
@@ -44,7 +44,7 @@ class FinnishDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 't';
     } else {
-      return 'tunti' + (amount.abs() != 1 ? 'a' : '');
+      return 'tunti${amount.abs() != 1 ? 'a' : ''}';
     }
   }
 
@@ -53,7 +53,7 @@ class FinnishDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'min';
     } else {
-      return 'minuutti' + (amount.abs() != 1 ? 'a' : '');
+      return 'minuutti${amount.abs() != 1 ? 'a' : ''}';
     }
   }
 
@@ -62,7 +62,7 @@ class FinnishDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 's';
     } else {
-      return 'sekunti' + (amount.abs() != 1 ? 'a' : '');
+      return 'sekunti${amount.abs() != 1 ? 'a' : ''}';
     }
   }
 
@@ -71,7 +71,7 @@ class FinnishDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'ms';
     } else {
-      return 'millisekunti' + (amount.abs() != 1 ? 'a' : '');
+      return 'millisekunti${amount.abs() != 1 ? 'a' : ''}';
     }
   }
 
@@ -80,7 +80,7 @@ class FinnishDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'us';
     } else {
-      return 'mikrosekunti' + (amount.abs() != 1 ? 'a' : '');
+      return 'mikrosekunti${amount.abs() != 1 ? 'a' : ''}';
     }
   }
 }

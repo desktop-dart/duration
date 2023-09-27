@@ -17,7 +17,7 @@ class SwedishDurationLanguage extends DurationLocale {
     if (abbreviated) {
       return 'mon';
     } else {
-      return 'månad' + (amount > 1 ? 'er' : '');
+      return 'månad${amount > 1 ? 'er' : ''}';
     }
   }
 
@@ -26,7 +26,7 @@ class SwedishDurationLanguage extends DurationLocale {
     if (abbreviated) {
       return 'w';
     } else {
-      return 'veck' + (amount > 1 ? 'or' : 'a');
+      return 'veck${amount > 1 ? 'or' : 'a'}';
     }
   }
 
@@ -35,7 +35,7 @@ class SwedishDurationLanguage extends DurationLocale {
     if (abbreviated) {
       return 'd';
     } else {
-      return 'dag' + (amount > 1 ? 'ar' : '');
+      return 'dag${amount > 1 ? 'ar' : ''}';
     }
   }
 
@@ -44,7 +44,7 @@ class SwedishDurationLanguage extends DurationLocale {
     if (abbreviated) {
       return 'h';
     } else {
-      return 'timm' + (amount > 1 ? 'ar' : 'e');
+      return 'timm${amount > 1 ? 'ar' : 'e'}';
     }
   }
 
@@ -53,7 +53,7 @@ class SwedishDurationLanguage extends DurationLocale {
     if (abbreviated) {
       return 'm';
     } else {
-      return 'minut' + (amount > 1 ? 'er' : '');
+      return 'minut${amount > 1 ? 'er' : ''}';
     }
   }
 
@@ -62,7 +62,7 @@ class SwedishDurationLanguage extends DurationLocale {
     if (abbreviated) {
       return 's';
     } else {
-      return 'sekund' + (amount > 1 ? 'er' : '');
+      return 'sekund${amount > 1 ? 'er' : ''}';
     }
   }
 
@@ -71,7 +71,7 @@ class SwedishDurationLanguage extends DurationLocale {
     if (abbreviated) {
       return 'ms';
     } else {
-      return 'millisekund' + (amount > 1 ? 'er' : '');
+      return 'millisekund${amount > 1 ? 'er' : ''}';
     }
   }
 
@@ -80,7 +80,7 @@ class SwedishDurationLanguage extends DurationLocale {
     if (abbreviated) {
       return 'us';
     } else {
-      return 'mikrosekund' + (amount > 1 ? 'er' : '');
+      return 'mikrosekund${amount > 1 ? 'er' : ''}';
     }
   }
 }

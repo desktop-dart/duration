@@ -8,7 +8,7 @@ class EnglishDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'y';
     } else {
-      return 'year' + (amount.abs() != 1 ? 's' : '');
+      return 'year${amount.abs() != 1 ? 's' : ''}';
     }
   }
 
@@ -17,7 +17,7 @@ class EnglishDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'mon';
     } else {
-      return 'month' + (amount.abs() != 1 ? 's' : '');
+      return 'month${amount.abs() != 1 ? 's' : ''}';
     }
   }
 
@@ -26,7 +26,7 @@ class EnglishDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'w';
     } else {
-      return 'week' + (amount.abs() != 1 ? 's' : '');
+      return 'week${amount.abs() != 1 ? 's' : ''}';
     }
   }
 
@@ -35,7 +35,7 @@ class EnglishDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'd';
     } else {
-      return 'day' + (amount.abs() != 1 ? 's' : '');
+      return 'day${amount.abs() != 1 ? 's' : ''}';
     }
   }
 
@@ -44,7 +44,7 @@ class EnglishDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'h';
     } else {
-      return 'hour' + (amount.abs() != 1 ? 's' : '');
+      return 'hour${amount.abs() != 1 ? 's' : ''}';
     }
   }
 
@@ -53,7 +53,7 @@ class EnglishDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'min';
     } else {
-      return 'minute' + (amount.abs() != 1 ? 's' : '');
+      return 'minute${amount.abs() != 1 ? 's' : ''}';
     }
   }
 
@@ -62,7 +62,7 @@ class EnglishDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 's';
     } else {
-      return 'second' + (amount.abs() != 1 ? 's' : '');
+      return 'second${amount.abs() != 1 ? 's' : ''}';
     }
   }
 
@@ -71,7 +71,7 @@ class EnglishDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'ms';
     } else {
-      return 'millisecond' + (amount.abs() != 1 ? 's' : '');
+      return 'millisecond${amount.abs() != 1 ? 's' : ''}';
     }
   }
 
@@ -80,7 +80,7 @@ class EnglishDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'us';
     } else {
-      return 'microsecond' + (amount.abs() != 1 ? 's' : '');
+      return 'microsecond${amount.abs() != 1 ? 's' : ''}';
     }
   }
 }

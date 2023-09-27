@@ -47,7 +47,7 @@ String prettyDuration(Duration duration,
 
   var out = <String>[];
 
-  for (final currentTersity in DurationTersity.list) {
+  for (final currentTersity in DurationTersity.values) {
     if (currentTersity > upperTersity) {
       continue;
     } else if (currentTersity < tersity) {

@@ -8,7 +8,7 @@ class SpanishDurationLanguage extends DurationLocale {
     if (abbreviated) {
       return 'y';
     } else {
-      return 'año' + (amount > 1 ? 's' : '');
+      return 'año${amount > 1 ? 's' : ''}';
     }
   }
 
@@ -17,7 +17,7 @@ class SpanishDurationLanguage extends DurationLocale {
     if (abbreviated) {
       return 'mon';
     } else {
-      return 'mes' + (amount > 1 ? 's' : '');
+      return 'mes${amount > 1 ? 's' : ''}';
     }
   }
 
@@ -26,7 +26,7 @@ class SpanishDurationLanguage extends DurationLocale {
     if (abbreviated) {
       return 'w';
     } else {
-      return 'semana' + (amount > 1 ? 's' : '');
+      return 'semana${amount > 1 ? 's' : ''}';
     }
   }
 
@@ -35,7 +35,7 @@ class SpanishDurationLanguage extends DurationLocale {
     if (abbreviated) {
       return 'd';
     } else {
-      return 'día' + (amount > 1 ? 's' : '');
+      return 'día${amount > 1 ? 's' : ''}';
     }
   }
 
@@ -44,7 +44,7 @@ class SpanishDurationLanguage extends DurationLocale {
     if (abbreviated) {
       return 'h';
     } else {
-      return 'hora' + (amount > 1 ? 's' : '');
+      return 'hora${amount > 1 ? 's' : ''}';
     }
   }
 
@@ -53,7 +53,7 @@ class SpanishDurationLanguage extends DurationLocale {
     if (abbreviated) {
       return 'm';
     } else {
-      return 'minuto' + (amount > 1 ? 's' : '');
+      return 'minuto${amount > 1 ? 's' : ''}';
     }
   }
 
@@ -62,7 +62,7 @@ class SpanishDurationLanguage extends DurationLocale {
     if (abbreviated) {
       return 's';
     } else {
-      return 'segundo' + (amount > 1 ? 's' : '');
+      return 'segundo${amount > 1 ? 's' : ''}';
     }
   }
 
@@ -71,7 +71,7 @@ class SpanishDurationLanguage extends DurationLocale {
     if (abbreviated) {
       return 'ms';
     } else {
-      return 'milisegundo' + (amount > 1 ? 's' : '');
+      return 'milisegundo${amount > 1 ? 's' : ''}';
     }
   }
 
@@ -80,7 +80,7 @@ class SpanishDurationLanguage extends DurationLocale {
     if (abbreviated) {
       return 'us';
     } else {
-      return 'microsegundo' + (amount > 1 ? 's' : '');
+      return 'microsegundo${amount > 1 ? 's' : ''}';
     }
   }
 }

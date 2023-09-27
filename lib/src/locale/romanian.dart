@@ -8,7 +8,7 @@ class RomanianDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'a';
     } else {
-      return 'an' + (amount > 1 ? 'i' : '');
+      return 'an${amount > 1 ? 'i' : ''}';
     }
   }
 
@@ -17,7 +17,7 @@ class RomanianDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'l';
     } else {
-      return 'lun' + (amount > 1 ? 'i' : 'ă');
+      return 'lun${amount > 1 ? 'i' : 'ă'}';
     }
   }
 
@@ -26,7 +26,7 @@ class RomanianDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 's';
     } else {
-      return 'săptămân' + (amount > 1 ? 'i' : 'ă');
+      return 'săptămân${amount > 1 ? 'i' : 'ă'}';
     }
   }
 
@@ -35,7 +35,7 @@ class RomanianDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'z';
     } else {
-      return 'zi' + (amount > 1 ? 'le' : '');
+      return 'zi${amount > 1 ? 'le' : ''}';
     }
   }
 
@@ -44,7 +44,7 @@ class RomanianDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'h';
     } else {
-      return 'or' + (amount > 1 ? 'e' : 'ă');
+      return 'or${amount > 1 ? 'e' : 'ă'}';
     }
   }
 
@@ -53,7 +53,7 @@ class RomanianDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'm';
     } else {
-      return 'minut' + (amount > 1 ? 'e' : '');
+      return 'minut${amount > 1 ? 'e' : ''}';
     }
   }
 
@@ -62,7 +62,7 @@ class RomanianDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 's';
     } else {
-      return 'secund' + (amount > 1 ? 'e' : 'ă');
+      return 'secund${amount > 1 ? 'e' : 'ă'}';
     }
   }
 
@@ -71,7 +71,7 @@ class RomanianDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'ms';
     } else {
-      return 'millisecund' + (amount > 1 ? 'e' : 'ă');
+      return 'millisecund${amount > 1 ? 'e' : 'ă'}';
     }
   }
 
@@ -80,7 +80,7 @@ class RomanianDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'us';
     } else {
-      return 'microsecund' + (amount > 1 ? 'e' : 'ă');
+      return 'microsecund${amount > 1 ? 'e' : 'ă'}';
     }
   }
 }

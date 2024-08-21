@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.0.14
+
++ Vietnamese locale
++ Greek locale
++ `DurationTersity` is now enhanced Enum
+
 ## 3.0.13
 
 + Abbreviation fix for Chinese, Japanese and Korean

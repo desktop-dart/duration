@@ -4,6 +4,7 @@ import 'package:duration/duration.dart';
 
 part 'english.dart';
 part 'french.dart';
+part 'greek.dart';
 part 'hebrew.dart';
 part 'polish.dart';
 part 'portuguese_br.dart';
@@ -101,6 +102,9 @@ const EnglishDurationLocale englishLocale = EnglishDurationLocale();
 /// [DurationLocale] for French language
 const FrenchDurationLocale frenchLocale = FrenchDurationLocale();
 
+/// [DurationLocale] for Greek language
+const GreekDurationLocale greekLocale = GreekDurationLocale();
+
 /// [DurationLocale] for Hebrew language
 const HebrewDurationLocale hebrewLocale = HebrewDurationLocale();
 
@@ -174,6 +178,7 @@ const JapaneseDurationLocale japaneseLocale = JapaneseDurationLocale();
 const UkrainianDurationLocale ukrainianLocale = UkrainianDurationLocale();
 
 const _locales = <String, DurationLocale>{
+  'el': greekLocale,
   'en': englishLocale,
   'fr': frenchLocale,
   'he': hebrewLocale,

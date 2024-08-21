@@ -1,4 +1,4 @@
-/// Parses duration string formatted by [prettyDuration] into [Duration].
+/// Parses duration string formatted by [prettyDuration] into [Duration] (in abbreviated mode).
 /// [separator] defines the string that splits duration components in the string.
 ///
 /// Example:
@@ -36,32 +36,32 @@ Duration parseDuration(String input, {String separator = ','}) {
         break;
       case 'h':
         if (hours != null) {
-          throw FormatException('Days specified multiple times');
+          throw FormatException('Hours specified multiple times');
         }
         hours = value;
         break;
       case 'min':
       case 'm':
         if (minutes != null) {
-          throw FormatException('Days specified multiple times');
+          throw FormatException('Minutes specified multiple times');
         }
         minutes = value;
         break;
       case 's':
         if (seconds != null) {
-          throw FormatException('Days specified multiple times');
+          throw FormatException('Seconds specified multiple times');
         }
         seconds = value;
         break;
       case 'ms':
         if (milliseconds != null) {
-          throw FormatException('Days specified multiple times');
+          throw FormatException('Milliseconds specified multiple times');
         }
         milliseconds = value;
         break;
       case 'us':
         if (microseconds != null) {
-          throw FormatException('Days specified multiple times');
+          throw FormatException('Microseconds specified multiple times');
         }
         microseconds = value;
         break;

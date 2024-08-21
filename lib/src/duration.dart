@@ -36,7 +36,7 @@ String prettyDuration(Duration duration,
     String? delimiter,
     String? conjunction,
     bool abbreviated = false,
-    bool first = false}) {
+    int maxUnits = 0}) {
   if (abbreviated && delimiter == null) {
     delimiter = ', ';
     spacer = '';
@@ -68,13 +68,18 @@ String prettyDuration(Duration duration,
     }
   }
 
-  if (out.length == 1 || first == true) {
+  if (maxUnits > 0 && out.length > maxUnits) {
+    out = out.sublist(0, maxUnits);
+  }
+
+  if (out.length == 1) {
     return sign + out.first;
   } else {
     if (conjunction == null || out.length == 1) {
       return sign + out.join(delimiter);
     } else {
-      return sign + out.sublist(0, out.length - 1).join(delimiter) +
+      return sign +
+          out.sublist(0, out.length - 1).join(delimiter) +
           conjunction +
           out.last;
     }
@@ -90,7 +95,7 @@ extension PrettyDuration on Duration {
       String? delimiter,
       String? conjunction,
       bool abbreviated = false,
-      bool first = false}) {
+      int maxUnits = 0}) {
     return prettyDuration(this,
         tersity: tersity,
         upperTersity: upperTersity,
@@ -99,6 +104,6 @@ extension PrettyDuration on Duration {
         delimiter: delimiter,
         conjunction: conjunction,
         abbreviated: abbreviated,
-        first: first);
+        maxUnits: maxUnits);
   }
 }

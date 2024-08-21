@@ -44,6 +44,6 @@ void main() {
   print((aDay * 5 + anHour * 9 + aMinute * 10).pretty(delimiter: ', '));
 
   // => 5 days, 9 hours and 10 minutes
-  print((aDay * 5 + anHour * 9 + aMinute * 10).pretty(
-      delimiter: ', ', conjunction: ' and '));
+  print((aDay * 5 + anHour * 9 + aMinute * 10)
+      .pretty(delimiter: ', ', conjunction: ' and '));
 }

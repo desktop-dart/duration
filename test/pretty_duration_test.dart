@@ -306,10 +306,13 @@ void main() {
       }
     });
 
-    test('First', () {
-      final dur = Duration(days: 5, hours: 23);
+    test('maxUnits', () {
+      final dur = Duration(days: 5, hours: 23, minutes: 15, seconds: 25);
 
-      expect(prettyDuration(dur, first: true), '5 days');
+      expect(prettyDuration(dur, maxUnits: 1), '5 days');
+      expect(prettyDuration(dur, maxUnits: 3), '5 days 23 hours 15 minutes');
+      expect(prettyDuration(dur, maxUnits: 3, conjunction: ' and '),
+          '5 days 23 hours and 15 minutes');
     });
 
     test('MinusDurations', () {
@@ -322,7 +325,7 @@ void main() {
         '-10 minutes 15 seconds',
       );
       expect(
-        (-(aMinute * 10 + aSecond * 15)).pretty(first: true),
+        (-(aMinute * 10 + aSecond * 15)).pretty(maxUnits: 1),
         '-10 minutes',
       );
     });

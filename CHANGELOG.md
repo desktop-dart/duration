@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.0.3
+
++ Replace `first` with `maxUnits` in `Duration.pretty()`
+
 ## 4.0.2
 
 + `parseDuration` exception message fixes

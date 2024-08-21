@@ -49,9 +49,9 @@ void main() {
             tersity: DurationTersity.microsecond),
         '201 день 21 година 21 хвилина 21 секунда 201 мілісекунда 201 мікросекунда',
       );
-      expect(prettyDuration(dur21W, locale: locale, first: true), '21 тиждень');
+      expect(prettyDuration(dur21W, locale: locale, maxUnits: 1), '21 тиждень');
       expect(
-          prettyDuration(dur201W, locale: locale, first: true), '201 тиждень');
+          prettyDuration(dur201W, locale: locale, maxUnits: 1), '201 тиждень');
     });
     test('Genitive singular - number ends with 2,3 or 4', () {
       const dur2 = Duration(

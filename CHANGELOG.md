@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.0.2
+
++ `parseDuration` exception message fixes
+
 ## 4.0.1
 
 + README and some documentation fixes

@@ -3,11 +3,9 @@ description: Utilities to make working with 'Duration's easier. Formats duration
 version: 3.0.13
 homepage: https://github.com/desktop-dart/duration
 
-documentation:
-
 environment:
-  sdk: '>=2.12.0 <4.0.0'
+  sdk: '>=2.17.0 <4.0.0'
 
 dev_dependencies:
   test: ^1.16.7
-  pedantic: ^1.11.0
+  lints: ^2.1.1

@@ -14,7 +14,7 @@ class NorwegianDurationLanguage extends DurationLocale {
     if (abbreviated) {
       return 'mnd';
     } else {
-      return 'måned' + (amount > 1 ? 'er' : '');
+      return 'måned${amount > 1 ? 'er' : ''}';
     }
   }
 
@@ -23,7 +23,7 @@ class NorwegianDurationLanguage extends DurationLocale {
     if (abbreviated) {
       return 'u';
     } else {
-      return 'uke' + (amount > 1 ? 'r' : '');
+      return 'uke${amount > 1 ? 'r' : ''}';
     }
   }
 
@@ -32,7 +32,7 @@ class NorwegianDurationLanguage extends DurationLocale {
     if (abbreviated) {
       return 'd';
     } else {
-      return 'dag' + (amount > 1 ? 'er' : '');
+      return 'dag${amount > 1 ? 'er' : ''}';
     }
   }
 
@@ -41,7 +41,7 @@ class NorwegianDurationLanguage extends DurationLocale {
     if (abbreviated) {
       return 't';
     } else {
-      return 'time' + (amount > 1 ? 'r' : '');
+      return 'time${amount > 1 ? 'r' : ''}';
     }
   }
 
@@ -50,7 +50,7 @@ class NorwegianDurationLanguage extends DurationLocale {
     if (abbreviated) {
       return 'm';
     } else {
-      return 'minutt' + (amount > 1 ? 'er' : '');
+      return 'minutt${amount > 1 ? 'er' : ''}';
     }
   }
 
@@ -59,7 +59,7 @@ class NorwegianDurationLanguage extends DurationLocale {
     if (abbreviated) {
       return 's';
     } else {
-      return 'sekund' + (amount > 1 ? 'er' : '');
+      return 'sekund${amount > 1 ? 'er' : ''}';
     }
   }
 
@@ -68,7 +68,7 @@ class NorwegianDurationLanguage extends DurationLocale {
     if (abbreviated) {
       return 'ms';
     } else {
-      return 'millisekund' + (amount > 1 ? 'er' : '');
+      return 'millisekund${amount > 1 ? 'er' : ''}';
     }
   }
 
@@ -77,7 +77,7 @@ class NorwegianDurationLanguage extends DurationLocale {
     if (abbreviated) {
       return 'us';
     } else {
-      return 'mikrosekund' + (amount > 1 ? 'er' : '');
+      return 'mikrosekund${amount > 1 ? 'er' : ''}';
     }
   }
 }

@@ -1,53 +1,25 @@
-/// Provides constants used to control terity of [prettyDuration] and
-/// [printDuration].
-class DurationTersity {
-  /// Unique id used to identify and compare [DurationTersity]
-  final int _id;
-  final int mod;
-  final String name;
+/// Enum used to control tersity of [prettyDuration] and [printDuration].
+enum DurationTersity {
+  week(1),
+  day(7),
+  hour(24),
+  minute(60),
+  second(60),
+  millisecond(1000),
+  microsecond(1000);
 
-  const DurationTersity._(this._id, this.mod, this.name);
+  const DurationTersity(this.mod);
+
+  final int mod;
+
+  int get _id => values.length - index;
 
   @override
   String toString() => name;
 
-  /// Skip all time units below week
-  static const week = DurationTersity._(7, 1, 'week');
-
-  /// Skip all time units below day
-  static const day = DurationTersity._(6, 7, 'day');
-
-  /// Skip all time units below hour
-  static const hour = DurationTersity._(5, 24, 'hour');
-
-  /// Skip all time units below minute
-  static const minute = DurationTersity._(4, 60, 'minute');
-
-  /// Skip all time units below second
-  static const second = DurationTersity._(3, 60, 'second');
-
-  /// Skip all time units below millisecond
-  static const millisecond = DurationTersity._(2, 1000, 'millisecond');
-
-  /// Skip all time units below microsecond
-  static const microsecond = DurationTersity._(1, 1000, 'microsecond');
-
-  static const list = [
-    week,
-    day,
-    hour,
-    minute,
-    second,
-    millisecond,
-    microsecond
-  ];
-
   bool operator >(DurationTersity other) => _id > other._id;
-
   bool operator <(DurationTersity other) => _id < other._id;
-
   bool operator >=(DurationTersity other) => _id >= other._id;
-
   bool operator <=(DurationTersity other) => _id <= other._id;
 }
 
@@ -70,8 +42,6 @@ extension DurExt on Duration {
         return inMilliseconds;
       case DurationTersity.microsecond:
         return inMicroseconds;
-      default:
-        throw UnsupportedError('support duration unit provided: $unit');
     }
   }
 }

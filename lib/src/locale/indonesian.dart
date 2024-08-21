@@ -8,7 +8,7 @@ class IndonesianDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'thn';
     } else {
-      return 'tahun' + (amount > 1 ? '' : ''); //no pluralization
+      return 'tahun${amount > 1 ? '' : ''}'; //no pluralization
     }
   }
 
@@ -17,7 +17,7 @@ class IndonesianDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'bln';
     } else {
-      return 'bulan' + (amount > 1 ? '' : ''); //no pluralization
+      return 'bulan${amount > 1 ? '' : ''}'; //no pluralization
     }
   }
 
@@ -26,7 +26,7 @@ class IndonesianDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'mgg';
     } else {
-      return 'minggu' + (amount > 1 ? '' : ''); //no pluralization
+      return 'minggu${amount > 1 ? '' : ''}'; //no pluralization
     }
   }
 
@@ -35,7 +35,7 @@ class IndonesianDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'hr';
     } else {
-      return 'hari' + (amount > 1 ? '' : ''); //no pluralization
+      return 'hari${amount > 1 ? '' : ''}'; //no pluralization
     }
   }
 
@@ -44,7 +44,7 @@ class IndonesianDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'j';
     } else {
-      return 'jam' + (amount > 1 ? '' : ''); //no pluralization
+      return 'jam${amount > 1 ? '' : ''}'; //no pluralization
     }
   }
 
@@ -53,7 +53,7 @@ class IndonesianDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'm';
     } else {
-      return 'menit' + (amount > 1 ? '' : ''); //no pluralization
+      return 'menit${amount > 1 ? '' : ''}'; //no pluralization
     }
   }
 
@@ -62,7 +62,7 @@ class IndonesianDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'd';
     } else {
-      return 'detik' + (amount > 1 ? '' : ''); //no pluralization
+      return 'detik${amount > 1 ? '' : ''}'; //no pluralization
     }
   }
 
@@ -71,7 +71,7 @@ class IndonesianDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'milidetik';
     } else {
-      return 'milidetik' + (amount > 1 ? '' : ''); //no pluralization
+      return 'milidetik${amount > 1 ? '' : ''}'; //no pluralization
     }
   }
 
@@ -80,7 +80,7 @@ class IndonesianDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'mikrodetik';
     } else {
-      return 'mikrodetik' + (amount > 1 ? 's' : ''); //no pluralization
+      return 'mikrodetik${amount > 1 ? 's' : ''}'; //no pluralization
     }
   }
 }

@@ -8,7 +8,7 @@ class GermanDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'J';
     } else {
-      return 'Jahr' + (amount > 1 ? 'e' : '');
+      return 'Jahr${amount > 1 ? 'e' : ''}';
     }
   }
 
@@ -17,7 +17,7 @@ class GermanDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'M';
     } else {
-      return 'Monat' + (amount > 1 ? 'e' : '');
+      return 'Monat${amount > 1 ? 'e' : ''}';
     }
   }
 
@@ -26,7 +26,7 @@ class GermanDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'W';
     } else {
-      return 'Woche' + (amount > 1 ? 'n' : '');
+      return 'Woche${amount > 1 ? 'n' : ''}';
     }
   }
 
@@ -35,7 +35,7 @@ class GermanDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'T';
     } else {
-      return 'Tag' + (amount > 1 ? 'e' : '');
+      return 'Tag${amount > 1 ? 'e' : ''}';
     }
   }
 
@@ -44,7 +44,7 @@ class GermanDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'Std';
     } else {
-      return 'Stunde' + (amount > 1 ? 'n' : '');
+      return 'Stunde${amount > 1 ? 'n' : ''}';
     }
   }
 
@@ -53,7 +53,7 @@ class GermanDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'Min';
     } else {
-      return 'Minute' + (amount > 1 ? 'n' : '');
+      return 'Minute${amount > 1 ? 'n' : ''}';
     }
   }
 
@@ -62,7 +62,7 @@ class GermanDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'Sek';
     } else {
-      return 'Sekunde' + (amount > 1 ? 'n' : '');
+      return 'Sekunde${amount > 1 ? 'n' : ''}';
     }
   }
 
@@ -71,7 +71,7 @@ class GermanDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'Ms';
     } else {
-      return 'Millisekunde' + (amount > 1 ? 'n' : '');
+      return 'Millisekunde${amount > 1 ? 'n' : ''}';
     }
   }
 
@@ -80,7 +80,7 @@ class GermanDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'Us';
     } else {
-      return 'Mikrosekunde' + (amount > 1 ? 'n' : '');
+      return 'Mikrosekunde${amount > 1 ? 'n' : ''}';
     }
   }
 }

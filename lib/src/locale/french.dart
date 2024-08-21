@@ -8,7 +8,7 @@ class FrenchDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'an';
     } else {
-      return 'année' + (amount > 1 ? 's' : '');
+      return 'année${amount > 1 ? 's' : ''}';
     }
   }
 
@@ -26,7 +26,7 @@ class FrenchDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'sem';
     } else {
-      return 'semaine' + (amount > 1 ? 's' : '');
+      return 'semaine${amount > 1 ? 's' : ''}';
     }
   }
 
@@ -35,7 +35,7 @@ class FrenchDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'j';
     } else {
-      return 'jour' + (amount > 1 ? 's' : '');
+      return 'jour${amount > 1 ? 's' : ''}';
     }
   }
 
@@ -44,7 +44,7 @@ class FrenchDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'h';
     } else {
-      return 'heure' + (amount > 1 ? 's' : '');
+      return 'heure${amount > 1 ? 's' : ''}';
     }
   }
 
@@ -53,7 +53,7 @@ class FrenchDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'min';
     } else {
-      return 'minute' + (amount > 1 ? 's' : '');
+      return 'minute${amount > 1 ? 's' : ''}';
     }
   }
 
@@ -62,7 +62,7 @@ class FrenchDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 's';
     } else {
-      return 'seconde' + (amount > 1 ? 's' : '');
+      return 'seconde${amount > 1 ? 's' : ''}';
     }
   }
 
@@ -71,7 +71,7 @@ class FrenchDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'ms';
     } else {
-      return 'milliseconde' + (amount > 1 ? 's' : '');
+      return 'milliseconde${amount > 1 ? 's' : ''}';
     }
   }
 
@@ -80,7 +80,7 @@ class FrenchDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'us';
     } else {
-      return 'microseconde' + (amount > 1 ? 's' : '');
+      return 'microseconde${amount > 1 ? 's' : ''}';
     }
   }
 }

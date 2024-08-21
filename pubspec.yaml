@@ -1,6 +1,6 @@
 name: duration
 description: Utilities to make working with 'Duration's easier. Formats duration in human readable form and also parses duration in human readable form to Dart's Duration.
-version: 3.0.15
+version: 4.0.0
 homepage: https://github.com/desktop-dart/duration
 
 environment:

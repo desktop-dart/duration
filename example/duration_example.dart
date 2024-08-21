@@ -3,7 +3,7 @@ import 'package:duration/locale.dart';
 
 void main() {
   // => 5 days 9 hours
-  printDuration(aDay * 5 + anHour * 9);
+  print((aDay * 5 + anHour * 9).pretty());
 
   // More examples
 
@@ -16,34 +16,34 @@ void main() {
       microseconds: 999);
 
   // => 5 days 23 hours 59 minutes 59 seconds
-  printDuration(dur);
+  print(dur.pretty());
 
   // => 3.455 milliseconds
-  printMilliseconds(aMicrosecond * 3455);
+  print(prettyMilliseconds(aMicrosecond * 3455));
 
   // => 3 seconds
-  printDuration(aMillisecond * 3000);
+  print((aMillisecond * 3000).pretty());
 
   // => 2 seconds
-  printDuration(aMillisecond * 2250);
+  print((aMillisecond * 2250).pretty());
 
   // => 1 day 3 hours 2 minutes
-  printDuration(aMillisecond * 97320000);
+  print((aMillisecond * 97320000).pretty());
 
   // => 5 días 9 horas
-  printDuration(aDay * 5 + anHour * 9,
-      abbreviated: false, locale: spanishLocale);
+  print((aDay * 5 + anHour * 9)
+      .pretty(abbreviated: false, locale: spanishLocale));
 
   // => 5d, 23h, 59m, 59s, 999ms, 999us
-  printDuration(dur, abbreviated: true, tersity: DurationTersity.microsecond);
+  print(dur.pretty(abbreviated: true, tersity: DurationTersity.microsecond));
 
   // => 5 whole days 9 whole hours
-  printDuration(aDay * 5 + anHour * 9, spacer: ' whole ');
+  print((aDay * 5 + anHour * 9).pretty(spacer: ' whole '));
 
   // => 5 days, 9 hours, 10 minute
-  printDuration(aDay * 5 + anHour * 9 + aMinute * 10, delimiter: ', ');
+  print((aDay * 5 + anHour * 9 + aMinute * 10).pretty(delimiter: ', '));
 
   // => 5 days, 9 hours and 10 minutes
-  printDuration(aDay * 5 + anHour * 9 + aMinute * 10,
-      delimiter: ', ', conjugation: ' and ');
+  print((aDay * 5 + anHour * 9 + aMinute * 10).pretty(
+      delimiter: ', ', conjunction: ' and '));
 }

@@ -39,25 +39,6 @@ String prettyMilliseconds(Duration duration,
   }
 }
 
-/// Pretty print [duration] in terms of milliseconds.
-///
-/// If [terse] is true, microseconds are ignored.
-/// Use [language] to configure which locale to print for.
-/// Use [abbreviated] to control if the units should be abbreviated.
-String printMilliseconds(Duration duration,
-    {bool terse = false,
-    DurationLocale language = const EnglishDurationLocale(),
-    String separator = ' ',
-    bool abbreviated = false}) {
-  final String fmt = prettyMilliseconds(duration,
-      terse: terse,
-      language: language,
-      separator: separator,
-      abbreviated: abbreviated);
-  print(fmt);
-  return fmt;
-}
-
 /// Pretty format [duration] in terms of seconds.
 ///
 /// If [terse] is true, milliseconds and microseconds are ignored.

@@ -1,5 +1,13 @@
 # Changelog
 
+## 4.0.0
+
++ Extension method `Duration.pretty()`
++ Handle negative durations
+
+**Breaking change**:
++ Removed `printDuration` and `printMilliseconds` functions
+
 ## 3.0.15
 
 **Breaking change**:

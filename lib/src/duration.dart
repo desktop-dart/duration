@@ -45,6 +45,9 @@ String prettyDuration(Duration duration,
     spacer ??= locale.defaultSpacer;
   }
 
+  String sign = duration.isNegative ? '-' : '';
+  duration = duration.abs();
+
   var out = <String>[];
 
   for (final currentTersity in DurationTersity.values) {
@@ -66,34 +69,36 @@ String prettyDuration(Duration duration,
   }
 
   if (out.length == 1 || first == true) {
-    return out.first;
+    return sign + out.first;
   } else {
     if (conjunction == null || out.length == 1) {
-      return out.join(delimiter);
+      return sign + out.join(delimiter);
     } else {
-      return out.sublist(0, out.length - 1).join(delimiter) +
+      return sign + out.sublist(0, out.length - 1).join(delimiter) +
           conjunction +
           out.last;
     }
   }
 }
 
-String printDuration(Duration duration,
-    {DurationTersity tersity = DurationTersity.second,
-    DurationTersity upperTersity = DurationTersity.week,
-    DurationLocale locale = const EnglishDurationLocale(),
-    String? spacer,
-    String? delimiter,
-    String? conjugation,
-    bool abbreviated = false}) {
-  final String fmt = prettyDuration(duration,
-      tersity: tersity,
-      upperTersity: upperTersity,
-      locale: locale,
-      spacer: spacer,
-      delimiter: delimiter,
-      conjunction: conjugation,
-      abbreviated: abbreviated);
-  print(fmt);
-  return fmt;
+extension PrettyDuration on Duration {
+  String pretty(
+      {DurationTersity tersity = DurationTersity.second,
+      DurationTersity upperTersity = DurationTersity.week,
+      DurationLocale locale = const EnglishDurationLocale(),
+      String? spacer,
+      String? delimiter,
+      String? conjunction,
+      bool abbreviated = false,
+      bool first = false}) {
+    return prettyDuration(this,
+        tersity: tersity,
+        upperTersity: upperTersity,
+        locale: locale,
+        spacer: spacer,
+        delimiter: delimiter,
+        conjunction: conjunction,
+        abbreviated: abbreviated,
+        first: first);
+  }
 }

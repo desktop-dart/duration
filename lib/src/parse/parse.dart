@@ -4,6 +4,14 @@
 /// Example:
 ///     parseDuration('2w 5d 23h 59m 59s 999ms 999us');
 Duration parseDuration(String input, {String separator = ','}) {
+  bool isNegative = false;
+  if (input.startsWith('-')) {
+    isNegative = true;
+    input = input.substring(1);
+  } else if (input.startsWith('+')) {
+    input = input.substring(1);
+  }
+
   final parts = input.split(separator).map((t) => t.trim()).toList();
 
   int? weeks;
@@ -70,13 +78,14 @@ Duration parseDuration(String input, {String separator = ','}) {
     }
   }
 
-  return Duration(
+  var ret = Duration(
       days: (days ?? 0) + (weeks ?? 0) * 7,
       hours: hours ?? 0,
       minutes: minutes ?? 0,
       seconds: seconds ?? 0,
       milliseconds: milliseconds ?? 0,
       microseconds: microseconds ?? 0);
+  return isNegative ? -ret : ret;
 }
 
 /// Parses duration string formatted by Duration.toString() to [Duration].
@@ -85,6 +94,14 @@ Duration parseDuration(String input, {String separator = ','}) {
 /// Example:
 ///     parseTime('245:09:08.007006');
 Duration parseTime(String input) {
+  bool isNegative = false;
+  if (input.startsWith('-')) {
+    isNegative = true;
+    input = input.substring(1);
+  } else if (input.startsWith('+')) {
+    input = input.substring(1);
+  }
+
   final parts = input.split(':');
 
   if (parts.length != 3) throw FormatException('Invalid time format');
@@ -120,13 +137,15 @@ Duration parseTime(String input) {
 
   // TODO verify that there are no negative parts
 
-  return Duration(
+  var ret = Duration(
       days: days,
       hours: hours,
       minutes: minutes,
       seconds: seconds,
       milliseconds: milliseconds,
       microseconds: microseconds);
+
+  return isNegative ? -ret : ret;
 }
 
 Duration? tryParseDuration(String input) {

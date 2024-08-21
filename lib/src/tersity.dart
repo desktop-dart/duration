@@ -1,4 +1,4 @@
-/// Enum used to control tersity of [prettyDuration] and [printDuration].
+/// Enum used to control tersity of [prettyDuration].
 enum DurationTersity {
   week(1),
   day(7),

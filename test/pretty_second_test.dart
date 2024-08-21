@@ -2,7 +2,7 @@ import 'package:duration/duration.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('A group of tests', () {
+  group('prettySecond', () {
     test('default', () {
       {
         final dur = Duration(microseconds: 0);
@@ -39,7 +39,6 @@ void main() {
         expect(prettySeconds(dur), '124 seconds 123.456 milliseconds');
       }
     });
-
     test('Abbreviated', () {
       {
         final dur = Duration(microseconds: 0);
@@ -76,7 +75,6 @@ void main() {
         expect(prettySeconds(dur, abbreviated: true), '124 s 123.456 ms');
       }
     });
-
     test('terse', () {
       {
         final dur = Duration(microseconds: 0);

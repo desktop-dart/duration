@@ -23,16 +23,16 @@ main() {
   );
 
   // => 5d, 23h, 59m, 59s
-  printDuration(dur);
+  print(dur.pretty());
 
   // => 3 seconds
-  printDuration(aMillisecond * 3000);
+  print((aMillisecond * 3000).pretty());
 
   // => 2 seconds 250 milliseconds
-  printDuration(aMillisecond * 2250);
+  print((aMillisecond * 2250).pretty);
 
   // => 1 day 3 hours 2 minutes
-  printDuration(aMillisecond * 97320000);
+  print((aMillisecond * 97320000).pretty());
 }
 ```
 
@@ -43,11 +43,12 @@ Use `locale` parameter to format with desired locale.
 ```dart
 main() {
   // => 5 días 9 horas
-  printDuration(
-    aDay * 5 + anHour * 9,
-    abbreviated: false,
-    locale: DurationLocale.fromLanguageCode('ru'),
-  );
+  final dur = aDay * 5 + anHour * 9;
+  print(
+      dur.pretty(
+        abbreviated: false,
+        locale: DurationLocale.fromLanguageCode('ru'),
+      ));
 }
 ```
 
@@ -67,7 +68,7 @@ main() {
   );
 
   // => 5d, 23h, 59m, 59s, 999ms, 999us
-  printDuration(dur, abbreviated: true, tersity: DurationTersity.all);
+  print(dur.pretty(abbreviated: true, tersity: DurationTersity.all));
 }
 ```
 
@@ -78,7 +79,7 @@ Use `spacer` to add a string between amount and unit.
 ```dart
 main() {
   // => 5 whole days 9 whole hours
-  printDuration(aDay * 5 + anHour * 9, spacer: ' whole ');
+  print((aDay * 5 + anHour * 9).pretty(spacer: ' whole '));
 }
 ```
 
@@ -89,7 +90,7 @@ Use `delimiter` to separate each individual part with a string.
 ```dart
 main() {
   // => 5 days, 9 hours and 10 minute
-  printDuration(aDay * 5 + anHour * 9 + aMinute * 10, delimiter: ', ');
+  print((aDay * 5 + anHour * 9 + aMinute * 10).pretty(delimiter: ', '));
 }
 ```
 
@@ -101,11 +102,11 @@ delimiter to add ',' and 'and' to separate individual parts.
 ```dart
 main() {
   // => 5 days, 9 hours and 10 minutes
-  printDuration(
-    aDay * 5 + anHour * 9 + aMinute * 10,
-    delimiter: ', ',
-    conjugation: ' and ',
-  );
+  print(
+      (aDay * 5 + anHour * 9 + aMinute * 10).pretty(
+        delimiter: ', ',
+        conjugation: ' and ',
+      ));
 }
 ```
 

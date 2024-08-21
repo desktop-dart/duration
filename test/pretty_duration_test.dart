@@ -311,5 +311,20 @@ void main() {
 
       expect(prettyDuration(dur, first: true), '5 days');
     });
+
+    test('MinusDurations', () {
+      expect(
+        (-(aMinute * 10)).pretty(),
+        '-10 minutes',
+      );
+      expect(
+        (-(aMinute * 10 + aSecond * 15)).pretty(),
+        '-10 minutes 15 seconds',
+      );
+      expect(
+        (-(aMinute * 10 + aSecond * 15)).pretty(first: true),
+        '-10 minutes',
+      );
+    });
   });
 }

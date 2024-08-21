@@ -203,7 +203,7 @@ const _locales = <String, DurationLocale>{
   'ko': koreanLocale,
   'ro': romanianLocale,
   'ar': arabicLocale,
-  'cz': czechLocale,
+  'cs': czechLocale,
   'fi': finnishLocale,
   'ja': japaneseLocale,
   'uk': ukrainianLocale,

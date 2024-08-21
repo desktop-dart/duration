@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.0.15
+
+**Breaking change**:
++ Czeck locale should be `cs` not `cz`
+
 ## 3.0.14
 
 + Vietnamese locale

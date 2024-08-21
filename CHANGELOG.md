@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.0.1
+
++ README and some documentation fixes
+
 ## 4.0.0
 
 + Extension method `Duration.pretty()`

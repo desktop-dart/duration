@@ -2,14 +2,9 @@
 
 Utilities to make working with 'Duration's easier.
 
-**NOTE**: Use `prettyDuration`, `prettySeconds`, `prettyMilliseconds` 
-instead of `printDuration`, `printSeconds`, `printMilliseconds`
-if you only want to format/convert and don't want to print to console!
-
 # Format duration
 
-Use `printDuration` to print a human readable durations. By default, `printDuration`
-will print the duration down to the second. It uses english locale by default.
+Use `Duration.pretty()` method or `prettyDuration` function to format a duration.
 
 ```dart
 main() {

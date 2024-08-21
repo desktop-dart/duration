@@ -12,14 +12,14 @@ import 'tersity.dart';
 ///         seconds: 59,
 ///         milliseconds: 999,
 ///         microseconds: 999);
-///     printDuration(dur); // => 5d 23h 59m 59s 999ms 999us
+///     prettyDuration(dur) // => 5d 23h 59m 59s 999ms 999us
 ///
 /// Use [abbreviated] to determine if units should be abbreviated or not.
 ///
 /// Example:
 ///
 ///     // => 5 days 9 hours
-///     printDuration(aDay * 5 + anHour * 9, abbreviated: false);
+///     prettyDuration(aDay * 5 + anHour * 9, abbreviated: false)
 ///
 /// Use [locale] to format according to the desired locale.
 ///

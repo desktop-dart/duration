@@ -14,10 +14,10 @@ class PortugueseBRDurationLanguage extends DurationLocale {
 
   @override
   String month(int amount, [bool abbreviated = true]) {
-    if (abbreviated) {
+    if (abbreviated || amount == 1) {
       return 'mês';
     } else {
-      return 'mês${amount > 1 ? 'es' : ''}';
+      return 'meses';
     }
   }
 
@@ -35,7 +35,7 @@ class PortugueseBRDurationLanguage extends DurationLocale {
     if (abbreviated) {
       return 'd';
     } else {
-      return 'día${amount > 1 ? 's' : ''}';
+      return 'dia${amount > 1 ? 's' : ''}';
     }
   }
 
@@ -71,7 +71,7 @@ class PortugueseBRDurationLanguage extends DurationLocale {
     if (abbreviated) {
       return 'ms';
     } else {
-      return 'milisegundo${amount > 1 ? 's' : ''}';
+      return 'milissegundo${amount > 1 ? 's' : ''}';
     }
   }
 
@@ -80,7 +80,7 @@ class PortugueseBRDurationLanguage extends DurationLocale {
     if (abbreviated) {
       return 'us';
     } else {
-      return 'microsegundo${amount > 1 ? 's' : ''}';
+      return 'microssegundo${amount > 1 ? 's' : ''}';
     }
   }
 }

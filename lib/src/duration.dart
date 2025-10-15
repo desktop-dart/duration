@@ -107,3 +107,9 @@ extension PrettyDuration on Duration {
         maxUnits: maxUnits);
   }
 }
+
+/// Returns the lesser of two durations.
+Duration min(Duration a, Duration b) => a < b ? a : b;
+
+/// Returns the larger of two durations.
+Duration max(Duration a, Duration b) => a > b ? a : b;

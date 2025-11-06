@@ -6,96 +6,96 @@ void main() {
     test('default', () {
       {
         final dur = Duration(microseconds: 0);
-        expect(prettyDuration(dur), '0 seconds');
+        expect(prettyDuration(dur), '0${'\u{00A0}'}seconds');
       }
 
       {
         final dur = Duration(microseconds: 999);
         expect(prettyDuration(dur, tersity: DurationTersity.microsecond),
-            '999 microseconds');
+            '999${'\u{00A0}'}microseconds');
       }
 
       {
         final dur = Duration(microseconds: 1000);
         expect(prettyDuration(dur, tersity: DurationTersity.microsecond),
-            '1 millisecond');
+            '1${'\u{00A0}'}millisecond');
       }
 
       {
         final dur = Duration(milliseconds: 5);
         expect(prettyDuration(dur, tersity: DurationTersity.microsecond),
-            '5 milliseconds');
+            '5${'\u{00A0}'}milliseconds');
       }
 
       {
         final dur = Duration(milliseconds: 999);
         expect(prettyDuration(dur, tersity: DurationTersity.microsecond),
-            '999 milliseconds');
+            '999${'\u{00A0}'}milliseconds');
       }
 
       {
         final dur = Duration(milliseconds: 1000);
-        expect(prettyDuration(dur), '1 second');
+        expect(prettyDuration(dur), '1${'\u{00A0}'}second');
       }
 
       {
         final dur = Duration(seconds: 5);
-        expect(prettyDuration(dur), '5 seconds');
+        expect(prettyDuration(dur), '5${'\u{00A0}'}seconds');
       }
 
       {
         final dur = Duration(seconds: 59);
-        expect(prettyDuration(dur), '59 seconds');
+        expect(prettyDuration(dur), '59${'\u{00A0}'}seconds');
       }
 
       {
         final dur = Duration(seconds: 60);
-        expect(prettyDuration(dur), '1 minute');
+        expect(prettyDuration(dur), '1${'\u{00A0}'}minute');
       }
 
       {
         final dur = Duration(minutes: 5);
-        expect(prettyDuration(dur), '5 minutes');
+        expect(prettyDuration(dur), '5${'\u{00A0}'}minutes');
       }
 
       {
         final dur = Duration(minutes: 59);
-        expect(prettyDuration(dur), '59 minutes');
+        expect(prettyDuration(dur), '59${'\u{00A0}'}minutes');
       }
 
       {
         final dur = Duration(minutes: 60);
-        expect(prettyDuration(dur), '1 hour');
+        expect(prettyDuration(dur), '1${'\u{00A0}'}hour');
       }
 
       {
         final dur = Duration(hours: 5);
-        expect(prettyDuration(dur), '5 hours');
+        expect(prettyDuration(dur), '5${'\u{00A0}'}hours');
       }
 
       {
         final dur = Duration(hours: 23);
-        expect(prettyDuration(dur), '23 hours');
+        expect(prettyDuration(dur), '23${'\u{00A0}'}hours');
       }
 
       {
         final dur = Duration(hours: 24);
-        expect(prettyDuration(dur), '1 day');
+        expect(prettyDuration(dur), '1${'\u{00A0}'}day');
       }
 
       {
         final dur = Duration(days: 5);
-        expect(prettyDuration(dur), '5 days');
+        expect(prettyDuration(dur), '5${'\u{00A0}'}days');
       }
 
       {
         final dur = Duration(days: 7);
-        expect(prettyDuration(dur), '1 week');
+        expect(prettyDuration(dur), '1${'\u{00A0}'}week');
       }
 
       {
         final dur = Duration(days: 14);
-        expect(prettyDuration(dur), '2 weeks');
+        expect(prettyDuration(dur), '2${'\u{00A0}'}weeks');
       }
     });
 
@@ -105,7 +105,7 @@ void main() {
         expect(
             prettyDuration(dur,
                 abbreviated: true, tersity: DurationTersity.microsecond),
-            '0us');
+            '0${'\u{00A0}'}us');
       }
 
       {
@@ -113,7 +113,7 @@ void main() {
         expect(
             prettyDuration(dur,
                 abbreviated: true, tersity: DurationTersity.microsecond),
-            '999us');
+            '999${'\u{00A0}'}us');
       }
 
       {
@@ -121,7 +121,7 @@ void main() {
         expect(
             prettyDuration(dur,
                 abbreviated: true, tersity: DurationTersity.microsecond),
-            '1ms');
+            '1${'\u{00A0}'}ms');
       }
 
       {
@@ -129,7 +129,7 @@ void main() {
         expect(
             prettyDuration(dur,
                 abbreviated: true, tersity: DurationTersity.microsecond),
-            '5ms');
+            '5${'\u{00A0}'}ms');
       }
 
       {
@@ -137,90 +137,90 @@ void main() {
         expect(
             prettyDuration(dur,
                 abbreviated: true, tersity: DurationTersity.microsecond),
-            '999ms');
+            '999${'\u{00A0}'}ms');
       }
 
       {
         final dur = Duration(milliseconds: 1000);
-        expect(prettyDuration(dur, abbreviated: true), '1s');
+        expect(prettyDuration(dur, abbreviated: true), '1${'\u{00A0}'}s');
       }
 
       {
         final dur = Duration(seconds: 5);
-        expect(prettyDuration(dur, abbreviated: true), '5s');
+        expect(prettyDuration(dur, abbreviated: true), '5${'\u{00A0}'}s');
       }
 
       {
         final dur = Duration(seconds: 59);
-        expect(prettyDuration(dur, abbreviated: true), '59s');
+        expect(prettyDuration(dur, abbreviated: true), '59${'\u{00A0}'}s');
       }
 
       {
         final dur = Duration(seconds: 60);
-        expect(prettyDuration(dur, abbreviated: true), '1min');
+        expect(prettyDuration(dur, abbreviated: true), '1${'\u{00A0}'}min');
       }
 
       {
         final dur = Duration(minutes: 5);
-        expect(prettyDuration(dur, abbreviated: true), '5min');
+        expect(prettyDuration(dur, abbreviated: true), '5${'\u{00A0}'}min');
       }
 
       {
         final dur = Duration(minutes: 59);
-        expect(prettyDuration(dur, abbreviated: true), '59min');
+        expect(prettyDuration(dur, abbreviated: true), '59${'\u{00A0}'}min');
       }
 
       {
         final dur = Duration(minutes: 60);
-        expect(prettyDuration(dur, abbreviated: true), '1h');
+        expect(prettyDuration(dur, abbreviated: true), '1${'\u{00A0}'}h');
       }
 
       {
         final dur = Duration(hours: 5);
-        expect(prettyDuration(dur, abbreviated: true), '5h');
+        expect(prettyDuration(dur, abbreviated: true), '5${'\u{00A0}'}h');
       }
 
       {
         final dur = Duration(hours: 23);
-        expect(prettyDuration(dur, abbreviated: true), '23h');
+        expect(prettyDuration(dur, abbreviated: true), '23${'\u{00A0}'}h');
       }
 
       {
         final dur = Duration(hours: 24);
-        expect(prettyDuration(dur, abbreviated: true), '1d');
+        expect(prettyDuration(dur, abbreviated: true), '1${'\u{00A0}'}d');
       }
 
       {
         final dur = Duration(days: 5);
-        expect(prettyDuration(dur, abbreviated: true), '5d');
+        expect(prettyDuration(dur, abbreviated: true), '5${'\u{00A0}'}d');
       }
 
       {
         final dur = Duration(days: 7);
-        expect(prettyDuration(dur, abbreviated: true), '1w');
+        expect(prettyDuration(dur, abbreviated: true), '1${'\u{00A0}'}w');
       }
 
       {
         final dur = Duration(days: 14);
-        expect(prettyDuration(dur, abbreviated: true), '2w');
+        expect(prettyDuration(dur, abbreviated: true), '2${'\u{00A0}'}w');
       }
     });
 
     test('Delimiter', () {
       expect(
         prettyDuration(aMinute * 10, delimiter: ', '),
-        '10 minutes',
+        '10${'\u{00A0}'}minutes',
       );
 
       expect(
         prettyDuration(aMinute * 10 + aSecond * 5, delimiter: ', '),
-        '10 minutes, 5 seconds',
+        '10${'\u{00A0}'}minutes, 5${'\u{00A0}'}seconds',
       );
 
       expect(
         prettyDuration(anHour * 15 + aMinute * 10 + aSecond * 5,
             delimiter: ', '),
-        '15 hours, 10 minutes, 5 seconds',
+        '15${'\u{00A0}'}hours, 10${'\u{00A0}'}minutes, 5${'\u{00A0}'}seconds',
       );
     });
 
@@ -244,24 +244,24 @@ void main() {
     test('Conjugation', () {
       expect(
         prettyDuration(aMinute * 10, conjunction: ' and '),
-        '10 minutes',
+        '10${'\u{00A0}'}minutes',
       );
 
       expect(
         prettyDuration(aMinute * 10 + aSecond * 5, conjunction: ' and '),
-        '10 minutes and 5 seconds',
+        '10${'\u{00A0}'}minutes and 5${'\u{00A0}'}seconds',
       );
 
       expect(
         prettyDuration(anHour * 15 + aMinute * 10 + aSecond * 5,
             conjunction: ' and '),
-        '15 hours 10 minutes and 5 seconds',
+        '15${'\u{00A0}'}hours 10${'\u{00A0}'}minutes and 5${'\u{00A0}'}seconds',
       );
 
       expect(
         prettyDuration(anHour * 15 + aMinute * 10 + aSecond * 5,
             conjunction: ' and ', delimiter: ', '),
-        '15 hours, 10 minutes and 5 seconds',
+        '15${'\u{00A0}'}hours, 10${'\u{00A0}'}minutes and 5${'\u{00A0}'}seconds',
       );
     });
 
@@ -274,59 +274,61 @@ void main() {
           milliseconds: 999,
           microseconds: 999);
 
-      expect(prettyDuration(dur, tersity: DurationTersity.day), '5 days');
+      expect(prettyDuration(dur, tersity: DurationTersity.day),
+          '5${'\u{00A0}'}days');
 
       expect(prettyDuration(dur, tersity: DurationTersity.hour),
-          '5 days 23 hours');
+          '5${'\u{00A0}'}days 23${'\u{00A0}'}hours');
 
       expect(prettyDuration(dur, tersity: DurationTersity.minute),
-          '5 days 23 hours 59 minutes');
+          '5${'\u{00A0}'}days 23${'\u{00A0}'}hours 59${'\u{00A0}'}minutes');
 
       expect(prettyDuration(dur, tersity: DurationTersity.second),
-          '5 days 23 hours 59 minutes 59 seconds');
+          '5${'\u{00A0}'}days 23${'\u{00A0}'}hours 59${'\u{00A0}'}minutes 59${'\u{00A0}'}seconds');
 
       expect(prettyDuration(dur, tersity: DurationTersity.millisecond),
-          '5 days 23 hours 59 minutes 59 seconds 999 milliseconds');
+          '5${'\u{00A0}'}days 23${'\u{00A0}'}hours 59${'\u{00A0}'}minutes 59${'\u{00A0}'}seconds 999${'\u{00A0}'}milliseconds');
 
       expect(prettyDuration(dur, tersity: DurationTersity.microsecond),
-          '5 days 23 hours 59 minutes 59 seconds 999 milliseconds 999 microseconds');
+          '5${'\u{00A0}'}days 23${'\u{00A0}'}hours 59${'\u{00A0}'}minutes 59${'\u{00A0}'}seconds 999${'\u{00A0}'}milliseconds 999${'\u{00A0}'}microseconds');
     });
 
     test('upperTersity', () {
       {
         final dur = Duration(hours: 25);
         expect(prettyDuration(dur, upperTersity: DurationTersity.hour),
-            '25 hours');
+            '25${'\u{00A0}'}hours');
       }
 
       {
         final dur = Duration(days: 2, hours: 2);
         expect(prettyDuration(dur, upperTersity: DurationTersity.minute),
-            '3000 minutes');
+            '3000${'\u{00A0}'}minutes');
       }
     });
 
     test('maxUnits', () {
       final dur = Duration(days: 5, hours: 23, minutes: 15, seconds: 25);
 
-      expect(prettyDuration(dur, maxUnits: 1), '5 days');
-      expect(prettyDuration(dur, maxUnits: 3), '5 days 23 hours 15 minutes');
+      expect(prettyDuration(dur, maxUnits: 1), '5${'\u{00A0}'}days');
+      expect(prettyDuration(dur, maxUnits: 3),
+          '5${'\u{00A0}'}days 23${'\u{00A0}'}hours 15${'\u{00A0}'}minutes');
       expect(prettyDuration(dur, maxUnits: 3, conjunction: ' and '),
-          '5 days 23 hours and 15 minutes');
+          '5${'\u{00A0}'}days 23${'\u{00A0}'}hours and 15${'\u{00A0}'}minutes');
     });
 
     test('MinusDurations', () {
       expect(
         (-(aMinute * 10)).pretty(),
-        '-10 minutes',
+        '-10${'\u{00A0}'}minutes',
       );
       expect(
         (-(aMinute * 10 + aSecond * 15)).pretty(),
-        '-10 minutes 15 seconds',
+        '-10${'\u{00A0}'}minutes 15${'\u{00A0}'}seconds',
       );
       expect(
         (-(aMinute * 10 + aSecond * 15)).pretty(maxUnits: 1),
-        '-10 minutes',
+        '-10${'\u{00A0}'}minutes',
       );
     });
   });

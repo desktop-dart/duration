@@ -7,6 +7,9 @@ class ChineseSimplifiedDurationLocale extends DurationLocale {
   String get defaultSpacer => '';
 
   @override
+  String get abbreviatedSpacer => '';
+
+  @override
   String year(int amount, [bool abbreviated = true]) {
     return '年';
   }

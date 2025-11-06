@@ -8,7 +8,7 @@ import 'locale/locale.dart';
 String prettyMilliseconds(Duration duration,
     {bool terse = false,
     DurationLocale language = const EnglishDurationLocale(),
-    String separator = ' ',
+    String separator = '\u{00A0}',
     bool abbreviated = false}) {
   if (duration.inMilliseconds > 0) {
     final int us = duration.inMicroseconds % 1000;
@@ -47,7 +47,7 @@ String prettyMilliseconds(Duration duration,
 String prettySeconds(Duration duration,
     {bool terse = false,
     DurationLocale language = const EnglishDurationLocale(),
-    String separator = ' ',
+    String separator = '\u{00A0}',
     String delimiter = ' ',
     bool abbreviated = false}) {
   if (duration.inSeconds > 0) {

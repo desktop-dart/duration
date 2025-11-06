@@ -9,7 +9,28 @@ void main() {
       const dur = Duration(days: 5, hours: 23);
       expect(
         prettyDuration(dur, locale: locale),
-        '5 days 23 hours',
+        '5${'\u{00A0}'}days 23${'\u{00A0}'}hours',
+      );
+      expect(
+        prettyDuration(dur, locale: locale, abbreviated: true),
+        '5${'\u{00A0}'}d, 23${'\u{00A0}'}h',
+      );
+      expect(
+        prettyDuration(dur, locale: locale, abbreviated: true, delimiter: ' '),
+        '5${'\u{00A0}'}d 23${'\u{00A0}'}h',
+      );
+    });
+    test('US English', () {
+      const locale = EnglishUSDurationLocale();
+      const dur = Duration(days: 5, hours: 23);
+      expect(
+        prettyDuration(dur, locale: locale),
+        '5${'\u{00A0}'}days 23${'\u{00A0}'}hours',
+      );
+      expect(
+        prettyDuration(dur,
+            locale: locale, abbreviated: false, delimiter: '=', spacer: '%'),
+        '5%days=23%hours',
       );
       expect(
         prettyDuration(dur, locale: locale, abbreviated: true),
@@ -17,7 +38,12 @@ void main() {
       );
       expect(
         prettyDuration(dur, locale: locale, abbreviated: true, delimiter: ' '),
-        '5 d 23 h',
+        '5d 23h',
+      );
+      expect(
+        prettyDuration(dur,
+            locale: locale, abbreviated: true, delimiter: '=', spacer: '%'),
+        '5%d=23%h',
       );
     });
 

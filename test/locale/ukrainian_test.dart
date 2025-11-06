@@ -33,25 +33,26 @@ void main() {
       expect(
         prettyDuration(dur1,
             locale: locale, tersity: DurationTersity.microsecond),
-        '1 тиждень 1 день 1 година 1 хвилина 1 секунда 1 мілісекунда 1 мікросекунда',
+        '1${'\u{00A0}'}тиждень 1${'\u{00A0}'}день 1${'\u{00A0}'}година 1${'\u{00A0}'}хвилина 1${'\u{00A0}'}секунда 1${'\u{00A0}'}мілісекунда 1${'\u{00A0}'}мікросекунда',
       );
       expect(
         prettyDuration(dur21,
             locale: locale,
             upperTersity: DurationTersity.day,
             tersity: DurationTersity.microsecond),
-        '21 день 21 година 21 хвилина 21 секунда 21 мілісекунда 21 мікросекунда',
+        '21${'\u{00A0}'}день 21${'\u{00A0}'}година 21${'\u{00A0}'}хвилина 21${'\u{00A0}'}секунда 21${'\u{00A0}'}мілісекунда 21${'\u{00A0}'}мікросекунда',
       );
       expect(
         prettyDuration(dur201,
             locale: locale,
             upperTersity: DurationTersity.day,
             tersity: DurationTersity.microsecond),
-        '201 день 21 година 21 хвилина 21 секунда 201 мілісекунда 201 мікросекунда',
+        '201${'\u{00A0}'}день 21${'\u{00A0}'}година 21${'\u{00A0}'}хвилина 21${'\u{00A0}'}секунда 201${'\u{00A0}'}мілісекунда 201${'\u{00A0}'}мікросекунда',
       );
-      expect(prettyDuration(dur21W, locale: locale, maxUnits: 1), '21 тиждень');
-      expect(
-          prettyDuration(dur201W, locale: locale, maxUnits: 1), '201 тиждень');
+      expect(prettyDuration(dur21W, locale: locale, maxUnits: 1),
+          '21${'\u{00A0}'}тиждень');
+      expect(prettyDuration(dur201W, locale: locale, maxUnits: 1),
+          '201${'\u{00A0}'}тиждень');
     });
     test('Genitive singular - number ends with 2,3 or 4', () {
       const dur2 = Duration(
@@ -71,12 +72,12 @@ void main() {
       expect(
         prettyDuration(dur2,
             locale: locale, tersity: DurationTersity.microsecond),
-        '2 тижні 2 дні 2 години 2 хвилини 2 секунди 2 мілісекунди 2 мікросекунди',
+        '2${'\u{00A0}'}тижні 2${'\u{00A0}'}дні 2${'\u{00A0}'}години 2${'\u{00A0}'}хвилини 2${'\u{00A0}'}секунди 2${'\u{00A0}'}мілісекунди 2${'\u{00A0}'}мікросекунди',
       );
       expect(
         prettyDuration(dur4,
             locale: locale, tersity: DurationTersity.microsecond),
-        '4 тижні 4 дні 4 години 4 хвилини 4 секунди 4 мілісекунди 4 мікросекунди',
+        '4${'\u{00A0}'}тижні 4${'\u{00A0}'}дні 4${'\u{00A0}'}години 4${'\u{00A0}'}хвилини 4${'\u{00A0}'}секунди 4${'\u{00A0}'}мілісекунди 4${'\u{00A0}'}мікросекунди',
       );
     });
     test('Genitive plural - number ends with 5,6,7,8,9,0', () {
@@ -113,58 +114,58 @@ void main() {
       expect(
         prettyDuration(dur0,
             locale: locale, tersity: DurationTersity.microsecond),
-        '0 мікросекунд',
+        '0${'\u{00A0}'}мікросекунд',
       );
       expect(
         prettyDuration(dur5,
             locale: locale, tersity: DurationTersity.microsecond),
-        '5 тижнів 5 днів 5 годин 5 хвилин 5 секунд 5 мілісекунд 5 мікросекунд',
+        '5${'\u{00A0}'}тижнів 5${'\u{00A0}'}днів 5${'\u{00A0}'}годин 5${'\u{00A0}'}хвилин 5${'\u{00A0}'}секунд 5${'\u{00A0}'}мілісекунд 5${'\u{00A0}'}мікросекунд',
       );
       expect(
         prettyDuration(dur9,
             locale: locale,
             upperTersity: DurationTersity.day,
             tersity: DurationTersity.microsecond),
-        '9 днів 9 годин 9 хвилин 9 секунд 9 мілісекунд 9 мікросекунд',
+        '9${'\u{00A0}'}днів 9${'\u{00A0}'}годин 9${'\u{00A0}'}хвилин 9${'\u{00A0}'}секунд 9${'\u{00A0}'}мілісекунд 9${'\u{00A0}'}мікросекунд',
       );
       expect(
         prettyDuration(dur29,
             locale: locale,
             upperTersity: DurationTersity.day,
             tersity: DurationTersity.microsecond),
-        '29 днів 9 годин 29 хвилин 29 секунд 29 мілісекунд 29 мікросекунд',
+        '29${'\u{00A0}'}днів 9${'\u{00A0}'}годин 29${'\u{00A0}'}хвилин 29${'\u{00A0}'}секунд 29${'\u{00A0}'}мілісекунд 29${'\u{00A0}'}мікросекунд',
       );
       expect(
         prettyDuration(dur209,
             locale: locale,
             upperTersity: DurationTersity.day,
             tersity: DurationTersity.microsecond),
-        '209 днів 9 годин 29 хвилин 29 секунд 209 мілісекунд 209 мікросекунд',
+        '209${'\u{00A0}'}днів 9${'\u{00A0}'}годин 29${'\u{00A0}'}хвилин 29${'\u{00A0}'}секунд 209${'\u{00A0}'}мілісекунд 209${'\u{00A0}'}мікросекунд',
       );
     });
 
     test('Genitive plural edge case - number is equal to or ends with 11 to 20',
         () {
       expect(prettyDuration(const Duration(seconds: 11), locale: locale),
-          '11 секунд');
+          '11${'\u{00A0}'}секунд');
       expect(prettyDuration(const Duration(seconds: 12), locale: locale),
-          '12 секунд');
+          '12${'\u{00A0}'}секунд');
       expect(prettyDuration(const Duration(seconds: 13), locale: locale),
-          '13 секунд');
+          '13${'\u{00A0}'}секунд');
       expect(prettyDuration(const Duration(seconds: 14), locale: locale),
-          '14 секунд');
+          '14${'\u{00A0}'}секунд');
       expect(prettyDuration(const Duration(seconds: 15), locale: locale),
-          '15 секунд');
+          '15${'\u{00A0}'}секунд');
       expect(prettyDuration(const Duration(seconds: 16), locale: locale),
-          '16 секунд');
+          '16${'\u{00A0}'}секунд');
       expect(prettyDuration(const Duration(seconds: 17), locale: locale),
-          '17 секунд');
+          '17${'\u{00A0}'}секунд');
       expect(prettyDuration(const Duration(seconds: 18), locale: locale),
-          '18 секунд');
+          '18${'\u{00A0}'}секунд');
       expect(prettyDuration(const Duration(seconds: 19), locale: locale),
-          '19 секунд');
+          '19${'\u{00A0}'}секунд');
       expect(prettyDuration(const Duration(seconds: 20), locale: locale),
-          '20 секунд');
+          '20${'\u{00A0}'}секунд');
     });
   });
 }
